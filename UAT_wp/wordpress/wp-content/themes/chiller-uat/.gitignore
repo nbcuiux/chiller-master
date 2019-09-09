@@ -1,0 +1,7 @@
+
+# Auto generated files
+assets/css/*.css
+assets/css/*.map
+assets/css/fonts/icons*
+assets/js/*.js
+assets/js/*.map

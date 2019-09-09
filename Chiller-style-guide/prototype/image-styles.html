@@ -1,0 +1,635 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Image Styles</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700,300italic,400italic,500italic,700italic,500,300" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="app.css">
+		<link rel="stylesheet" href="additional.css" />
+	</head>
+	<body>
+		<!-- Asset Library -->
+		
+		<div id="wrapper" class="wrapper">
+			<div class="tb">
+                <div id="menuToggle" class="menuToggle"></div>
+                <div class="logo">Concerto</div>
+            </div>
+            <div class="lm" id="lm">
+                <div class="close"></div>
+                <div class="logo">Concerto</div>
+                <ul>
+                    <li class="ad" id="dashboard"><div class="icon"></div><a href="index.html">Dashboard</a></li>
+                    <li class="ad" id="createContent">
+                        <div class="icon"></div>
+                        Create Content
+                        <ul class="">
+                            <li class="ad" id="series"><div class="icon"></div><a href="create-series.html">Series</a></li>
+                            <li class="ad" id="season"><div class="icon"></div><a href="create-season.html">Season</a></li>
+                            <li class="ad" id="episode"><div class="icon"></div><a href="create-episode.html">Episode</a></li>
+                            <li class="ad" id="event"><div class="icon"></div><a href="create-event.html">Event</a></li>
+                        </ul>
+                    </li>
+                    <li class="ad open" id="config">
+                    	<div class="icon"></div>
+                    	Configuration
+                    	<ul class="open">
+                            <li class="ad" id=""><div class="icon"></div>File System</li>
+                            <li class="ad" id=""><div class="icon"></div>Event Count</li>
+                            <li class="active ad" id="image_style"><div class="icon"></div><a href="config-image-styles.html">Image Styles</a></li>
+                            <li class="ad" id=""><div class="icon"></div>Focal Point</li>
+                        </ul>
+                    </li>
+                    <li class="ad" id="files"><div class="icon"></div><a href="assetLibrary.html" class="link">Asset Library</a></li>                
+                </ul>
+            </div>
+			<div class="ct" id="ct">
+				<div class="tb">
+					<div id="menuToggle" class="menuToggle"></div>
+					<div class="logo">Concerto</div>
+				</div>
+				<div class="header">
+					<div class="title"><span>Image Styles</span>
+						<div class="checkboxWrapper">
+							<input type="checkbox" class="favorites" id="toDashboard"><label for="toDashboard">Add to favorites</label>
+						</div>
+					</div>	
+				</div>
+				
+				<!--where tabs used to be-->
+				<!--TODO: give nice class/ID to this-->
+				<div class="" id="">
+					<div class="controls">
+							<button class="empty" id="selectAll" title="Select All"></button><label for="selectAll">All</label>
+							<button class="button transparentGray" id="bulkDelete"><i class="fa fa-trash-o"></i><span class="buttonText">  Delete</span></button>
+							<div class="right">
+								<button class="button transparentGray" id="addStyles"><i class="fa fa-plus-circle"></i><span class="buttonText">  Add style</span></button>
+							</div>
+					</div>
+						<div class="files">
+							<!-- Files Section-->
+							<div class="section">
+								<div class="section-title">
+									<!--TODO: Do we want to categorize image styles?-->
+									<p><span class="helper">Category 1</span></p>
+								</div>
+								<div class="section-files">
+									<div class="file img">
+									<!--TODO: Call this something different and assign corresponding css-->									
+										<div class="file-img" style="background-image: url('img/config/image_styles/crop_ipad.png');">
+											<div class="progressBar">
+												<div class="loaded" style="width: 0;"></div>
+											</div>
+											<div class="file-controls">
+												<div class="checkmark"></div>
+												<div class="close"></div>
+												<div class="type"></div>
+												<button class="button whiteOutline">Edit</button>
+											</div>										
+										</div>
+										<div class="file-title">Crop iPad</div>
+										<button class="button grayOutline">Edit</button>
+									</div>
+									<div class="file img">
+										<div class="file-img" style="background-image: url('img/config/image_styles/crop_iphone.png');">
+											<div class="progressBar">
+												<div class="loaded" style="width: 15%;"></div>
+											</div>
+											<div class="file-controls">
+												<div class="checkmark"></div>
+												<div class="close"></div>
+												<div class="type"></div>
+												<button class="button whiteOutline">Edit</button>
+											</div>
+										</div>
+										<div class="file-title">Crop iPhone</div>
+										<button class="button grayOutline">Edit</button>
+									</div>
+									<div class="file img">									
+										<div class="file-img" style="background-image: url('img/config/image_styles/black_white.png');">
+											<div class="progressBar">
+												<div class="loaded" style="width: 0;"></div>
+											</div>
+											<div class="file-controls">
+												<div class="checkmark"></div>
+												<div class="close"></div>
+												<div class="type"></div>
+												<button class="button whiteOutline">Edit</button>
+											</div>										
+										</div>
+										<div class="file-title">Black & white</div>
+										<button class="button grayOutline">Edit</button>
+									</div>
+									<div class="file img">
+										<div class="file-img" style="background-image: url('img/config/image_styles/rotate_clockwise.png');">
+											<div class="progressBar">
+												<div class="loaded" style="width: 15%;"></div>
+											</div>
+											<div class="file-controls">
+												<div class="checkmark"></div>
+												<div class="close"></div>
+												<div class="type"></div>
+												<button class="button whiteOutline">Edit</button>
+											</div>
+										</div>
+										<div class="file-title">Rotate 90 degrees Clockwise</div>
+										<button class="button grayOutline">Edit</button>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="al hidden" id="al">
+			<div class="close"></div>
+			<!-- Asset Library Header -->
+			<div class="header">
+				<div class="searchField">
+						<input type="text" placeholder="Search asset ..." id="searchField"/>
+						<div class="filterIcon" id="filterButton"></div>
+						<div id="filterMenu" class="filter">
+							<div class="section" id="filter-show">
+								<div class="section-title">Show</div>
+								<div class="section-options">
+									<input type="checkbox" class="toggle" id="alcatraz"><label for="alcatraz" class="toggle-label">Alcatraz</label>
+									<input type="checkbox" class="toggle" id="blade"><label for="blade" class="toggle-label">Blade</label>
+									<input type="checkbox" class="toggle" id="blindspot"><label for="blindspot" class="toggle-label">Blindspot</label>
+									<input type="checkbox" class="toggle" id="slashers"><label for="slashers" class="toggle-label">Great American Slashers</label>
+									<input type="checkbox" class="toggle" id="kids"><label for="kids" class="toggle-label">Horror's Creepiest Kids</label>
+									<input type="checkbox" class="toggle" id="river"><label for="river" class="toggle-label">The River</label>
+									<input type="checkbox" class="toggle" id="gates"><label for="gates" class="toggle-label">The Gates</label>									
+								</div>
+							</div>
+							<div class="section" id="filter-files">
+								<div class="section-title">File Types</div>
+								<div class="section-options">
+									<input type="checkbox" class="toggle" id="img"><label for="img" class="toggle-label">images</label>
+									<input type="checkbox" class="toggle" id="video"><label for="video" class="toggle-label">video</label>
+									<input type="checkbox" class="toggle" id="music"><label for="music" class="toggle-label">audio</label>
+									<input type="checkbox" class="toggle" id="pres"><label for="pres" class="toggle-label">documents</label>
+								</div>
+							</div>
+							<div class="section" id="filter-date">
+								<div class="section-title">Date</div>
+								<div class="section-options">
+									<input type="checkbox" class="toggle" id="week"><label for="week" class="toggle-label">last week</label>
+									<input type="checkbox" class="toggle" id="month"><label for="month" class="toggle-label">last month</label>
+									<input type="checkbox" class="toggle" id="3month"><label for="3month" class="toggle-label">last 3 month</label>
+									<input type="checkbox" class="toggle" id="year"><label for="year" class="toggle-label">year</label>
+								</div>
+							</div>
+							
+						</div>				
+				</div>				
+			</div>
+			<!-- Asset Library Files-->
+			<div class="files">				
+				<!-- Files Section-->
+				<div class="section">
+					<div class="section-files">
+						<div class="file img">
+							<div class="file-img" style="background-image: url('img/1.jpg');">
+								<div class="file-controls">
+									<div class="checkmark"></div>
+									<div class="type"></div>
+								</div>
+							</div>
+							<div class="file-title">Blindspot S03 preview</div>
+							<div class="file-info">2230×1350, jpeg, Canon-Mark 5, 18.0mm, F-1.5, ISO-500</div>
+						</div>
+						<div class="file img">
+							<div class="file-img" style="background-image: url('img/2.jpg');">
+								<div class="file-controls">
+									<div class="checkmark"></div>
+									<div class="type"></div>
+								</div>
+							</div>
+							<div class="file-title">Crime Place</div>
+							<div class="file-info">2230×1350, jpeg, ISO-500</div>
+						</div>
+						<div class="file video">
+							<div class="file-img" style="background-image: url('img/3.jpg');">
+								<div class="file-controls">
+									<div class="checkmark"></div>
+									<div class="type"></div>
+								</div>
+							</div>
+							<div class="file-title">Tonight Show</div>
+							<div class="file-info">800×600, avi, 6 min</div>
+						</div>
+						<div class="file img">
+							<div class="file-img" style="background-image: url('img/4.jpg');">
+								<div class="file-controls">
+									<div class="checkmark"></div>
+									<div class="type"></div>
+								</div>
+							</div>
+							<div class="file-title">Forest</div>
+							<div class="file-info">2230×1350, jpeg, ISO-500</div>
+						</div>
+						<div class="file img">
+							<div class="file-img" style="background-image: url('img/4.jpg');">
+								<div class="file-controls">
+									<div class="checkmark"></div>
+									<div class="type"></div>
+								</div>
+							</div>
+							<div class="file-title">Forest</div>
+							<div class="file-info">2230×1350, jpeg, ISO-500</div>
+						</div>
+						<div class="file img">
+							<div class="file-img" style="background-image: url('img/5.jpg');">
+								<div class="file-controls">
+									<div class="checkmark"></div>
+									<div class="type"></div>
+								</div>
+							</div>
+							<div class="file-title">Blindspot S03 preview</div>
+							<div class="file-info">2230×1350, jpeg, Canon-Mark 5, 18.0mm, F-1.5, ISO-500</div>
+						</div>
+						<div class="file video">
+							<div class="file-img" style="background-image: url('img/6.jpg');">
+								<div class="file-controls">
+									<div class="checkmark"></div>
+									<div class="type"></div>
+								</div>
+							</div>
+							<div class="file-title">Blindspot S03 preview</div>
+							<div class="file-info">2230×1350, jpeg, Canon-Mark 5, 18.0mm, F-1.5, ISO-500</div>
+						</div>
+						<div class="file img">
+							<div class="file-img" style="background-image: url('img/7.jpg');">
+								<div class="file-controls">
+									<div class="checkmark"></div>
+									<div class="type"></div>
+								</div>
+							</div>
+							<div class="file-title">Blindspot S03 preview</div>
+							<div class="file-info">2230×1350, jpeg, Canon-Mark 5, 18.0mm, F-1.5, ISO-500</div>
+						</div>
+						<div class="file video">
+							<div class="file-img" style="background-image: url('img/10.jpg');">
+								<div class="file-controls">
+									<div class="checkmark"></div>
+									<div class="type"></div>
+								</div>
+							</div>
+							<div class="file-title">Blindspot S03 preview</div>
+							<div class="file-info">2230×1350, jpeg, Canon-Mark 5, 18.0mm, F-1.5, ISO-500</div>
+						</div>
+						<div class="file video">
+							<div class="file-img" style="background-image: url('img/9.jpg');">
+								<div class="file-controls">
+									<div class="checkmark"></div>
+									<div class="type"></div>
+								</div>
+							</div>
+							<div class="file-title">Blindspot S03 preview</div>
+							<div class="file-info">2230×1350, jpeg, Canon-Mark 5, 18.0mm, F-1.5, ISO-500</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="controls">
+				<button class="button orange" id="alAddButton">Add Files</button>
+				<button class="button whiteOutline" id="alCloseButton">Cancel</button>
+			</div>
+		</div>
+		<div class="as hidden" id="as">
+			<div class="close"></div>
+			<div class="preview">
+				<div class="files"></div>
+				<div class="img">
+					<img src="img/config/image_styles/sample.png" id="previewImg">
+					<div class="focalPoint"></div>
+					<div class="videoPlay"></div>
+				</div>
+				<div class="purposes">
+					<div class="purpose">
+						<div class="purpose-img pr-1"></div>
+						<div class="purpose-title">iOS cover</div>
+						<div class="purpose-info">230×160</div>
+					</div>
+					<div class="purpose">
+						<div class="purpose-img pr-2"></div>
+						<div class="purpose-title">Android cover</div>
+						<div class="purpose-info">240×140</div>
+					</div>
+					<div class="purpose">
+						<div class="purpose-img pr-3"></div>
+						<div class="purpose-title">Facebook cover</div>
+						<div class="purpose-info">250×120</div>
+					</div>
+					<div class="purpose">
+						<div class="purpose-img pr-4"></div>
+						<div class="purpose-title">Desktop cover</div>
+						<div class="purpose-info">400×280</div>
+					</div>
+					<div class="purpose">
+						<div class="purpose-img pr-5"></div>
+						<div class="purpose-title">Instagram cover</div>
+						<div class="purpose-info">360×360</div>
+					</div>
+					<div class="purpose">
+						<div class="purpose-img pr-6"></div>
+						<div class="purpose-title">Left-side cover</div>
+						<div class="purpose-info">120×360</div>
+					</div>
+				</div>				
+			</div>
+			<!-- Panel with file metadata -->
+			<div class="ip">
+				<!-- Group of controls -->
+				<div class="group" id="section_add_effects">
+					<div class="group-title">Add effects</div>
+					<div class="group-control">
+						<label for="select_new_effect">Add new effect</label>
+						<div id="select_new_effect" class="select select_effect"><span>Select new effect to add...</span>
+							<ul>
+								<!--only the top three effect works in this version. Nothing happens when no_dialog is selected.-->
+								<li>Crop</li>
+								<li>Resize</li>
+								<li>Rotate</li>
+								<li class="no_dialog">Focal Point Crop</li>
+								<li class="no_dialog">Focal Point Scale and Crop</li>
+								<li class="no_dialog">Desaturate</li>
+								<li class="no_dialog">Scale</li>
+								<li class="no_dialog">Scale and Crop</li>
+								<li class="no_dialog">Automatically correct orientation</li>
+								<li class="no_dialog">Strip metadata</li>
+
+							</ul>						
+						</div>
+					</div>								
+				</div>
+				
+				<!-- View all effect button -->
+				<div class="group hidden" id="effect_view_all">
+					<div class="group-control">
+						<label>View all effects</label>
+						<input type="checkbox" class="switch" id="effect_all" checked>
+					</div>
+				</div>
+				
+				<!--where all the added effects go-->
+				<div class="group" id="effect_list">
+				</div>
+				
+				<!--Divs for each effect-->
+				<!--Crop-->				
+				<div class="group hidden effect" id="crop">
+					<div class="group-control">
+						<label for="crop_width" class="requiered">Width</label>
+						<input type="text" id="crop_width" required="true" />
+					</div>
+					<div class="group-control">
+						<label for="crop_height" class="requiered">Height</label>
+						<input type="text" id="crop_height" required="true" />
+					</div>
+					<div class="group-control">
+						<button class="button_effect orange" id="add_effect">Add Effect</button>
+						<button class="button_effect whiteOutline" id="cancel">Cancel</button>
+					</div>
+				</div>
+				<!--Rotate-->
+				<div class="group hidden effect" id="rotate">
+					<div class="group-control">
+						<label for="rotate_angle" class="requiered">Rotation angle</label>
+						<input type="text" id="rotate_angle" required="true" />
+					</div>
+					<div class="group-control">
+						<label for="rotate_background">Background color</label>
+						<input type="text" id="rotate_background" />
+					</div>
+					<div class="group-control">
+						<input type="checkbox" id="rotate_randomize">
+						<label for="rotate_randomize">Randomize</label>
+					</div>
+					<div class="group-control">
+						<button class="button_effect orange" id="add_effect">Add Effect</button>
+						<button class="button_effect whiteOutline" id="cancel">Cancel</button>
+					</div>
+				</div>
+				<!--Resize-->				
+				<div class="group hidden effect" id="resize">
+					<div class="group-control">
+						<label for="crop_width" class="requiered">Width</label>
+						<input type="text" id="crop_width" required="true" />
+					</div>
+					<div class="group-control">
+						<label for="crop_height" class="requiered">Height</label>
+						<input type="text" id="crop_height" required="true" />
+					</div>
+					<div class="group-control">
+						<button class="button_effect orange" id="add_effect">Add Effect</button>
+						<button class="button_effect whiteOutline" id="cancel">Cancel</button>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+			<div class="controls">
+				<button class="button orange" id="saveChanges">Save</button>
+				<button class="button whiteOutline" id="closePreview">Cancel</button>
+				<div class="right">
+					<button class="button whiteOutline" id="focalPointToggle">Set Focal Point</button>
+				</div>
+			</div>
+		</div>
+		<div class="pr hidden">
+			<div class="close"></div>
+			<div class="preview">
+				<div class="files"></div>
+				<div class="img">
+					<img src="img/10.jpg" id="previewImg">
+					<div class="focalPoint"></div>
+					<div class="videoPlay"></div>
+				</div>
+				<div class="purposes">
+					<div class="purpose">
+						<div class="purpose-img pr-1"></div>
+						<div class="purpose-title">iOS cover</div>
+						<div class="purpose-info">230×160</div>
+					</div>
+					<div class="purpose">
+						<div class="purpose-img pr-2"></div>
+						<div class="purpose-title">Android cover</div>
+						<div class="purpose-info">240×140</div>
+					</div>
+					<div class="purpose">
+						<div class="purpose-img pr-3"></div>
+						<div class="purpose-title">Facebook cover</div>
+						<div class="purpose-info">250×120</div>
+					</div>
+					<div class="purpose">
+						<div class="purpose-img pr-4"></div>
+						<div class="purpose-title">Desktop cover</div>
+						<div class="purpose-info">400×280</div>
+					</div>
+					<div class="purpose">
+						<div class="purpose-img pr-5"></div>
+						<div class="purpose-title">Instagram cover</div>
+						<div class="purpose-info">360×360</div>
+					</div>
+					<div class="purpose">
+						<div class="purpose-img pr-6"></div>
+						<div class="purpose-title">Left-side cover</div>
+						<div class="purpose-info">120×360</div>
+					</div>
+				</div>				
+			</div>
+			<!-- Panel with file metadata -->
+			<div class="ip">
+				<!-- Group of controls -->
+				<div class="group">
+					<div class="group-title">Basic Fields</div>
+					<div class="group-control">
+						<label for="title" class="requiered">Title</label>
+						<input type="text" id="title" placeholder="Add Title" required="true">
+					</div>
+					<div class="group-control">
+						<label for="caption" class="requiered">Caption</label>
+						<input type="text" id="caption" placeholder="Add Caption" required="true">
+					</div>
+					<div class="group-control">
+						<label for="description" class="requiered">Description</label>
+						<textarea type="text" id="description" placeholder="Add Description" required="true"></textarea>
+					</div>
+					<div class="group-control img-only">
+						<input type="checkbox" id="resolution" required="true">
+						<label for="resolution">High Resolution<span class="ad-info">2400×1400</span></label>
+					</div>					
+				</div>
+				
+				<!-- Group of controls -->
+				<div class="group">
+					<div class="group-title">Taxonomy</div>
+					<div class="group-control">
+						<label for="categories">Categories</label>
+						<div id="categories" class="select"><span>Select Category</span>
+							<ul>
+								<li>Sport</li>
+								<li>Science</li>
+								<li>Entartainment</li>
+								<li>Music</li>
+							</ul>						
+						</div>
+					</div>
+					<div class="group-control">
+						<label for="tags">Tags</label>
+						<input type="text" id="tags" placeholder="Tags" required="true">
+					</div>										
+				</div>
+				
+				<!-- Group of controls -->
+				<div class="group" style="margin-bottom: 80px;">
+					<div class="group-title">Credits and SEO</div>
+					<div class="group-control img-only">
+						<label for="altText" class="requiered">Alt Text</label>
+						<input type="text" id="altText" placeholder="Alt Text" required="true">
+					</div>
+					<div class="group-control">
+						<label for="credit" class="requiered">Credit</label>
+						<input type="text" id="credit" placeholder="Add Credit" required="true">
+					</div> 
+					<div class="group-control">
+						<label for="copyright" class="requiered">Copyright</label>
+						<input type="text" id="copyright" placeholder="Copyright" required="true">
+					</div> 
+					<div class="group-control">
+						<label for="source" class="requiered">Source</label>
+						<input type="text" id="source" placeholder="Add Source" required="true">
+					</div> 
+					<div class="group-control">
+						<label for="reference">Reference</label>
+						<input type="text" id="reference" placeholder="Show, Season, Episode or Event" required="true">
+					</div>				
+				</div>
+			</div>
+			<div class="controls">
+				<button class="button orange" id="saveChanges">Save</button>
+				<button class="button whiteOutline" id="closePreview">Cancel</button>
+				<div class="right">
+					<button class="button whiteOutline" id="focalPointToggle">Set Focal Point</button>
+				</div>
+			</div>
+		</div>
+		<div class="pp hidden" id="pp">
+			<div class="close"></div>
+			<div class="header">
+				<div class="select"><span>Select Purpose</span>
+					<ul>
+						<li>Cover</li>
+						<li>Preview</li>
+						<li>Thumbnail</li>
+						<li>Primary</li>
+						<li>Secondary</li>
+					</ul>
+				</div>				
+			</div>
+			
+			<div class="purposes">
+				<div class="purpose">
+					<div class="purpose-img pr-1"></div>
+					<div class="purpose-title">iOS cover</div>
+					<div class="purpose-info">230×160</div>
+				</div>
+				<div class="purpose">
+					<div class="purpose-img pr-2"></div>
+					<div class="purpose-title">Android cover</div>
+					<div class="purpose-info">240×140</div>
+				</div>
+				<div class="purpose">
+					<div class="purpose-img pr-3"></div>
+					<div class="purpose-title">Facebook cover</div>
+					<div class="purpose-info">250×120</div>
+				</div>
+				<div class="purpose">
+					<div class="purpose-img pr-4"></div>
+					<div class="purpose-title">Desktop cover</div>
+					<div class="purpose-info">400×280</div>
+				</div>
+				<div class="purpose">
+					<div class="purpose-img pr-5"></div>
+					<div class="purpose-title">Instagram cover</div>
+					<div class="purpose-info">360×360</div>
+				</div>
+			</div>
+		</div>	
+		<div id="dropZone-1" class="dz hidden">
+			<div class="dz-zone locked">
+				<div class="dz-title">Drop files here</div>
+			</div>
+		</div>
+		<div class="op hidden" id="deleteFiles">		
+			<!--<div class="op-image">
+				<img src="img/dragAndDrop.svg">
+			</div>-->
+			<div class="title">Delete Image Styles?</div>
+			<div class="text">Selected image styles will be permanently deleted from the library. Are you sure you would like to delete them?</div>
+			<div class="controls">
+				<button class="button redOutline" id="deleteConf">Delete</button>
+				<button class="button whiteOutline" id="cancelPrompt">Cancel</button>
+			</div>
+		</div>
+		
+		
+		<!--</div>-->
+	<input type="file" multiple hidden="true" accept="application/pdf, image/*, audio/*, video/*" id="filesInput">
+	</body>
+	
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/autosize.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/additional.js"></script>
+</html>

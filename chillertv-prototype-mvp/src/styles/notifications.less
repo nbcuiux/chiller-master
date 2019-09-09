@@ -1,0 +1,173 @@
+@import "variables.less";
+
+.notification {
+  width: 100vw;
+  height: 0px;
+  transition: height .5s;
+  background: #222;
+  overflow: hidden;
+  transition: @transition-basic;
+
+  a {
+    animation: none;
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .notification-content-wrapper {
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+
+  .notification-icon, .notification-content {
+    position: relative;
+    flex-direction: column;
+  }
+
+  .notification-icon {
+    font-size: 38px;
+    margin-right: 20px;
+  }
+
+  .notification-content {
+    width: 90%;
+  }
+
+  .notification-title {
+    font-size: 20px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+
+  .notification-description {
+    font-size: 14px;
+    font-family: sans-serif;
+  }
+
+  .notification-browsers {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .notification-browser-item {
+    display: inline-block;
+    text-align: center;
+    font-size: 30px;
+    margin-right: 140px;
+    transition: transform .2s;
+
+    // @media screen and (max-width: 768px) {
+    //   margin-right: 20%;
+    // }
+    //
+    // @media screen and (max-width: 610px) {
+    //   margin-right: 15%;
+    // }
+    //
+    // @media screen and (max-width: 480px) {
+    //   margin-bottom: 40px;
+    //     &:nth-child(3) {
+    //       display: block;
+    //     }
+    // }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  .notification-browser-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'ApexNew_Medium';
+    margin-top: 10px;
+  }
+
+  .notification-close-trigger {
+    position: absolute;
+    font-size: 14px;
+    color: @color-white;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: @transition-basic;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .notification-overlay {
+    opacity: 0;
+    transition: @transition-basic;
+    position: fixed;
+    height: 100%;
+    width: calc(100% + 50px);
+    z-index: 9999;
+    left: -50%;
+    pointer-events: all;
+    background: black;
+    display: none;
+
+    // @media screen and (max-width: 480px) {
+    //   top: 560px;
+    // }
+  }
+
+  &.active {
+    height: 350px;
+    padding: 50px;
+
+    .notification-overlay {
+      opacity: 0.7;
+      top: 350px;
+      display: block;
+    }
+
+    ~ .side-navigation-container .side-navigation-trigger {
+      top: 370px;
+    }
+
+    ~ .side-navigation-container .side-navigation {
+      top: 350px;
+    }
+  }
+
+  &.active{
+    &.cookie {
+      height: 224px;
+      padding: 50px;
+
+      .button-container {
+        margin-top: 30px;
+      }
+
+      .notification-overlay {
+        opacity: 0.7;
+        top: 224px;
+        display: block;
+      }
+
+      ~ .side-navigation-container .side-navigation-trigger {
+        top: 244px;
+      }
+
+      ~ .side-navigation-container .side-navigation {
+        top: 224px;
+      }
+    }
+  }
+}

@@ -1,0 +1,162 @@
+@import "variables";
+@import "typography";
+
+.section {
+  padding: 40px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-family: 'ApexNew_Book';
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding: 0 0 10px;
+}
+
+.section-tile-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.section-tile {
+  width: 16.66%;
+  min-width: 300px;
+  margin-bottom: 20px;
+}
+
+.tile-img {
+  height: auto;
+  position: relative;
+  margin: 0 20px;
+  margin-top: 25px;
+
+
+  &:hover {
+    .img-overlay {
+      opacity: 1;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    border-color: @chiller-red transparent transparent;
+    z-index: 2;
+    .details-link--read & {
+      display: none;
+    }
+  }
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: calc(~'100% - 40px');
+  height: calc(~'100% - 45px');
+  background-color: rgba(17, 17, 17, 0.95);
+  color: #fff;
+  opacity: 0;
+  padding: 20px;
+  transition: opacity .6s;
+  cursor: pointer;
+
+  .overlay-text {
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    font-size: 20px;
+  }
+
+  i {
+    font-size: 24px;
+    margin-top: 14px;
+    position: relative;
+    top: 3px;
+    margin-right: 3px;
+  }
+}
+
+
+
+// Subpages
+
+.subpage {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  z-index: 5;
+  background: #000;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s;
+
+  &--show-add {
+    display: block;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  &--show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &--remove-add {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &--remove {
+    display: block;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tile-copy {
+  width: calc(~'100% - 60px');
+  margin: 0 30px;
+}
+
+.tile-title {
+  margin: 10px 0 5px;
+}
+
+.tile-description {
+  font-size: 14px;
+  font-family: 'ApexNew_Light';
+  opacity: 0.7;
+}
+
+
+
+

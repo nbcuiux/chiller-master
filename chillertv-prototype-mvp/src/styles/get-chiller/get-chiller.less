@@ -1,0 +1,368 @@
+@import "../variables.less";
+
+.get-chiller__page .hero--full {
+  background: none;
+}
+
+.get__hero-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+
+  @media screen and (max-width: 992px) {
+    height: 100vh;
+  }
+
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, fade(#000000, 100%), fade(#000000, 90%) 20%, fade(#000000, 0%),);
+    pointer-events: none;
+  }
+}
+.get-chiller {
+  position: relative;
+  width: ~"calc(100% + 1px)";
+  min-height: 100vh;
+  height: auto;
+  padding: 10% 80px 30px 80px;
+
+  //background: linear-gradient(to bottom, fade(#000000, 80%), fade(#000000, 50%) 40%, fade(#000000, 0));
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 992px) {
+    display: block;
+    padding: 40px;
+  }
+
+
+  //Buttons
+  .button-container,
+  .button1-right,
+  .button1-left  {
+    width: 140px;
+
+    .button {
+      text-align: center;
+      width: 100%;
+    }
+  }
+  .network.on-demand .button1-right,
+  .network.on-demand .button1-left {
+    background: @color-red;
+    border: @color-red !important;
+  }
+}
+
+.get__main {
+  position: relative;
+  width: 440px;
+  margin-right: 40px;
+  margin-top: 60px;
+  padding: 50px 40px 50px 40px;
+
+  transition: 0.8s ease-in-out;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: ~"calc(100% + 60px)";
+    top: 45%;
+    height: 55vh;
+    border-right: 2px solid fade(@color-red, 80%);
+    transition: 0.8s ease-in-out;
+    transform: rotate(12deg) translateY(-50%) translateX(-60px);
+  }
+
+  &.is-active {
+    max-width: 100%;
+    width: 100%;
+    padding: 70px 40px 50px 40px;
+    border-color: transparent;
+
+    &::after {
+      border-color: transparent;
+    }
+    @media screen and (max-width: 992px) {
+      padding: 60px 0;
+      &::after {
+        border-color: fade(@color-red, 80%);
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    margin-top: 100px;
+    max-width: none;
+    width: 100%;
+    margin-right: 0;
+    padding: 60px 0;
+    flex-direction: column;
+
+    transition: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 0;
+      top: 100%;
+      border-bottom: 2px solid fade(@color-red, 80%);
+      border-right: none;
+      transition: 0.8s ease-in-out;
+      transform: rotate(-3deg);
+    }
+  }
+}
+.get__main-close {
+  position: absolute;
+  z-index: 10;
+  top: 14px;
+  right: 14px;
+  opacity: 0;
+
+  transition: 0.3s ease-in-out;
+
+  .get__main.is-active & {
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.get__header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+
+  @media screen and (max-width: 992px) {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.get__section {
+  position: relative;
+  margin: 0 0 20px 0;
+  //padding: 0 60px;
+  width: 100%;
+  //height: 100%
+  transition: 0.8s ease-in-out;
+  opacity: 1;
+
+  &.is-dimmed {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  &.get__section--zip {
+    max-width: 350px;
+  }
+  &.get__section--subscribe {
+    padding-top: 80px;
+    max-width: 450px;
+  }
+  &.get__section--promo {
+    padding-top: 50px;
+  }
+  &.get__section--results {
+    .get__main.is-active & {
+      margin-top: 30px;
+    }
+  }
+}
+
+.get__title {
+  display: none;
+
+  .get__section--subscribe & ,
+  .get__section--zip & {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    display: block;
+    text-align: left;
+    padding: 0 10px 10px 0;
+    flex-shrink: 0;
+
+    color: @color-red;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.5;
+
+    font-family: 'ApexNew_Medium';
+  }
+  .get__section--zip & {
+    padding-bottom: 0;
+  }
+}
+
+.get__controls {
+  position: relative;
+  display: flex;
+
+  .get__section--subscribe & {
+    flex-direction: column;
+  }
+}
+.get__input {
+  font-size: 60px;
+  border: none;
+  outline: none;
+  padding: 0 5px 10px 5px;
+  border-bottom: 1px solid fade(#ffffff, 40%);
+  width: auto;
+  min-width: 0;
+
+  .get__section--zip & {
+    font-size: 60px;
+    height: 90px;
+    width: 270px;
+    padding: 15px;
+    margin: 0 -1px 0 0;
+
+    @media screen and (max-width: 992px) {
+      font-size: 45px;
+      padding: 5px;
+    }
+  }
+
+  .get__section--subscribe & {
+    font-size: 14px;
+    height: 40px;
+    padding: 10px 2px;
+    margin: 0 10px 20px 0;
+    border-bottom: 1px solid fade(#ffffff, 40%);
+    //border-top: 1px solid fade(#ffffff, 40%);
+  }
+}
+.get__input.get__input--zip {
+  width: 250px;
+  padding: 5px;
+}
+
+.get__button {
+  padding: 0;
+  border: none;
+  outline: none;
+
+  &.is-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .get__section--zip & {
+    height: 90px;
+    font-size: 32px;
+    padding: 28px 12px;
+    .button-container,
+    .button1-right,
+    .button1-left  {
+      width: 60px;
+      margin: 0;
+      height: 100%;
+
+      .button {
+        text-align: center;
+        width: 100%;
+        font-size: 22px;
+        padding: 15px 12px;
+      }
+    }
+  }
+  .get__section--subscribe & {
+    margin-top: 20px;
+    .button-container,
+    .button1-right,
+    .button1-left  {
+      width: 100px;
+      .button {
+        text-align: center;
+      }
+    }
+  }
+}
+.get__copy {
+  position: relative;
+  width: 100%;
+  margin: 15px 0 0 0;
+  padding: 0 60px 0 0;
+
+  line-height: 1.5;
+  opacity: 0.7;
+
+}
+
+.get-chiller__add {
+  background-color: #0e0e0e;
+}
+
+.get__form {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+
+  .is-confermed & {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.get__confirmation {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+
+  .is-confermed & {
+    opacity: 1;
+  }
+}
+.confirmation__text {
+  font-size: 16px;
+
+}
+
+.get-results__close {
+  position: absolute;
+  z-index: 100;
+  margin: 10px;
+  top: none;
+  bottom: 100%;
+  right: 0;
+  opacity: 0.8;
+
+  transition: 0.3s ease-in-out;
+
+  @media screen and (max-width: 992px) {
+    margin: 0;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.get__twitter::before {
+  content: '';
+  font-size: 20px;
+  color: @color-white;
+  font-family: 'chiller';
+  content: "\e90e";
+  opacity: 0.5;
+  margin-right: 6px;
+  position: relative;
+  top: 4px;
+}

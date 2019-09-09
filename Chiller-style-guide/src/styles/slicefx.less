@@ -1,0 +1,139 @@
+@import "variables.less";
+
+/* Text Slice */
+
+.text-link {
+	outline: none;
+	text-decoration: none;
+	position: relative;
+	font-size: 20px;
+	line-height: 1;
+	color: @color-red;
+	display: inline-block;
+}
+
+.hidden {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+.slice-container {
+	background: url('img/slasher-hero.jpg');
+	text-align: left;
+	padding: 264px 0px 10px 30px;
+}
+
+.text-link-slice {
+	font-family: Chiller Sans Bold, sans-serif;
+	font-size: 70px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: @color-red;
+	-webkit-transition: color 0s 0.5s;
+	transition: color 0s 0.5s;
+	padding: 5px;
+}
+
+.text-link-slice:hover {
+	color: transparent !important;
+	-webkit-transition: none;
+	transition: none;
+}
+
+.text-link-slice::before,
+.text-link-slice::after {
+	content: attr(data-letters);
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 5px;
+	color: @color-red;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: color 0.5s, -webkit-transform 0.5s;
+	transition: color 0.5s, transform 0.5s;
+}
+
+.text-link-slice::before {
+	-webkit-clip-path: url(#slice_up); 
+	clip-path: url(../animation-hover-state.html#slice_up);
+}
+
+.text-link-slice::after {
+	-webkit-clip-path: url(#slice_down); 
+	clip-path: url(../animation-hover-state.html#slice_down);
+}
+
+.text-link-slice:hover::before,
+.text-link-slice:hover::after {
+	color: #fff;
+	-webkit-transition: color 0.5s, -webkit-transform 0.5s;
+	transition: color 0.5s, transform 0.5s;
+}
+
+.text-link-slice:hover::before {
+	-webkit-transform: translate3d(8px,0px,0);
+	transform: translate3d(8px,0px,0);
+}
+
+.text-link-slice:hover::after {
+	-webkit-transform: translate3d(-8px,-2px,0);
+	transform: translate3d(-8px,-2px,0);
+}
+
+/* Logo  Slice */
+
+.logo-slice-container {
+  position: relative;
+  width: 760px;
+  height: 430px;
+  cursor: pointer;
+  background: url('img/z-nation.jpg');
+  background-size: cover;
+  background-position: 0 -170px;
+}
+
+.logo-slice-container .card__left-side_1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0% 100%, 100% 100%, 0% 65%);
+  transition: 0.3s ease-out;
+}
+
+.logo-slice-container .card__right-side_1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0 65%, 100% 100%, 100% 0);
+  transition: 0.3s ease-out;
+}
+
+.logo-slice-container .card__img_1 {
+  position: absolute;
+  height: 116px;
+  width: 400px;
+  left: 160px;
+  top: 300px;
+  background-image: url('img/z-nation-logo.png');
+  transition: 0.3s ease-out;
+}
+
+.logo-slice-container:hover .card__left-side_1 {
+  left: -8px;
+  top: -2px;
+}
+
+.logo-slice-container:hover .card__right-side_1 {
+  left: 8px;
+  top: 0px;
+}
+

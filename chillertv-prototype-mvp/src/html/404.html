@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slasher | 404 Page Not Found - ChillerTV.com</title>
+    <link href="lib/bootstrap.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+    <link rel="shortcut icon" href="http://www.chillertv.com/sites/chiller/themes/zen_chiller/favicon.png" type="image/png" />
+  </head>
+  <body>
+
+//= template/navigation.html
+    <!--  Hero -->
+    <section style="margin-bottom: -120px;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 error-bg-blur">
+            <div class="error-bg">
+              <div class="error-content-container">
+                <div class="four-o-four slideDown-trigger">
+                  <h5>404 Unavailable</h5>
+                </div>
+                <div class="tlt error-message">
+                  <div>This page cannot be found. Leave before you're next!</div>
+                </div>
+              </div>
+            </div>
+            <div id="preload">
+             <img src="img/generic-bg-14-net.jpg" width="1" height="1" alt="Image 01" />
+             <img src="img/generic-bg-15-net.jpg" width="1" height="1" alt="Image 02" />
+             <img src="img/generic-bg-16-net.jpg" width="1" height="1" alt="Image 03" />
+             <img src="img/generic-bg-17-net.jpg" width="1" height="1" alt="Image 04" />
+             <img src="img/generic-bg-11-net.jpg" width="1" height="1" alt="Image 05" />
+             <img src="img/generic-bg-8-net.jpg" width="1" height="1" alt="Image 06" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+//= template/footer.html
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/animations.js"></script>
+    <script src="js/side-navigation.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+    if ( $(window).width() > 768) {
+        $('.tlt').textillate({
+          // the default selector to use when detecting multiple texts to animate
+          selector: '.error-message',
+          initialDelay: 250,
+
+          // in animation settings
+          in: {
+            // set the effect name
+            effect: 'fadeInDown',
+
+            // set the delay factor applied to each consecutive character
+            delayScale: 1.5,
+
+            // set the delay between each character
+            delay: 20,
+
+            // set to true to animate all the characters at the same time
+            sync: false,
+
+            // randomize the character sequence
+            // (note that shuffle doesn't make sense with sync = true)
+            shuffle: true,
+
+            // reverse the character sequence
+            // (note that reverse doesn't make sense with sync = true)
+            reverse: false,
+
+            // callback that executes once the animation has finished
+            callback: function () {}
+          },
+          // callback that executes once textillate has finished
+          callback: function () {},
+
+        });
+      }
+      else {
+        //Add your javascript for small screens here
+      }
+      if ( $(window).width() > 992) {
+        $(function () {
+            $('div.slideDown-trigger , p.slideDown-trigger , h4.slideDown-trigger , img.slideDown-trigger').addClass("hide-ani").viewportChecker({
+                classToAdd: 'visible slideDown', // Class to add to the elements when they are visible
+                offset: 75
+            });
+        });
+        }
+        else {
+          //Add your javascript for small screens here
+        }
+    </script>
+    <script>
+      var images = ['generic-bg-17-net.jpg'];
+      $('.error-bg').css({'background-image': 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+    </script>
+  </body>
+</html>

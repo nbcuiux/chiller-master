@@ -1,0 +1,54 @@
+@import "variables";
+@import "typography";
+
+* { margin: 0; font-family: 'ApexNew_Book', sans-serif; letter-spacing: 1px; }
+
+body {
+  background: radial-gradient(at 41% top, #202020, #000000);
+  overflow-x: hidden;
+  background-attachment: fixed;
+  color: @white;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: 0;
+}
+
+.header {
+  height: 80px;
+  padding: 20px 40px 10px;
+  width: calc(~'100% - 80px');
+  background: #222;
+
+  .logo {
+    width: auto;
+    height: 60px;
+    display: inline-block;
+  }
+
+  .page-title {
+    font-size: 22px;
+    color: @white;
+    display: inline-block;
+    position: absolute;
+    top: 32px;
+    font-family: 'ApexNew_Light';
+    line-height: 1.7;
+    letter-spacing: 1.6px;
+    right: 30px;
+
+    span {
+      font-family: 'ApexNew_Medium';
+    }
+  }
+}

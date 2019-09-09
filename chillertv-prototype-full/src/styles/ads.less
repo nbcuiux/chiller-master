@@ -1,0 +1,146 @@
+@import "variables.less";
+/* ----------------------------  Hortizontal Sticky Ad ---------------------------- */
+
+.horizontal-ad {
+	text-align: center;
+	background: transparent;
+	z-index: 4;
+	transition: @transition-basic;
+}
+
+	.horizontal-ad img {
+		max-width: 728px;
+		width: 100%;
+		height: auto;
+		padding: 20px 0 20px 0;
+	}
+
+.horizontal-ad.is_stuck {
+	background: rgba(0,0,0,0.95);
+	z-index: 4;
+	transition: @transition-basic;
+}
+
+#sticky {
+	text-align: center;
+	background: rgba(14,14,14,1);
+	transition: all .2s ease-in;
+}
+
+#sticky-phantom {
+	text-align: center;
+	background: rgba(14,14,14,1);
+	transition: all .2s ease-in;
+	visibility: hidden;
+}
+
+#sticky.stick {
+	position:fixed;
+	background: rgba(0,0,0,0.95);
+	top:80px;
+	z-index: 999;
+	transition: all .2s ease-in;
+}
+.cast .ad, .series-tile.ad {
+  margin-bottom: 0.18% !important;
+}
+
+.ad300 {
+	padding: 20px;
+}
+
+	.ad300 img {
+		width: 300px;
+		height: 250px;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+
+.ad--s {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e0e0e;
+
+  transition: @transition-basic;
+}
+.ad--h {
+  padding: 20px;
+}
+.ad.is-stuck {
+  position: fixed;
+  z-index: 1000;
+  top: 90px;
+  left: 0;
+  height: auto;
+  background: rgba(0,0,0,0.9);
+}
+
+.ad.is-stuck.stuck--80 {
+  top: 80px;
+}
+.ad__img {
+  position: relative;
+}
+
+.ad__img--300 {
+  width: 300px;
+  height: 250px;
+}
+
+.ad__img--blog {
+  width: 300px;
+  height: 250px;
+  margin: 0 0 30px 30px;
+  float: right;
+}
+
+.ad__img--728 {
+  width: 728px;
+  height: 90px;
+}
+
+.is-stick {
+	position:fixed;
+	background: rgba(0,0,0,0.9);
+	top:80px;
+	z-index: 999;
+	transition: all .2s ease-in;
+}
+
+.standard-ad-tile {
+	height: 27vw;
+	min-height: 340px;
+
+	@media screen and (min-width: 2100px) {
+		height: 22vw;
+	}
+}
+
+.cast-ad-tile {
+	height: 30vw;
+	min-height: 400px;
+
+	@media screen and (min-width: 2100px) {
+		height: 24vw;
+	}
+}
+
+.gallery-ad {
+	// position: absolute;
+	bottom: 30px;
+
+	img {
+		max-width: 300px;
+		height: auto;
+	}
+}

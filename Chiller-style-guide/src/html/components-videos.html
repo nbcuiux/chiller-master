@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+'Futurizr': {
+'hasTouch': 'touch'
+}
+}">
+<head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="lib/google.css" rel="stylesheet" />
+    <link href="app.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/img/favicon.png">
+
+    <title>Videos - Components - Chiller Design Guide | DPIM UX Team</title>
+
+</head>
+
+<body class="site-material_ext_publish section-animation first-chapter color-red qp-ui" data-qp-ui="{ 'Mask': {} }">
+  <header class="qp-ui" data-qp-ui="{
+  'Peekaboo': {
+  'mobile': 72,
+  'desktop-sm': 72,
+  'default': 192
+}
+}">
+<div class="header-wrapper qp-ui" data-qp-ui="{
+'Peekaboo': {
+'mobile': 28,
+'desktop-sm': 28,
+'default': 82
+}
+}">
+<div class="header-title">      <span class="section-title">Components</span>
+  <span class="chapter-title"><span class="title-separator">- Videos</span></span>
+</div>
+</div>
+
+</header>
+
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab"><i class="material-icons material-spec-icon" title="Show navigation">menu</i></button>
+</nav>
+
+//= template/menu.html
+
+<div id="grid-cont">
+    <section class="grid_outer chapter">
+        <h1 class="chapter-title">Videos</h1>
+
+        <div class="chapter-content">
+
+            <div class="chapter-intro">
+                <p>Videos can be used to add more of an immersive feel when using hero graphics.  Videos also will be used in a video player for viewers to watch their favorite episodes directly on ChillerTV.com.</p>
+            </div>
+
+            <nav class="chapter-toc">
+                <h1>Contents</h1>
+                <ul>
+                    <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#videos-hero">Hero</a></li>
+                    <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#videos-player">Player</a></li>
+                </ul>
+            </nav>
+
+            <div class="article-list">
+                <!-- Hero Start --> 
+                <div id="videos-hero" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                    <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">Hero</h2>
+                    <div class="article-content">
+                        <div class="module-list">
+                            <div>
+                                <section class="moduleE1">
+                                    <div class="module-body">
+                                        <p>Adding subtle videos used as a hero can add to the eerie and ominous feeling for the viewer.</p>
+                                    </div>
+                                    <div class="figure-group">
+                                        <div class="figure-row">
+                                            <figure class="">
+                                                <div class="media" style="position: relative;">
+                                                    <div style="position: absolute; bottom: 10px; left: 20px;">
+                                                        <h6 style="font-size: 10px;">ALL NEW</h6>
+                                                        <h3 style="color: #be0c36; font-size: 40px;margin-top: 8px;">Slasher Series Premiere</h3>
+                                                        <h5 style="font-size: 14px;font-weight: 100; margin: -20px 0 20px 0;">Katie McGrath (Jurassic World) stars as Sarah Bennett, a<br/>young woman who returns to the small town where she was born.</h5>
+                                                        <div class="feedback-press-button" style="z-index: 5; margin-left: 0;">
+                                                            <a class="feedback-press-button-v5">
+                                                                <div class="button">View Show</div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <video autoplay loop>
+                                                      <source src="img/Salem-S2.mp4" type="video/mp4">
+                                                      Your browser does not support HTML5 video.
+                                                    </video>
+                                                </div>
+                                                <figcaption>
+                                                    <p>Hero Video Example</p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hero End --> 
+                <!-- Video Player Start --> 
+                <div id="videos-player" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                    <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">Player</h2>
+                    <div class="article-content">
+                        <div class="module-list">
+                            <div>
+                                <section class="moduleE1">
+                                    <div class="module-body">
+                                        <p>The video player for ChillerTV.com will be simple and elegant for the user to view.  It fill the users entire screen with the acception of the header and footer.  If a use hovers over the video, player controls will then appear.</p>
+                                    </div>
+                                    <div class="figure-group">
+                                        <div class="figure-row">
+                                            <figure class="is-active">
+                                                <div class="media">
+                                                    <img src="img/components-videos.jpg" />
+                                                </div>
+                                                <figcaption>
+                                                    <p>Video Player Example</p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="moduleE1">
+                                    <div class="module-body">
+                                        <p>The viewer will have the ability to navigate to any episode from that season of that series by simply clicking the "epsidoes" indicator at the bottom of the video player.  This will then slide up a panel that will show three episodes at a time.  If the user wants to go further than the next three episodes they will have the ability to scroll left or right in this panel.</p>
+                                    </div>
+                                    <div class="figure-group">
+                                        <div class="figure-row">
+                                            <figure class="is-active">
+                                                <div class="media">
+                                                    <img src="img/components-videos-open.jpg" />
+                                                </div>
+                                                <figcaption>
+                                                    <p>Video Player Episode Selector Example</p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video Player End --> 
+            </div>
+        </div>
+    </section>
+</div>
+
+
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-L section-what-is-material color-light-blue">&nbsp;</div>
+                <div class="footer-grid-L section-what-is-material color-light-blue">
+                    <a class="footer-text" href="components-tooltips.html">
+                        <i class="material-icons arrow-L">arrow_back</i>
+                        <span class="direction">Previous</span>
+                        <div>Tooltips</div>
+                    </a>
+                </div>
+
+                <div class="footer-R section-animation color-purple">&nbsp;</div>
+                <div class="footer-grid-R section-animation color-purple">
+                    <a class="footer-text" href="animation-hover-interaction.html">
+                        <i class="material-icons arrow-R">arrow_forward</i>
+                        <span class="direction">Next</span>
+                        <div>Hover Interactions</div>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script src="lib/google.js"></script>
+        <script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/animation-hover-state.js"></script>
+    </body>
+</html>

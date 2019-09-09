@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slasher | Schedule - ChillerTV.com</title>
+    <link href="lib/bootstrap.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+  </head>
+  <body>
+
+//= template/navigation.html
+    <!--  Hero -->
+    <section class="no-hero">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="sticky-schedule-anchor"></div>
+          <div id="sticky-schedule-phantom">
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+              <div class="header-content-container">
+                <h1 class="header">Schedule</h1>
+              </div>
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-2 col-lg-2">
+              <div class="filter-container">
+                EST
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
+              <div class="filter-container">
+                Today, Feb 18<sup>th</sup>
+              </div>
+            </div>
+          </div>
+          <div id="sticky-schedule">
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 header-container">
+              <div class="header-content-container" id="header">
+                <h1 class="header">Schedule</h1>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 filter-bg">
+              <div class="filter-container filter-date">
+                <button onclick="myFunction()" class="date-button">Today, <span>Feb 18<sup>th</sup></span></button>
+                <div id="date-list" class="date-list">
+                  <div class="scrolling">
+                    <ul>
+                      <a><li>Today, <span>Feb 18<sup>th</sup></span></li></a>
+                      <a><li>Tomorrow, <span>Feb 19<sup>th</sup></span></li></a>
+                      <a><li>Saturday, <span>Feb 20<sup>th</sup></span></li></a>
+                      <a><li>Sunday, <span>Feb 21<sup>st</sup></span></li></a>
+                      <a><li>Monday, <span>Feb 22<sup>nd</sup></span></li></a>
+                      <a><li>Tuesday, <span>Feb 23<sup>rd</sup></span></li></a>
+                      <a><li>Wednesday, <span>Feb 24<sup>th</sup></span></li></a>
+                      <a><li>Thursday, <span>Feb 25<sup>th</sup></span></li></a>
+                      <a><li>Friday, <span>Feb 26<sup>th</sup></span></li></a>
+                      <a><li>Saturday, <span>Feb 27<sup>th</sup></span></li></a>
+                      <a><li>Sunday, <span>Feb 28<sup>th</sup></span></li></a>
+                      <a><li>Monday, <span>Mar 1<sup>st</sup></span></li></a>
+                      <a><li>Tuesday, <span>Mar 2<sup>nd</sup></span></li></a>
+                      <a><li>Wednesday, <span>Mar 3<sup>rd</sup></span></li></a>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="filter-container filter-zone">
+                <button onclick="myFunction()" class="zone-button">EST</button>
+                <div id="zone-list" class="zone-list">
+                  <ul>
+                    <a>
+                      <li>
+                        <div class="zone">EST</div>
+                        <div class="time">4:00pm</div>
+                      </li>
+                    </a>
+                    <a>
+                      <li>
+                        <div class="zone">CST</div>
+                        <div class="time">3:00pm</div>
+                      </li>
+                    </a>
+                    <a>
+                      <li>
+                        <div class="zone">MST</div>
+                        <div class="time">2:00pm</div>
+                      </li>
+                    </a>
+                    <a>
+                      <li>
+                        <div class="zone">PST</div>
+                        <div class="time">1:00pm</div>
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  Body -->
+    <section class="schedule-bg">
+      <div class="schedule-container">
+        <div class="row slideUp-trigger">
+          <a>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 airing">
+              <div class="schedule-tile-container">
+                <div class="tile-time-container">4:00pm</div>
+                <div class="tile-content-container">
+                  <div class="icon-container">
+                    <div class="icon-left chiller-video-weathered"></div>
+                    <div class="icon-right chiller-video-weathered"></div>
+                  </div>
+                </div>
+                <div class="tile-bottom-content-container">
+                  <div class="caption">Alcatraz S1 E2</div>
+                  <h4>Jailbreak</h4>
+                  <h3>Lorem ipsum dolor sit amet, alii rebum at mea. Eos ad harum dolor, sed eros delicatissimi ut.</h3>
+                </div>
+                <img src="img/schedule-2.jpg" />
+              </div>
+            </div>
+          </a>
+          <div class="hidden-xs hidden-sm col-md-6 col-lg-6"></div>
+        </div>
+        <div class="row slideUp-trigger">
+          <div class="hidden-xs hidden-sm col-md-6 col-lg-6"></div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="tile-time-container">5:00pm</div>
+            <div class="tile-bottom-content-container">
+              <div class="caption">Alcatraz S1 E3</div>
+              <h4>The Hunt</h4>
+              <h3>Lorem ipsum dolor sit amet, alii rebum at mea. Eos ad harum dolor, sed eros delicatissimi ut.</h3>
+            </div>
+            <img src="img/schedule-3.jpg" />
+          </div>
+        </div>
+        <div class="row slideUp-trigger">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="tile-time-container">6:00pm</div>
+            <div class="tile-bottom-content-container">
+              <div class="caption">Being Human S1 E1</div>
+              <h4>Old Dog, New Tricks</h4>
+              <h3>Lorem ipsum dolor sit amet, alii rebum at mea. Eos ad harum dolor, sed eros delicatissimi ut.</h3>
+            </div>
+            <img src="img/schedule-4.jpg" />
+          </div>
+          <div class="hidden-xs hidden-sm col-md-6 col-lg-6"></div>
+        </div>
+        <div class="row slideUp-trigger">
+          <div class="hidden-xs hidden-sm col-md-6 col-lg-6"></div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="tile-time-container">7:00pm</div>
+            <div class="tile-bottom-content-container">
+              <div class="caption">Being Human S1 E2</div>
+              <h4>That Time of the Month</h4>
+              <h3>Lorem ipsum dolor sit amet, alii rebum at mea. Eos ad harum dolor, sed eros delicatissimi ut.</h3>
+            </div>
+            <img src="img/schedule-6.jpg" />
+          </div>
+        </div>
+        <div class="row slideUp-trigger">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="tile-time-container">8:00pm</div>
+            <div class="tile-bottom-content-container">
+              <div class="caption">Being Human S1 E3</div>
+              <h4>Lil' Smokie</h4>
+              <h3>Lorem ipsum dolor sit amet, alii rebum at mea. Eos ad harum dolor, sed eros delicatissimi ut.</h3>
+            </div>
+            <img src="img/schedule-5.jpg" />
+          </div>
+          <div class="hidden-xs hidden-sm col-md-6 col-lg-6"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row" style="margin-bottom: -20px;">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 horizontal-ad">
+          <img src="img/horizontal-ad.jpg" />
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+//= template/footer.html
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/animations.js"></script>
+    <script src="js/sticky-header.js"></script>
+    <script src="js/schedule-filter.js"></script>
+    <script src="js/side-navigation.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(window).on( 'resize', function () {
+            $('.hero-container').height( $(window).height() * .6);
+        }).resize();
+      });
+
+
+      $(window).load(function() {
+        function setHeight() {
+          windowHeight = $('#image-tile').outerHeight(true);
+          $('.video').css('height', Math.round(windowHeight).toString() + "px");
+        };
+        setHeight();
+
+        $(window).resize(function() {
+          setHeight();
+        });
+      });
+
+      $(function () {
+          $('div.slideDown-trigger').addClass("hide-ani").viewportChecker({
+              classToAdd: 'visible slideDown', // Class to add to the elements when they are visible
+              offset: 75
+          });
+          $('div.slideUp-trigger').addClass("hide-ani").viewportChecker({
+              classToAdd: 'visible slideUp', // Class to add to the elements when they are visible
+              offset: 200
+          });
+      });
+
+    </script>
+  </body>
+</html>

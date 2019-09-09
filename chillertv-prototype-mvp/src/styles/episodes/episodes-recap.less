@@ -1,0 +1,80 @@
+@import "../variables.less";
+@import "../fonts.less";
+
+.additional-recap-item.episode-4::after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  left: -1px;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #ffffff;
+  z-index: 10;
+
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+}
+.episodes-about::after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  left: auto;
+  right: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid #161616;
+  z-index: 20;
+  transition: @transition-basic;
+
+  @media screen and (max-width: 992px) {
+    left: 50%;
+    top: 1px;
+    transform: translate(-50%, -100%);
+    border-bottom: 20px solid #141414 ;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+  }
+}
+.additional-recaps {
+  padding: 0;
+}
+.additional-recaps h4 {
+  font-size: 20px;
+}
+.additional-recaps p {
+  font-size: 14px;
+}
+.additional-recaps .episodes-about::before {
+  -webkit-clip-path: polygon(50px 0%, 0% 0%, 0% 100%, 0% 100%, 0% 50px);
+}
+.recap-episode-about {
+  padding: 40px 40px 20px 40px;
+}
+.additional-recap-item {
+  background-size: cover !important;
+  background-position: center center !important;
+  position: relative;
+  min-height: 150px;
+  height: 8vw;
+  transition: @transition-basic;
+
+  @media screen and (max-width: 992px) and (min-width: 480px) {
+    min-height: 300px;
+    transition: @transition-basic;
+  }
+}
+@media screen and (min-width: 1569px) {
+  #recaps {
+    background: @color-white;
+  }
+}

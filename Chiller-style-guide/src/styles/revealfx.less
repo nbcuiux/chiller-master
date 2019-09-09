@@ -1,0 +1,592 @@
+
+@import "variables.less";
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card.logo {
+  background: url('img/z-nation.jpg');
+}
+
+.card, .card_4, .card_4_v2 {
+  position: relative;
+  width: 270px;
+  height: 195px;
+  cursor: pointer;
+}
+
+.card .card__title {
+  position: relative;
+  z-index: 10;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  font-size: 24px;
+  margin: 30px 30px 10px 30px;
+  color: #ffffff;
+  opacity: 0;
+}
+.card .card__info {
+  position: relative;
+  z-index: 10;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0 30px 5px 30px;
+  color: #ffffff;
+  opacity: 0;
+}
+.card .card__link {
+  position: absolute;
+  width: auto;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  font-size: 14px;
+  margin: 30px;
+  color: #ffffff;
+  opacity: 0;
+}
+.card:hover .card__title {
+  opacity: 1;
+  transition: 0.6s ease-out 0.5s;
+}
+.card:hover .card__info {
+  opacity: 0.8;
+  transition: 0.6s ease-out 0.6s;
+}
+.card:hover .card__link {
+  opacity: 0.8;
+  transition: 0.6s ease-out 0.7s;
+}
+.card .card__left-side_2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0% 0%, 86% 0%, 26% 100%, 0% 100%);
+  transition: 0.6s ease-out;
+}
+.card .card__left-side_2::after {
+  position: absolute;
+  background-color: @color-red;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.6s ease-out;
+}
+.card .card__right-side_2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(84% 0%, 100% 0%, 100% 100%, 24% 100%);
+  transition: 0.6s ease-out 0.15s;
+}
+.card .card__right-side_2::after {
+  position: absolute;
+  background-color: @color-red;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.6s ease-out;
+}
+.card .card__img_2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-image: url('img/alcatraz_cast_neill_1080x780.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 3s ease-out;
+}
+.card .card__img_2::after {
+  content: '';
+  position: absolute;
+  background-color: @color-red;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.6s ease-out;
+}
+.card:hover .card__left-side_2 {
+  transform: rotate3d(1, 0, 0, -0.5turn);
+}
+.card:hover .card__left-side_2::after {
+  opacity: 1;
+}
+.card:hover .card__right-side_2 {
+  transform: rotate3d(1, 0, 0, -0.5turn);
+}
+.card:hover .card__right-side_2::after {
+  opacity: 1;
+}
+.card:hover .card__img_2::after {
+  opacity: 1;
+}
+.card .card__left-side_3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0% 0%, 40px 0%, 0% 40px);
+  background-image: url('img/alcatraz_cast_harner_1080x780.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.6s ease-out;
+}
+.card .card__right-side_3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(39px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 39px);
+  transition: 0.3s ease-out;
+  background-image: url('img/alcatraz_cast_harner_1080x780.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card .card__right-side_3 .card__title {
+  position: relative;
+  z-index: 10;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  font-size: 24px;
+  margin: 40px 20px 10px 40px;
+  color: #ffffff;
+  opacity: 0;
+}
+.card .card__right-side_3 .card__info {
+  position: relative;
+  z-index: 10;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0 20px 5px 40px;
+  color: #ffffff;
+  opacity: 0;
+}
+.card .card__right-side_3::after {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  background: linear-gradient(to bottom right, #272727 0%, rgba(39,39,39, 0.7) 100%);
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 200px;
+  border-bottom-right-radius: 300px;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: left top;
+}
+
+
+.card:hover .card__left-side_3 {
+  background: @color-red;
+}
+.card:hover .card__right-side_3 {
+  transform: translate(2px, 2px);
+}
+.card:hover .card__right-side_3 .card__title {
+  opacity: 1;
+  transition: 0.6s ease-out 0.2s;
+}
+.card:hover .card__right-side_3 .card__info {
+  opacity: 0.8;
+  transition: 0.6s ease-out 0.4s;
+}
+.card:hover .card__right-side_3::after {
+  transform: scale(1);
+  opacity: 1;
+  border-bottom-right-radius: 0;
+  transition: opacity 0.4s ease-out, transform 0.3s ease-out, border-radius 0.3s ease-out 0.2s;
+}
+
+.card_4 .card__left-side_4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0% 0%, 86% 0%, 26% 100%, 0% 100%);
+  background-image: url('img/alcatraz_cast_jones_1080x780.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.6s ease-out;
+}
+.card_4 .card__right-side_4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(84% 0%, 100% 0%, 100% 100%, 24% 100%);
+  transition: 0.3s ease-out;
+  background-image: url('img/alcatraz_cast_jones_1080x780.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card_4 .card__left-subcard_4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(farthest-corner at 0 0, #be0c36 0%, rgba(190, 12, 54, 0.7) 100%);
+  transform: translate(100%, 100%);
+  transition: transform 0.5s ease-out;
+}
+.card_4 .card__right-subcard_4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(farthest-corner at 0 0, #be0c36 0%, rgba(190, 12, 54, 0.7) 100%);
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+.card_4 .card__title {
+  position: relative;
+  z-index: 10;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  font-size: 24px;
+  margin: 30px 30px 10px 30px;
+  color: #ffffff;
+  opacity: 0;
+}
+.card_4 .card__info {
+  position: relative;
+  z-index: 10;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0 30px 5px 30px;
+  color: #ffffff;
+  opacity: 0;
+}
+.card_4 .card__link {
+  position: absolute;
+  width: auto;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  margin: 30px;
+  color: #ffffff;
+  opacity: 0;
+}
+.card_4:hover .card__left-subcard_4 {
+  transform: translate(0, 0);
+}
+.card_4:hover .card__right-subcard_4 {
+  opacity: 1;
+  transition: 0.6s ease-out 0.2s;
+}
+.card_4:hover .card__title {
+  opacity: 1;
+  transition: 0.6s ease-out 0.5s;
+}
+.card_4:hover .card__info {
+  opacity: 0.8;
+  transition: 0.6s ease-out 0.6s;
+}
+.card_4:hover .card__link {
+  opacity: 0.8;
+  transition: 0.6s ease-out 0.7s;
+}
+
+/* V2 */
+
+.card .card__left-side_2_v2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0% 0%, 86% 0%, 26% 100%, 0% 100%);
+  transition: 0.6s ease-out;
+}
+.card .card__left-side_2_v2::after {
+  position: absolute;
+  background-color: @color-red;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.6s ease-out;
+}
+.card .card__right-side_2_v2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(84% 0%, 100% 0%, 100% 100%, 24% 100%);
+  transition: 0.6s ease-out 0.15s;
+}
+.card .card__right-side_2_v2::after {
+  position: absolute;
+  background-color: #272727;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.6s ease-out;
+}
+.card .card__img_2_v2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-image: url('img/alcatraz_cast_neill_1080x780.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 3s ease-out;
+}
+.card .card__img_2_v2::after {
+  content: '';
+  position: absolute;
+  background-color: #272727;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.6s ease-out;
+}
+.card:hover .card__left-side_2_v2 {
+  transform: rotate3d(1, 0, 0, -0.5turn);
+}
+.card:hover .card__left-side_2_v2::after {
+  opacity: 1;
+}
+.card:hover .card__right-side_2_v2 {
+  transform: rotate3d(1, 0, 0, -0.5turn);
+}
+.card:hover .card__right-side_2_v2::after {
+  opacity: 1;
+}
+.card:hover .card__img_2_v2::after {
+  opacity: 1;
+}
+
+.card_4 .card__left-side_4_v2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0% 0%, 86% 0%, 26% 100%, 0% 100%);
+  background-image: url('img/alcatraz_cast_jones_1080x780.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.6s ease-out;
+}
+.card_4 .card__right-side_4_v2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(84% 0%, 100% 0%, 100% 100%, 24% 100%);
+  transition: 0.3s ease-out;
+  background-image: url('img/alcatraz_cast_jones_1080x780.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card_4 .card__left-subcard_4_v2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(farthest-corner at 0 0, #272727 0%, rgba(39,39,39, 0.7) 100%);
+  transform: translate(100%, 100%);
+  transition: transform 0.5s ease-out;
+}
+.card_4 .card__right-subcard_4_v2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(farthest-corner at 0 0, #272727 0%, rgba(39,39,39, 0.7) 100%);
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+.card_4 .card__title {
+  position: relative;
+  z-index: 10;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  font-size: 24px;
+  margin: 30px 30px 10px 30px;
+  color: #ffffff;
+  opacity: 0;
+}
+.card_4 .card__info {
+  position: relative;
+  z-index: 10;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0 30px 5px 30px;
+  color: #ffffff;
+  opacity: 0;
+}
+.card_4 .card__link {
+  position: absolute;
+  width: auto;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  font-size: 14px;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  margin: 30px;
+  color: #ffffff;
+  opacity: 0;
+}
+.card_4:hover .card__left-subcard_4_v2 {
+  transform: translate(0, 0);
+}
+.card_4:hover .card__right-subcard_4_v2 {
+  opacity: 1;
+  transition: 0.6s ease-out 0.2s;
+}
+.card_4:hover .card__title {
+  opacity: 1;
+  transition: 0.6s ease-out 0.5s;
+}
+.card_4:hover .card__info {
+  opacity: 0.8;
+  transition: 0.6s ease-out 0.6s;
+}
+.card_4:hover .card__link {
+  opacity: 0.8;
+  transition: 0.6s ease-out 0.7s;
+}
+
+.card .card__left-side_3_v2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0% 0%, 40px 0%, 0% 40px);
+  background-image: url('img/alcatraz_cast_harner_1080x780.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.6s ease-out;
+}
+.card .card__right-side_3_v2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(39px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 39px);
+  transition: 0.3s ease-out;
+  background-image: url('img/alcatraz_cast_harner_1080x780.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card .card__right-side_3_v2 .card__title {
+  position: relative;
+  z-index: 10;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  font-size: 24px;
+  margin: 40px 20px 10px 40px;
+  color: #ffffff;
+  opacity: 0;
+}
+.card .card__right-side_3_v2 .card__info {
+  position: relative;
+  z-index: 10;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0 20px 5px 40px;
+  color: #ffffff;
+  opacity: 0;
+}
+.card .card__right-side_3_v2::after {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  background: linear-gradient(to bottom right, @color-red 0%, rgba(190,12,54, 0.7) 100%);
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 200px;
+  border-bottom-right-radius: 300px;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: left top;
+}
+
+
+.card:hover .card__left-side_3_v2 {
+  background: #272727;
+}
+.card:hover .card__right-side_3_v2 {
+  transform: translate(2px, 2px);
+}
+.card:hover .card__right-side_3_v2 .card__title {
+  opacity: 1;
+  transition: 0.6s ease-out 0.2s;
+}
+.card:hover .card__right-side_3_v2 .card__info {
+  opacity: 0.8;
+  transition: 0.6s ease-out 0.4s;
+}
+.card:hover .card__right-side_3_v2::after {
+  transform: scale(1);
+  opacity: 1;
+  border-bottom-right-radius: 0;
+  transition: opacity 0.4s ease-out, transform 0.3s ease-out, border-radius 0.3s ease-out 0.2s;
+}
+

@@ -1,0 +1,340 @@
+@import "../variables.less";
+
+.search__item {
+  display: block;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: ~"calc(25% - 2px)";
+
+  animation: slideDown 0.4s ease-in-out;
+  animation-fill-mode: backwards;
+  .item-delay(6);
+
+  &.search__item--actor,
+  &.search__item--schedule {
+    padding: 0 20px 0 0;
+    margin: 0 0 10px 0;
+    box-sizing: border-box;
+    height: 50px;
+    width: 25%;
+    vertical-align: top;
+
+    .search__section--more &:nth-child(n+5) {
+      display: none;
+    }
+    .search__section--more.is-expanded &:nth-child(n+5) {
+      display: inline-block;
+    }
+    @media screen and (max-width: 992px) {
+      width: 50%;
+    }
+    @media screen and (max-width: 540px) {
+      width: 100%;
+    }
+  }
+
+  .item-delay(@counter) when (@counter > 0) {
+    .item-delay((@counter - 1));    // next iteration
+    &:nth-child(@{counter}) {
+  	  animation-delay: (0.05s * @counter);
+  	}
+  }
+  &.search__item--schedule {
+    height: 60px;
+  }
+
+  &.search__item--post {
+    height: 10vw;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 1px;
+
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: ~"calc(100% + 1px)";
+      height: ~"calc(100% + 1px)";
+      background: linear-gradient(transparent, transparent 50%, #000000);
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.4;
+      transition: all 0.4s ease-in-out;
+    }
+    &:hover::before {
+      top: -100%;
+      height: ~"calc(200% + 1px)";
+      opacity: 0.6;
+    }
+    &.search__item--friday::before {
+      -webkit-clip-path: polygon(80% 0%, 0% 0%, 0% 100%, 0% 100%, 0% 80%);
+      background: @color-red;
+      overflow: hidden;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      transition: all 0.2s ease-in-out;
+      z-index: 100;
+      opacity: 1;
+    }
+    &.search__item--friday::after {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 100%;
+      height: 20px;
+      padding: 0 10px;
+      z-index: 100;
+      font-family: 'Shadows_Into_Light';
+      content: '';
+      font-size: 42px;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+
+      pointer-events: none;
+
+      background-image: url('img/Logo-friday.png');
+      background-size: contain;
+      background-position: left top;
+      background-repeat: no-repeat;
+    }
+    @media screen and (max-width: 992px) {
+      height: 30vw;;
+    }
+  }
+
+  &.search__item--episode,
+  &.search__item--show,
+  &.search__item--movie,
+  &.search__item--gallery,
+  &.search__item--video {
+    height: 12vw;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 1px;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: ~"calc(100% + 1px)";
+      height: ~"calc(100% + 1px)";
+      background: linear-gradient(transparent, transparent 50%, #000000);
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.4;
+      transition: all 0.4s ease-in-out;
+    }
+    &:hover::before {
+      top: -100%;
+      height: ~"calc(200% + 1px)";
+      opacity: 0.6;
+    }
+
+    @media screen and (max-width: 992px) {
+      height: 30vw;
+    }
+  }
+
+  &.search__item--movie {
+    height: 20vw;
+    width: ~"calc(33.3333333% - 2px)";
+
+    @media screen and (max-width: 992px) {
+      height: 30vw;
+      width: ~"calc(100% - 2px)";
+    }
+  }
+
+  &.is-hidden {
+    display: none;
+  }
+  &.is-visible {
+    animation: slideDown 0.4s ease-in-out;
+    animation-fill-mode: backwards;
+  }
+
+  @media screen and (max-width: 992px) {
+    width: ~"calc(100% - 2px)";
+  }
+}
+
+.search__item-time {
+  font-size: 26px;
+  display: inline-block;
+  line-height: 1.1;
+}
+.search__item-schedule {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+}
+.search__item-date {
+  font-size: 24px;
+}
+.search__item-date {
+  font-size: 14px;
+}
+.search__item-title {
+  .search__item--actor & {
+    position: relative;
+    margin-left: 60px;
+    font-size: 14px;
+    font-family: 'ApexNew_Medium';
+  }
+  .search__item--schedule & {
+    position: relative;
+    margin-left: 110px;
+    font-size: 14px;
+    font-family: 'ApexNew_Medium';
+  }
+
+  .search__item--post & {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    font-family: 'ApexNew_Medium';
+  }
+  .search__item--episode &,
+  .search__item--video & {
+    position: absolute;
+    z-index: 2;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    font-family: 'ApexNew_Medium';
+  }
+  .search__item--show &,
+  .search__item--movie &,
+  .search__item--gallery & {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    font-family: 'ApexNew_Medium';
+  }
+}
+.search__item-subtitle {
+  .search__item--actor & {
+    position: relative;
+    opacity: 1;
+    font-size: 12px;
+    margin: 1px 0 1px 60px;
+  }
+  .search__item--schedule & {
+    position: relative;
+    margin-left: 110px;
+    opacity: 1;
+    font-size: 12px;
+    color: #888888;
+  }
+  .search__item--post & {
+    display: none;
+  }
+  .search__item--episode &,
+  .search__item--video & {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    font-size: 8px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    font-family: 'ApexNew_Medium';
+    letter-spacing: 0.05em;
+  }
+}
+
+.search__item-series {
+  .search__item--actor & {
+    position: relative;
+    margin-left: 60px;
+    opacity: 0.5;
+    font-size: 12px;
+    //text-transform: uppercase;
+  }
+}
+.search__item-reference {
+  position: relative;
+  opacity: 1;
+  font-size: 12px;
+  margin: 1px 0 1px 110px;
+}
+
+.search__item-avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.search__item-active {
+  position: absolute;
+  z-index: 100;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  border-bottom: 4px solid @color-red;
+
+  //outline: 4px solid @color-red;
+  //outline-offset: -2px;
+
+  .search__item--actor & {
+    outline: none;
+    top: 12px;
+    //width: ~"calc(100% - 5px)";
+
+  }
+  .search__item--schedule & {
+    outline: none;
+    top: 12px;
+    //width: ~"calc(100% - 5px)";
+
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid @color-red;
+    z-index: 20;
+  }
+  .search__item.is-active & {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,257 @@
+@import "../variables.less";
+@import "../fonts.less";
+
+@keyframes blur {
+  0% {
+    color: #88b7a5;
+    text-shadow: 0 0 2px rgba(136, 183, 165, 0);
+  }
+  100% {
+    color: rgba(136, 183, 165, 0);
+    text-shadow: 0 0 2px #88b7a5;
+  }
+}
+
+.recap-content-container {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  text-shadow: 1px 1px 1px #000000;
+  padding: 0 30px 30px 30px;
+}
+.episodes-extras {
+  overflow: hidden;
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  transition: @transition-basic;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
+    position: relative;
+    bottom: 0;
+    transition: @transition-basic;
+  }
+}
+.episodes-extras a:hover {
+  color: #88b7a5;
+  transition: color 0.2s;
+  animation-name: blur !important;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  cursor: pointer;
+  text-decoration: none;
+  animation-fill-mode: forwards;
+}
+.episodes-about h2, .white-content-container h2 {
+  line-height: 1.5;
+  font-size: 16px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 1.5;
+    transition: @transition-basic;
+  }
+}
+.episodes-extras p {
+  font-size: 14px;
+  float: right;
+  margin-top: 4px;
+  margin-right: 10px;
+
+  @media screen and (max-width: 768px) {
+    float: none;
+  }
+}
+.episodes-extras p span {
+  font-size: 16px;
+  vertical-align: text-top;
+  margin-right: 8px;
+}
+.episodes-extras a:first-child,
+.episodes-extras a:nth-child(1n+1) {
+  margin-right: 10%;
+  display: inline-block;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 0 30px 0;
+    display: block;
+    transition: @transition-basic;
+  }
+}
+.episodes-extras a:last-child {
+  margin-right: 0px;
+  display: inline-block;
+
+  @media screen and (max-width: 768px) {
+    margin: 0;
+    display: block;
+    transition: @transition-basic;
+  }
+}
+
+/* ---------------------------- Video Player ---------------------------- */
+
+.video-play,
+.gallery {
+  opacity: 0.8;
+  margin: -10px 0 0 0;
+}
+.video-play {
+  font-size: 60px;
+  cursor: pointer;
+}
+.episode-back {
+  z-index: 3;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-bottom: -5px;
+}
+.episode-back h3 {
+  font-size: 20px !important;
+  font-weight: 600;
+  color: @color-white !important;
+}
+.episode-back span {
+  font-size: 22px;
+  vertical-align: text-top;
+  margin-right: 5px;
+}
+.episode-video {
+  width: 100%;
+  border: 1px solid black;
+}
+.episode-wrapper {
+  display: table;
+  width: auto;
+  position: relative;
+  width: 50%;
+}
+.playpause {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: auto;
+  background-size: contain;
+  background-position: center;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.slasher-placeholder {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  margin: auto;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+.additional-episodes {
+  @media screen and (max-width: 1100px) {
+    margin-top: -115px !important;
+  }
+  @media screen and (max-width: 800px) {
+    margin-top: -100px !important;
+  }
+  @media screen and (max-width: 480px) {
+    margin-top: -85px !important;
+  }
+}
+.additional-episodes-container {
+  bottom: -200px;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 4;
+  transition: @transition-basic;
+  background: #0e0e0e;
+}
+.additional-episodes-container.open {
+  bottom: 80px;
+  opacity: 1;
+  background: #0e0e0e;
+  transition: @transition-basic;
+}
+.additional-episodes-trigger {
+  position: relative;
+  z-index: 5001;
+  text-align: center;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.additional-episodes-control {
+  text-align: center;
+  transition: @transition-basic;
+}
+.additional-episodes-control.open {
+  transform: rotate(-180deg);
+  transition: @transition-basic;
+}
+.additional-episodes {
+  margin-top: -146px !important;
+  transition: @transition-basic;
+  margin-bottom: -10px;
+}
+.additional-episodes .container-fluid {
+  padding-bottom: -140px;
+  @media screen and (max-width: 1200px) {
+    padding-bottom: 110px !important;
+  }
+}
+.episodes {
+  background-size: cover !important;
+  background-position: center center !important;
+  position: relative;
+  min-height: 340px;
+  height: 17vw;
+  padding: 20px;
+}
+/*.episodes h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.episodes h4 {
+  font-size: 14px;
+  line-height: 1.5;
+}*/
+.episode-1 {
+  background: url('img/slasher-episode-1.jpg');
+}
+.episode-2 {
+  background: url('img/slasher-episode-2.jpg');
+}
+.episode-3 {
+  background: url('img/slasher-episode-3.jpg');
+}
+.episode-4 {
+  background: url('img/slasher-episode-4.jpg');
+}
+.episode-5 {
+  background: url('img/slasher-episode-5.jpg');
+}
+.episode-6 {
+  background: url('img/slasher-episode-6.jpg');
+}
+.enlarge-text {
+  font-family: 'ApexNew_Medium';
+  font-size: 16px;
+  margin-left: 22px;
+  margin-top: -2px;
+}
+video.background {
+  background: #0e0e0e;
+}
+@media screen and (min-width: 1500px) {
+  .episodes-about {
+    height: 16vw;
+  }
+}

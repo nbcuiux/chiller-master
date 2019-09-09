@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+'Futurizr': {
+'hasTouch': 'touch'
+}
+}">
+<head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="lib/google.css" rel="stylesheet" />
+    <link href="app.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/img/favicon.png">
+
+    <title>Transitions - Animation - Chiller Design Guide | DPIM UX Team</title>
+
+</head>
+
+<body class="site-material_ext_publish section-animation first-chapter color-red qp-ui" data-qp-ui="{ 'Mask': {} }">
+  <header class="qp-ui" data-qp-ui="{
+  'Peekaboo': {
+  'mobile': 72,
+  'desktop-sm': 72,
+  'default': 192
+}
+}">
+<div class="header-wrapper qp-ui" data-qp-ui="{
+'Peekaboo': {
+'mobile': 28,
+'desktop-sm': 28,
+'default': 82
+}
+}">
+<div class="header-title">      <span class="section-title">Animation</span>
+  <span class="chapter-title"><span class="title-separator">- Transitions</span></span>
+</div>
+</div>
+
+</header>
+
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab"><i class="material-icons material-spec-icon" title="Show navigation">menu</i></button>
+</nav>
+
+//= template/menu.html
+
+<div id="grid-cont">
+    <section class="grid_outer chapter">
+        <h1 class="chapter-title">Transitions</h1>
+
+        <div class="chapter-content">
+
+            <div class="chapter-intro">
+                <p>Tranistions are used to make the laoding of content more dynamic and interactive for the user.  Add subtle trasition can completetly change the experience a viewer has while on your website.</p>
+            </div>
+
+            <nav class="chapter-toc">
+                <h1>Contents</h1>
+                <!--<ul>
+                    <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#transitions-tiles">Tiles</a></li>
+                    <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#transitions-text-buttons">Text &amp; Buttons</a></li>-->
+                </ul>
+            </nav>
+
+            <div class="article-list">
+                <!-- Tile Start --> 
+                <div id="tranistions-tiles" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                    <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">Tiles</h2>
+                    <div class="article-content">
+                        <div class="module-list">
+                            <div>
+                                <section class="moduleE1">
+                                    <div class="module-body">
+                                        <p>Tiles will make up most of the new ChillerTV.com website.  To keep with the ominious feel the tiles will fade up from the shadows, loading left to right.</p>
+                                    </div>
+                                    <div class="figure-group">
+                                        <div class="figure-row">
+                                            <figure class="is-active">
+                                                <div class="media tile-transitions">
+                                                    <div class="tile-container tile-fadeUp-trigger" data-vp-repeat="true">
+                                                        <img src="img/components-tile.jpg" />
+                                                    </div>
+                                                    <div class="tile-container tile-fadeUp-trigger" data-vp-repeat="true">
+                                                        <img src="img/components-tile-2.jpg" />
+                                                    </div>
+                                                    <!--<div class="tile-container tile-fadeUp-trigger" data-vp-repeat="false">
+                                                        <img src="img/components-tile-2.jpg" />
+                                                    </div>
+                                                    <div class="tile-container tile-fadeUp-trigger" data-vp-repeat="false">
+                                                        <img src="img/components-tile.jpg" />
+                                                    </div>-->
+                                                </div>
+                                                <figcaption>
+                                                    <p>Tile Load In</p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <section class="moduleE1">
+                                <div class="module-body">
+                                    <p></p>
+                                </div>
+                                <div class="figure-group">
+                                    <div class="figure-row">
+                                        <figure class="is-active">
+                                            <div class="media tile-transitions-out">
+                                                <div class="tile-container tile-fadeOut-trigger" data-vp-repeat="true">
+                                                    <img src="img/components-tile.jpg" />
+                                                </div>
+                                                <div class="tile-container tile-fadeOut-trigger" data-vp-repeat="true">
+                                                    <img src="img/components-tile-2.jpg" />
+                                                </div>
+                                                <!--<div class="tile-container tile-fadeOut-trigger" data-vp-repeat="false">
+                                                    <img src="img/components-tile-2.jpg" />
+                                                </div>
+                                                <div class="tile-container tile-fadeOut-trigger" data-vp-repeat="false">
+                                                    <img src="img/components-tile.jpg" />
+                                                </div>-->
+                                            </div>
+                                            <figcaption>
+                                                <p>Tile Load Out</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tile End --> 
+                <!-- Text & Button Start
+                <div id="transitions-text-buttons" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                    <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">Text &amp; Buttons</h2>
+                    <div class="article-content">
+                        <div class="module-list">
+                            <div>
+                                <section class="moduleG1 clear-spacing">
+                                        <div class="figure-group">
+                                            <div class="figure-row">
+                                                <figure class="">
+                                                    <div class="media hero">
+                                                        <div class="content-container">
+                                                            <h3 class="slideDown-trigger" data-vp-repeat="true">Destination Truth</h3>
+                                                            <h4 class="slideDown-trigger" data-vp-repeat="true">Search for The Unexplained</h4>
+                                                            <button class="slideDown-trigger" data-vp-repeat="true">View Show</button>
+                                                        </div>
+                                                        <img src="img/4.png" class="tilt-effect" alt="grid02"  data-tilt-options='{ "movement": { "perspective" : 700, "translateX" : -15, "translateY" : -15, "translateZ" : 10, "rotateX" : 2, "rotateY" : 10 } }' />
+                                                    </div>
+                                                    <figcaption>
+                                                        <p>Tilt Effect Example 4 Without Transition</p>
+                                                    </figcaption>
+                                                </figure>
+                                                <figure class="is-active">
+                                                    <div class="media hero">
+                                                        <div class="content-container">
+                                                            <h3 class="slideDown-trigger" data-vp-repeat="true">Destination Truth</h3>
+                                                            <h4 class="slideDown-trigger" data-vp-repeat="true">Search for The Unexplained</h4>
+                                                            <button class="slideDown-trigger" data-vp-repeat="true">View Show</button>
+                                                        </div>
+                                                        <img src="img/4.png" class="tilt-effect" alt="grid02"  data-tilt-options='{"transition": 0.4, "movement": { "perspective" : 700, "translateX" : -15, "translateY" : -15, "translateZ" : 10, "rotateX" : 2, "rotateY" : 10 } }' />
+                                                    </div>
+                                                    <figcaption>
+                                                        <p>Tilt Effect Example 4 With Transition</p>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                Text & Button End --> 
+            </div>
+        </div>
+    </section>
+</div>
+
+
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-L section-what-is-material color-light-blue">&nbsp;</div>
+                <div class="footer-grid-L section-what-is-material color-light-blue">
+                    <a class="footer-text" href="animation-hover-interaction.html">
+                        <i class="material-icons arrow-L">arrow_back</i>
+                        <span class="direction">Previous</span>
+                        <div>Hover Interactions</div>
+                    </a>
+                </div>
+
+                <div class="footer-R section-animation color-purple">&nbsp;</div>
+                <div class="footer-grid-R section-animation color-purple">
+                    <a class="footer-text" href="animation-feedback-interaction.html">
+                        <i class="material-icons arrow-R">arrow_forward</i>
+                        <span class="direction">Next</span>
+                        <div>Feedback Interactions</div>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script src="lib/google.js"></script>
+        <script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+        <script src="lib/viewportchecker.js"></script>
+        <script src="js/menu.js"></script>
+        <script>
+            $(function () {
+                $('div.tile-fadeUp-trigger').addClass("hide-ani").viewportChecker({
+                    classToAdd: 'visible tile-fadeUp', // Class to add to the elements when they are visible
+                    offset: 100
+                });
+                $('div.tile-fadeOut-trigger').addClass("hide-ani").viewportChecker({
+                    classToAdd: 'visible tile-fadeOut', // Class to add to the elements when they are visible
+                    offset: 50
+                });
+                $('h3.slideDown-trigger, h4.slideDown-trigger, button.slideDown-trigger').addClass("hide-ani").viewportChecker({
+                    classToAdd: 'visible tile-slideDown', // Class to add to the elements when they are visible
+                    offset: 50
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Get Chiller - ChillerTV.com</title>
+    <link href="lib/bootstrap.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+    <link rel="shortcut icon" href="http://www.chillertv.com/sites/chiller/themes/zen_chiller/favicon.png" type="image/png" />
+  </head>
+  <body class="get-chiller__page">
+
+
+    //= template/navigation.html
+    <!--  Hero -->
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="hero-header">
+              <div class="header-container">
+                <div class="header-content-container">
+                  <h1 class="header">Get Chiller</h1>
+                </div>
+              </div>
+            </div>
+            <div class="hero-container full hero--full">
+              <div class="get__hero-image">
+                <img src="img/get-chiller.jpg" class="tilt-effect" alt="grid03"  data-tilt-options='{"transition": 0.4, "movement": { "perspective" : 700, "translateX" : -15, "translateY" : -15, "translateZ" : 10, "rotateX" : 2, "rotateY" : 10 } }'/>
+              </div>
+
+              <div class="get-chiller">
+                <!-- Get Chiller -->
+                <div class="get__main">
+                  <!--div class="get__main-close chiller-close-weathered"></div-->
+                  <div class="get__header">
+                    <div class="get__section get__section--zip" id="getChiller">
+                      <div class="get__title">Check Availability</div>
+                      <div class="get__controls">
+                        <input type="text" name="name" placeholder="Zip Code" class="get__input" id="zipField" />
+                        <button class="get__button is-disabled" id="searchNetwork">
+                          <span class="chiller-search-thick-weathered"></span>
+                        </button>
+                      </div>
+                      <div class="get__copy">
+                        See if Chiller is available in your area by entering your zip code.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="get__section get__section--results" id="getResults"></div>
+                </div>
+
+                <!-- Promo -->
+                <div class="promo__wrapper">
+                  <div class="promo">
+                    <div class="promo__logo">
+                      <img src="img/slasher-logo.png" class="slasher-logo" />
+                    </div>
+                    <div class="promo__copy">
+                      Thursday @ 10pm EST
+                    </div>
+                    <a class="promo__action" href="slasher.html">
+                      <div class="button-container explore-button">
+                        <div class="button1-left explore-button">
+                            <div class="button">Explore</div>
+                        </div>
+                        <div class="button1-right explore-button">
+                            <div class="button">Explore</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- End of Promo -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Ad banner -->
+    <section>
+      <div class="row" style="margin-bottom: -20px;">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 horizontal-ad background--dark">
+          <img src="img/horizontal-ad.jpg" />
+        </div>
+      </div>
+    </section>
+    <div class="background--dark">
+      <!-- Footer -->
+      //= template/footer.html
+    </div>
+
+    <!-- Body -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+    <script src="lib/jquery.elastic.source.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/animations.js"></script>
+    <script src="js/side-navigation.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/get-chiller.js"></script>
+    <script>
+    if ( $(window).width() > 992) {
+      $(function () {
+          $('div.slideDown-trigger , p.slideDown-trigger , h4.slideDown-trigger , img.slideDown-trigger').addClass("hide-ani").viewportChecker({
+              classToAdd: 'visible slideDown', // Class to add to the elements when they are visible
+              offset: 75
+          });
+      });
+    }
+    else {
+
+    }
+    </script>
+  </body>
+</html>

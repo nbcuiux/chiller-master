@@ -1,0 +1,145 @@
+.shiver {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  margin: 0 auto;
+}
+.shiver .shiver_animation {
+  animation: none;
+}
+.shiver:hover .shiver_animation {
+  animation-iteration-count: infinite;
+  animation-duration: 0.1s;
+}
+.shiver__back,
+.shiver__front {
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.shiver__back {
+  position: relative;
+}
+.shiver__front,
+.shiver__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*
+ * Keyframes
+ */
+@keyframes shiver_h_1 {
+  0% {
+    transform: translateX(-1px);
+  }
+  50% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(-1px);
+  }
+}
+@keyframes shiver_h_2 {
+  0% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(-2px);
+  }
+}
+@keyframes shiver_h_3 {
+  0% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(-3px);
+  }
+}
+@keyframes shiver_v_1 {
+  0% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
+}
+@keyframes shiver_v_2 {
+  0% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+@keyframes shiver_v_3 {
+  0% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes shiver_r_1 {
+  0% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: translateX(1deg);
+  }
+  100% {
+    transform: translateX(-1deg);
+  }
+}
+@keyframes shiver_r_2 {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: translateX(2deg);
+  }
+  100% {
+    transform: translateX(-2deg);
+  }
+}
+@keyframes shiver_r_3 {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: translateX(3deg);
+  }
+  100% {
+    transform: translateX(-3deg);
+  }
+}
+@keyframes shiver-link {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: translateX(2deg);
+  }
+  100% {
+    transform: translateX(-2deg);
+  }
+}

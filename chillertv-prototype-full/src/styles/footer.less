@@ -1,0 +1,197 @@
+/* ----------------------------  Footer ---------------------------- */
+.footer {
+  position: relative;
+  z-index: 999;
+  margin-top: -1px;
+}
+.footer .row {
+  margin-top: -100px;
+}
+.footer .container-fluid {
+  max-width: 1200px;
+  padding-bottom: 160px;
+}
+.footer ul,
+footer ul.social,
+.footer ul.links {
+  padding: 0;
+  margin: 0;
+}
+.footer ul li,
+.footer ul.social li,
+.footer ul.links li {
+  list-style-type: none;
+  font-weight: 200;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 2;
+}
+.footer ul.social li span {
+  list-style-type: none;
+  font-weight: 200;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 30px;
+  margin-right: 5px;
+}
+.footer ul.links li a,
+.footer ul.links li a:visited,
+.footer ul.links li a:active,
+.footer ul.social li a,
+.footer ul.social li a:visited,
+.footer ul.social li a:active {
+  color: rgba(255, 255, 255, 0.5) !important;
+  display: inline-block;
+}
+.footer ul.links li a,
+.footer ul.links li a:visited,
+.footer ul.links li a:active,
+.footer ul.social li a,
+.footer ul.social li a:visited,
+.footer ul.social li a:active,
+.side-navigation ul li a,
+.side-navigation ul li a:visited,
+.side-navigation ul li a:active,
+.series-navigation ul li a,
+.series-navigation ul li a:visited,
+.series-navigation ul li a:active {
+  transition: text-shadow 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.footer ul.links li a:hover {
+  animation-name: shiver-link-white !important;
+  animation-duration: 100ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 3;
+  cursor: pointer;
+  text-decoration: none;
+}
+.footer img {
+  max-width: 83px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.footer-container:before,
+.footer-container:after {
+  content: "";
+  display: table;
+}
+.footer-container:after {
+  clear: both;
+}
+.footer .syfy img {
+  max-width: 86px;
+  width: 100%;
+  height: auto;
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
+.footer .float-left:first-child  {
+  margin-right: 6%;
+}
+.footer .float-left:nth-child(2) {
+  margin-right: 10%;
+}
+.footer .float-left:nth-child(3) {
+  margin-right: 10%;
+}
+.footer.diagonal {
+  overflow: hidden;
+  margin-top: 0%;
+  opacity: 1;
+}
+.footer h4 {
+  font-size: 14px;
+  color: #FFFFFF;
+  font-family: 'chiller_sansbold';
+  margin: 17px 0 15px;
+}
+.footer ul.legal li {
+  color: #545454;
+}
+.footer-container br {
+  display: none;
+}
+.footer.video {
+  background: radial-gradient(at 41% top, #202020, #000000);
+  height: 100%;
+}
+.footer.video .row, .footer.video .row.additional-episodes {
+  margin-top: 0 !important;
+}
+.footer.video .row.additional-episodes {
+  margin-bottom: 20px !important;
+}
+.footer.video .container-fluid {
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 1199px) {
+  .footer-container {
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 524px) {
+  .footer .float-left {
+    height: 160px;
+  }
+  .footer .float-left:first-child, .footer .float-left:nth-child(2), .footer .float-left:nth-child(3) {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 442px) {
+  .footer .float-left:first-child {
+    margin-right: 30%;
+    transition: all 0.05s ease-in-out;
+  }
+  .footer .float-left:nth-child(3) {
+    margin-right: 34%;
+    transition: all 0.05s ease-in-out;
+    margin-bottom: 0;
+  }
+  .footer .float-left:nth-child(2){
+    margin-bottom: 0;
+  }
+  .footer .float-left:nth-child(2),
+  .footer .float-left:nth-child(4) {
+    margin-right: 0;
+    transition: all 0.05s ease-in-out;
+  }
+  .footer .float-right img {
+      display: none;
+  }
+}
+.diagonal-angle {
+  z-index: 1;
+  padding: 6em 0 10em 0;
+  margin: 125px 0 -100px 0;
+  position: relative;
+}
+.diagonal-angle::before {
+  position: absolute;
+  content: '';
+  pointer-events: none;
+  top: 0;
+  z-index: -1;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(at 41% top, #202020, #000000);
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  -webkit-transform-origin: 3% 0;
+  transform-origin: 3% 0;
+  left: -40%;
+  box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.1);
+}
+.diagonal-angle::after {
+  top: 0;
+  z-index: -1;
+  width: 150%;
+  height: 100%;
+  background: #FFFFFF;
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  -webkit-transform-origin: 3% 0;
+  transform-origin: 3% 0;
+  content: '';
+}

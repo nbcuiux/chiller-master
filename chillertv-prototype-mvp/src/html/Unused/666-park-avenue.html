@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>666 Park Avenue - ChillerTV.com</title>
+    <link href="lib/bootstrap.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+  </head>
+  <body>
+
+//= template/navigation.html
+    <!--  Hero -->
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 0px;">
+            <div class="hero-container six-park-hero">
+              <div class="tile-content-container">
+                <h4 class="slideDown-trigger" style="animation-delay: 0.2s">666 Park Avenue</h4>
+                <p class="slideDown-trigger" style="animation-delay: 0.4s">Jane and Henry are a young couple from the Midwest who are hired to manage The Drake, a luxurious apartment building located on the Upper East Side in Manhattan. However, they soon discover that things are not exactly what they seem. Residents seem to come and go very mysteriously, and the building owners Gavin and Olivia Doran seem to be very active in their tenants' lives. As Jane and Henry explore the building, they uncover the shocking truth behind its origins, while the other residents deliberate the prices they are willing to pay to achieve happiness.</p>
+                <br/>
+                <p class="slideDown-trigger" style="animation-delay: 0.6s">Based on the novel 666 Park Avenue by Gabriella Pierce, the show stars Rachael Taylor, Dave Annable, Robert Buckley, Mercedes Masohn, Helena Mattson, Erik Palladino, Samantha Logan, Vanessa Williams and Terry O'Quinn. The series is developed by David Wilcox.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer diagonal" style="margin-top: -100px;">
+      <div class="diagonal-angle">
+        <div class="row">
+          <div class="container-fluid">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="footer-container">
+                <div class="float-left">
+                  <img src="img/chiller-nav-logo.png" />
+                  <ul class="links">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about-chiller.html">About Chiller</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="closed-captioning.html">Closed Captioning</a></li>
+                  </ul>
+                </div>
+                <div class="float-left">
+                  <img src="img/chiller-nav-logo.png" style="visibility: hidden" />
+                  <ul class="links">
+                    <li><a href="friday.html">The Friday 13</a></li>
+                    <li><a href="faq.html">FAQs<a/></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                  </ul>
+                </div>
+                <div class="float-left syfy">
+                  <img src="img/syfy-logo.png" />
+                  <ul class="links">
+                    <li><a href="http://www.syfy.com/">Syfy.com</a></li>
+                    <li><a href="http://www.syfygames.com/">Syfy Games</a></li>
+                    <li><a href="http://www.blastr.com/">Blastr</a></li>
+                  </ul>
+                </div>
+                <div class="float-left syfy">
+                  <h4>Follow Us</h4>
+                  <ul class="social">
+                    <li><span class="chiller-facebook-weathered"></span><a href="https://www.facebook.com/chillertv">Facebook</a></li>
+                    <li><span class="chiller-twitter-weathered"></span><a href="https://twitter.com/ChillerTv">Twitter</a></li>
+                    <!--<li><span class="chiller-instagram-weathered"></span><a href="">Instagram</a></li>-->
+                    <li><span class="chiller-youtube-weathered"></span><a href="">Youtube</a></li>
+                  </ul>
+                </div>
+                <div class="float-right syfy">
+                  <img src="img/syfy-logo.png" style="visibility: hidden" />
+                  <ul class="legal">
+                    <li>&copy;2015 Chiller. All right reserved.</li>
+                    <li>A divisions of NBCUniversal</li>
+                    <li><a href="http://www.comcast.com/independentprogramming" target="_blank">Independent Programming Report</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Body -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/animations.js"></script>
+    <script src="js/side-navigation.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(window).on( 'resize', function () {
+            $('.hero-container').height( $(window).height() * 1.2);
+        }).resize();
+      });
+
+      $(function () {
+          $('div.slideDown-trigger , p.slideDown-trigger , h4.slideDown-trigger').addClass("hide-ani").viewportChecker({
+              classToAdd: 'visible slideDown', // Class to add to the elements when they are visible
+              offset: 75
+          });
+      });
+    </script>
+  </body>
+</html>

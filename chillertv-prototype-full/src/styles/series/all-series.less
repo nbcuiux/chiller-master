@@ -1,0 +1,126 @@
+.tile-container .the-boy-logo {
+  max-width: 200px;
+  margin-bottom: 0px;
+}
+.animal-logo {
+  max-width: 190px;
+}
+.beneath-logo {
+  max-height: 29px;
+}
+.deep-logo {
+  max-height: 80px;
+}
+.monkeys-paw-logo {
+  max-height: 70px;
+  margin-bottom: 0px;
+}
+.park-avenue {
+  background: url('img/666-park-avenue-2.jpg');
+}
+.alcatraz {
+  background: url('img/alcatraz-2.jpg');
+}
+.beyond-belief {
+  background: url('img/beyond-belief.jpg');
+}
+.blade {
+  background: url('img/show-tile-4.jpg');
+}
+.cult {
+  background: url('img/cult.jpg');
+}
+.destination-truth {
+  background: url('img/destination-truth.jpg');
+}
+.animal {
+  background: url('img/animal.jpg');
+}
+.beneath {
+  background: url('img/beneath.jpg');
+}
+.deep {
+  background: url('img/deep-in-the-darkness.jpg');
+}
+.monkeys-paw {
+  background: url('img/the-monkeys-paw.jpg');
+}
+
+.show-tile .slice-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0% 25%, 100% 65%, 0% 65%);
+  transition: 0.3s ease-out;
+}
+.show-tile .slice-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0% 25%, 100% 65%, 100% 0);
+  transition: 0.3s ease-out;
+}
+.show-tile.beyond-belief .slice-left {
+  -webkit-clip-path: polygon(0% 25%, 100% 70%, 0% 70%);
+}
+.show-tile.beyond-belief .slice-right {
+  -webkit-clip-path: polygon(0% 25%, 100% 70%, 100% 0);
+}
+.park-avenue-logo {
+  max-width: 200px;
+}
+.alcatraz-logo {
+  max-width: 200px;
+}
+.beyond-belief-logo {
+  max-width: 150px;
+}
+.blade-logo {
+  max-width: 160px;
+}
+.cult-logo {
+  max-width: 180px;
+  margin-bottom: -20px !important;
+}
+.slasher-logo {
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+.destination-truth-logo {
+  max-width: 180px;
+}
+.show-tile .destination-truth-logo2 {
+  min-height: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  background-image: url('img/destination-truth-logo.png');
+  transition: 0.3s ease-out;
+  background-size: contain;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center 40%;
+}
+.hero-container-70 .the-boy-logo {
+  max-width: 280px;
+  margin-bottom: 10px;
+}
+
+.slasher-episode {
+  background: transparent;
+  height: 90vh;
+}
+
+@media screen and (min-width: 2100px) {
+  .series-tile .tile-container, #albums .tile-container {
+    height: 22vw;
+  }
+  .series-tile.ad {
+    margin: 0;
+  }
+}

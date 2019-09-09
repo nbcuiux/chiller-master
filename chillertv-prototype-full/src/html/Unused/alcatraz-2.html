@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alcatraz - ChillerTV.com</title>
+    <link href="lib/bootstrap.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+  </head>
+  <body>
+
+//= template/navigation.html
+    <!--  Hero -->
+    <section style="margin-bottom: -100px;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 0px;">
+            <div class="hero-container alcatraz-hero-v2">
+              <div class="syn-content-container light">
+                <div class="syn-left">
+                  <h4 class="slideDown-trigger" style="animation-delay: 0.2s">Alcatraz</h4>
+                  <p class="slideDown-trigger" style="animation-delay: 0.4s">Jane and Henry are a young couple from the Midwest who are hired to manage The Drake, a luxurious apartment building located on the Upper East Side in Manhattan. However, they soon discover that things are not exactly what they seem. Residents seem to come and go very mysteriously, and the building owners Gavin and Olivia Doran seem to be very active in their tenants' lives. As Jane and Henry explore the building, they uncover the shocking truth behind its origins, while the other residents deliberate the prices they are willing to pay to achieve happiness.</p>
+                  <br/>
+                  <p class="slideDown-trigger" style="animation-delay: 0.6s">Based on the novel 666 Park Avenue by Gabriella Pierce, the show stars Rachael Taylor, Dave Annable, Robert Buckley, Mercedes Masohn, Helena Mattson, Erik Palladino, Samantha Logan, Vanessa Williams and Terry O'Quinn. The series is developed by David Wilcox.</p>
+                </div>
+                <div class="syn-right">
+                  <div class="tile-content-container">
+                    <div style="font-size: 60px; opacity: 0.8; margin: -10px 0 0 0;" class="chiller-youtube-weathered"></div>
+                  </div>
+                  <img src="img/alcatraz-hero-2.jpg"  class="tilt-effect" alt="grid03"  data-tilt-options='{"transition": 0.4, "movement": { "perspective" : 700, "translateX" : -15, "translateY" : -15, "translateZ" : 10, "rotateX" : 2, "rotateY" : 10 } }' />
+                </div>
+                <div style="clear: both"></div>
+                <br/>
+                <h3>Cast</h3>
+                <div class="syn-cast-container">
+                  <img src="img/alcatraz-cast-1.jpg" />
+                </div>
+                <div class="syn-cast-container">
+                  <img src="img/alcatraz-cast-2.jpg" />
+                </div>
+                <div class="syn-cast-container">
+                  <img src="img/alcatraz-cast-3.jpg" />
+                </div>
+                <div class="syn-cast-container">
+                  <img src="img/alcatraz-cast-4.jpg" />
+                </div>
+                <div class="syn-cast-container">
+                  <img src="img/alcatraz-cast-5.jpg" />
+                </div>
+                <div class="syn-cast-container">
+                  <img src="img/alcatraz-cast-6.jpg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+//= template/footer.html
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/animations.js"></script>
+    <script src="js/side-navigation.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(window).on( 'resize', function () {
+            $('.hero-container').height( $(window).height() * 1.2);
+        }).resize();
+      });
+
+      $(function () {
+          $('div.slideDown-trigger , p.slideDown-trigger , h4.slideDown-trigger').addClass("hide-ani").viewportChecker({
+              classToAdd: 'visible slideDown', // Class to add to the elements when they are visible
+              offset: 75
+          });
+      });
+    </script>
+  </body>
+</html>

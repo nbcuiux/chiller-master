@@ -1,0 +1,49 @@
+@import "../variables.less";
+
+
+.search__hints {
+  position: relative;
+  padding: 20px 60px 0 90px;
+
+  @media screen and (max-width: 992px) {
+    padding-left: 60px;
+  }
+}
+
+.search__hints-title {
+  padding: 10px 0;
+
+  color: @color-red;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-family: 'ApexNew_Bold';
+}
+
+.search__hints-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.search__hint-item {
+  display: inline-block;
+  position: relative;
+  padding: 15px 0;
+  text-transform: capitalize;
+  font-size: 24px;
+  width: auto;
+  opacity: 0.9;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+    transition: color 0.2s;
+    animation-name: shiver-link;
+    animation-duration: 100ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+  }
+}

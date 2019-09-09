@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'ApexNew_Book';
+  src: url('fonts/ApexNew/apexnew-book-webfont.eot');
+  src: url('fonts/ApexNew/apexnew-book-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/ApexNew/apexnew-book-webfont.woff2') format('woff2'), url('fonts/ApexNew/apexnew-book-webfont.woff') format('woff'), url('fonts/ApexNew/apexnew-book-webfont.ttf') format('truetype'), url('fonts/ApexNew/apexnew-book-webfont.svg#apex_newbook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ApexNew_Light';
+  src: url('fonts/ApexNew/apexnew-light-webfont.eot');
+  src: url('fonts/ApexNew/apexnew-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/ApexNew/apexnew-light-webfont.woff2') format('woff2'), url('fonts/ApexNew/apexnew-light-webfont.woff') format('woff'), url('fonts/ApexNew/apexnew-light-webfont.ttf') format('truetype'), url('fonts/ApexNew/apexnew-light-webfont.svg#apex_newlight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chiller';
+  src: url('fonts/Icons/chiller-icons.eot?pk6rlh');
+  src: url('fonts/Icons/chiller-icons.eot?pk6rlh#iefix') format('embedded-opentype'), url('fonts/Icons/chiller-icons.ttf?pk6rlh') format('truetype'), url('fonts/Icons/chiller-icons.woff?pk6rlh') format('woff'), url('fonts/Icons/chiller-icons.svg?pk6rlh#chiller') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="chiller-"],
+[class*=" chiller-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'chiller' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.chiller-mvp:before {
+    content: "\e91d";
+}
+.chiller-full:before {
+    content: "\e91e";
+}
+.chiller-guide:before {
+    content: "\e91f";
+}
+.chiller-uat:before {
+    content: "\e92b";
+}
+
+
+.intro-page {
+  position: relative;
+  font-family: 'ApexNew_Book';
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #000710;
+  background-image: url('img/bg.jpg');
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.intro__promo {
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.intro__image {
+  position: absolute;
+  /*max-height: 65vh;*/
+  max-width: 60vw;
+  left: 50%;
+  top: 20%;
+  margin-bottom: 20%;
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.8), 0 5px 20px 0 rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.intro__left {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 25%;
+  transform: translate(-50%, 0);
+  padding: 20px 0;
+  height: 100%;
+}
+
+.intro__nav {
+  position: relative;
+  top: calc(50% - 20px);
+  transform: translate(0, -50%);
+  min-width: 200px;
+}
+
+.intro__logo {
+    position: relative;
+    left: 0;
+    font-size: 36px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+    letter-spacing: 0.1em;
+}
+.logo__image {
+    height: 60px;
+}
+
+.intro__nav-list {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 60px 0;
+}
+
+.intro__nav-item {
+  position: relative;
+  font-weight: 300;
+  font-size: 18;
+  padding: 14px 4px;
+}
+
+
+.chrome-link {
+    position: relative;
+    font-family: 'ApexNew_Light';
+    text-decoration: none;
+    width: 300px;
+    color: #ffffff;
+    opacity: 1;
+}
+.chrome-link__logo {
+    display: inline-block;
+    margin-top: -1px;
+    vertical-align: top;
+
+    width: 15px;
+    height: 15px;
+
+    background-image: url('img/chrome-logo-c.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.chrome-link__text {
+    width: 150px;
+    display: inline-block;
+    margin-left: 4px;
+    font-size: 12px;
+    line-height: 1.3;
+    vertical-align: top;
+
+    opacity: 0.8;
+}
+
+/**
+ *
+ * New variables names
+ *
+ */
+.intro__nav-item-link {
+    position: relative;
+    display: inline-block;
+  text-decoration: none;
+  color: rgba(255,255,255, 0.8);
+  cursor: pointer;
+  text-decoration: none;
+}
+.intro__nav-item-link:hover {
+    animation-name: shiver-link-white !important;
+    animation-duration: 100ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+}
+
+@keyframes shiver-link-white {
+  0% {
+    color: rgba(255, 255, 255, 0.1);
+    transform: rotate(-4deg);
+    text-shadow: 0 0 2px #ffffff;
+  }
+  50% {
+    color: rgba(255, 255, 255, 0.1);
+    transform: translateX(4deg);
+    text-shadow: 0 0 2px #ffffff;
+  }
+  100% {
+    color: rgba(255, 255, 255, 0.1);
+    transform: translateX(-2deg);
+    text-shadow: 0 0 2px #ffffff;
+  }
+}
+
+.intro__nav-item-text {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  margin-left: 8px;
+  letter-spacing: 0.05em;
+}

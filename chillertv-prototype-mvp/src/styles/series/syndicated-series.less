@@ -1,0 +1,36 @@
+@import "../variables.less";
+@import "../fonts.less";
+
+.syndicated-hero {
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translateY(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.syndicated-hero img {
+  max-width: 400px;
+  height: auto;
+  width: 100%;
+}
+.syndicated-about {
+  list-style: none;
+  padding: 50px;
+  transition: @transition-basic;
+
+  @media screen and (max-width: 768px) {
+    padding: 40px;
+  }
+}
+.six-park-hero .tile-content-container,
+.slasher-about .tile-content-container {
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 25px;
+  padding: 20px;
+  text-align: center !important;
+}
+.syn-content-container.light p {
+  font-weight: 600;
+}

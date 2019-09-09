@@ -1,0 +1,61 @@
+.tilt,
+.full .tilt,
+.stacked-tile .tilt {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  margin: 0 auto;
+}
+#image-tile .tilt {
+  min-height: 450px;
+}
+.tilt__back,
+.tilt__front {
+  width: 140%;
+  height: 140%;
+  position: relative;
+  margin: -14% 0 0 -14%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.full .tilt__back,
+.full .tilt__front {
+  width: 120%;
+  height: 140%;
+  position: relative;
+  margin: -4% 0 0 -9%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.stacked-tile .tilt__back,
+.stacked-tile .tilt__front {
+  width: 120%;
+  height: 140%;
+  position: relative;
+  margin: -4% 0 0 -9%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.tilt__back,
+.full .tilt__back, 
+.stacked-tile .tilt__back {
+  position: relative;
+}
+.tilt__front,
+.full .tilt__front, 
+.stacked-tile .tilt__front {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

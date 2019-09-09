@@ -1,0 +1,180 @@
+* {
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 0.5px;
+}
+
+body {
+	background: radial-gradient(at 41% top, #202020, #000000);
+}
+
+.content {
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    position: relative;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translateY(-50%, -50%);
+}
+
+	.content img {
+		width: 70%; 
+		height: auto;
+		margin-top: -200px;
+		margin-bottom: 0px;
+	}
+
+/* ---------------------------- Buttons ---------------------------- */
+
+.button {
+    text-shadow: none;
+    background: transparent;
+    border-radius: 1px;
+    text-transform: uppercase;
+    font-size: 16px;
+    position: absolute;
+    font-weight: 500;
+    font-family: 'ApexNew_Book'; 
+	padding: 7px 12px;
+	pointer-events: visible !important;
+	left:0;
+	right:0;
+}
+
+.button-container {
+	width: 218px;
+	height: 35px;
+	position: relative;
+	cursor: pointer;
+	transition: .2s ease-in-out;
+	margin: 0 auto;
+	float: left;
+}
+
+.button-container .button1-left {
+	-webkit-clip-path: polygon(0% 0%, 16px 0%, 0% 16px);
+	overflow: hidden;
+	position: absolute;
+	width: 218px;
+	height: 35px;
+	background: transparent;
+	border: 1px solid #ffffff;
+	transition: .5s ease-in-out;
+	top: 0;
+	left: 0;
+}
+
+.button-container:hover .button1-left {
+	background: #be0c36;
+	border: 1px solid #be0c36;
+	transition: 0.5s ease-in-out;
+	top: -1px;
+	left: -1px;
+}
+
+.button-container .button1-right { 
+	-webkit-clip-path: polygon(15px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 15px);
+	overflow: hidden;
+	position: absolute;
+	width: 218px;
+	height: 35px;
+	background: transparent;
+	transition: .5s ease-in-out;
+	border: 1px solid #ffffff;
+	top: 0;
+	left: 0;
+}
+
+.button-container:hover .button1-right {
+	transition: .5s ease-in-out;
+	border: 1px solid #be0c36;
+	background: #be0c36;
+	top: 1px;
+	left: 1px;
+}
+
+.guide {
+	margin: 0 100px 0 0;
+}
+
+.buttons {
+	margin: 0 auto;
+	text-align: center;
+    max-width: 536px;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'ApexNew_Bold';
+    src: url('fonts/ApexNew/apexnew-bold-webfont.eot');
+    src: url('fonts/ApexNew/apexnew-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ApexNew/apexnew-bold-webfont.woff2') format('woff2'),
+         url('fonts/ApexNew/apexnew-bold-webfont.woff') format('woff'),
+         url('fonts/ApexNew/apexnew-bold-webfont.ttf') format('truetype'),
+         url('fonts/ApexNew/apexnew-bold-webfont.svg#apex_newbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ApexNew_Book';
+    src: url('fonts/ApexNew/apexnew-book-webfont.eot');
+    src: url('fonts/ApexNew/apexnew-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ApexNew/apexnew-book-webfont.woff2') format('woff2'),
+         url('fonts/ApexNew/apexnew-book-webfont.woff') format('woff'),
+         url('fonts/ApexNew/apexnew-book-webfont.ttf') format('truetype'),
+         url('fonts/ApexNew/apexnew-book-webfont.svg#apex_newbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ApexNew_Light';
+    src: url('fonts/ApexNew/apexnew-light-webfont.eot');
+    src: url('fonts/ApexNew/apexnew-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ApexNew/apexnew-light-webfont.woff2') format('woff2'),
+         url('fonts/ApexNew/apexnew-light-webfont.woff') format('woff'),
+         url('fonts/ApexNew/apexnew-light-webfont.ttf') format('truetype'),
+         url('fonts/ApexNew/apexnew-light-webfont.svg#apex_newlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ApexNew_Medium';
+    src: url('fonts/ApexNew/apexnew-medium-webfont.eot');
+    src: url('fonts/ApexNew/apexnew-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ApexNew/apexnew-medium-webfont.woff2') format('woff2'),
+         url('fonts/ApexNew/apexnew-medium-webfont.woff') format('woff'),
+         url('fonts/ApexNew/apexnew-medium-webfont.ttf') format('truetype'),
+         url('fonts/ApexNew/apexnew-medium-webfont.svg#apex_newmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (max-width: 768px) {
+	.button-container {
+		float: none;
+	}
+
+	.content img {
+		width: 100%;
+		margin-top: -300px;
+	}
+
+	.guide {
+		margin: 0 auto 40px auto;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.button-container {
+		float: none;
+	}
+
+
+	.guide {
+		margin: 0 auto 40px auto;
+	}
+}

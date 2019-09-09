@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Closed Captioning - ChillerTV.com</title>
+    <link href="lib/bootstrap.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+    <link rel="shortcut icon" href="http://www.chillertv.com/sites/chiller/themes/zen_chiller/favicon.png" type="image/png" />
+  </head>
+  <body>
+
+//= template/navigation.html
+    <!--  Body -->
+    <section class="no-hero">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 header-container">
+            <div class="header-content-container">
+              <h1 class="header">Closed Captioning</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 slideDown-trigger white-content-container white">
+            <h4 class="slideDown-trigger">Closed Captioning</h4>
+            <div>
+              <p class="slideDown-trigger">Chiller is pleased to offer closed captioning on long-form content and certain other content that it makes available on television and online via websites and apps on mobile devices. To report an issue or concern regarding closed captioning on Chiller programs viewed on television or online, please contact us at <a href="mailto:affiliate.operations@nbcuni.com">affiliate.operations@nbcuni.com</a> or 1-866-787-6228.</p>
+              <p class="slideDown-trigger">To assist us in resolving the issue, please provide the following information when you contact us for assistance with captions:</p>
+              <ul class="bullet">
+                <li class="slideDown-trigger">Your name, address, telephone number and email address</li>
+                <li class="slideDown-trigger">Your preferred method of contact (phone or email)</li>
+                <li class="slideDown-trigger">The name of the program with the captioning issue</li>
+                <li class="slideDown-trigger">A brief description of the captioning issue, including the date and time you experienced the problem</li>
+                <li class="slideDown-trigger">If you are watching on television, please provide the name of your pay TV provider</li>
+                <li class="slideDown-trigger">If you are watching online, please identify the device and brand (e.g., computer, tablet, smartphone) and software (including version) you are using.</li>
+              </ul>
+              <p class="slideDown-trigger">If you wish to submit a written complaint, please send it to:</p>
+              <p class="slideDown-trigger">Margaret Tobey<br/>Vice President, Regulatory Affairs<br/>NBCUniversal 300 New Jersey Avenue, NW<br/>Suite 700<br/>Washington, DC 20001</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 additional-recaps" id="sidebar">
+            <a href="#" class="ad--s slideDown-trigger link-wrapper">
+              <img src="img/ad-v3.png" class="ad__img ad__img--300"/>
+            </a>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 slideDown-trigger">
+              <a>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <div class="tile-container additional-info">
+                    <div class="tile-bottom-content-container">
+                      <div class="caption">All New</div>
+                      <h4>Slasher Episode 09</h4>
+                      <h3>Short description of episode is placed here</h3>
+                      <div class="button-container recap-button">
+                        <div class="button1-left recap-button">
+                          <div class="button">Read Recap</div>
+                        </div>
+                        <div class="button1-right recap-button">
+                          <div class="button">Read Recap</div>
+                        </div>
+                      </div>
+                    </div>
+                    <img src="img/slasher-image-2.jpg" class="tilt-effect" alt="grid03"  data-tilt-options='{"transition": 0.4, "movement": { "perspective" : 700, "translateX" : -15, "translateY" : -15, "translateZ" : 10, "rotateX" : 2, "rotateY" : 10 } }' />
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row" style="margin-bottom: -20px;">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 horizontal-ad">
+          <img src="img/horizontal-ad.jpg" />
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+//= template/footer.html
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/animations.js"></script>
+    <script src="js/side-navigation.js"></script>
+    <script src="js/sticky-kit.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+      //$(function () {
+      //    $('div.slideDown-trigger, p.slideDown-trigger , h4.slideDown-trigger , li.slideDown-trigger').addClass("hide-ani").viewportChecker({
+      //        classToAdd: 'visible slideDown', // Class to add to the elements when they are visible
+      //        offset: 75
+      //    });
+      //});
+      $("#sidebar").stick_in_parent({
+          offset_top: 150
+      });
+    </script>
+  </body>
+</html>

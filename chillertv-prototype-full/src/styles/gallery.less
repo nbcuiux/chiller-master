@@ -1,0 +1,238 @@
+@import "variables.less";
+@import "fonts.less";
+
+.gallery {
+  font-size: 60px;
+  border-radius: 2px;
+}
+.fancybox-social {
+  z-index: 9999;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: @transition-basic;
+
+  @media screen and (max-width: 768px) {
+    top: -50px;
+    left: 10px;
+  }
+}
+
+.fancybox-social .twitter {
+  color: @color-white;
+  font-size: 19px;
+  padding: 10px;
+  border-left: 1px solid @color-white;
+  border-right: 1px solid @color-white;
+  border-bottom: 1px solid @color-white;
+  display: block;
+  opacity: 0.7;
+
+  @media screen and (max-width: 768px) {
+    float: left;
+    margin-left: -1px;
+    border-top: 1px solid #ffffff;
+    border-left: none;
+    padding: 9px 10px;
+  }
+}
+
+.fancybox-social .twitter:hover, .fancybox-social .facebook:hover {
+  opacity: 1;
+  background: @color-white;
+  color: #bbb;
+}
+
+.fancybox-social .facebook {
+  color: @color-white;
+  font-size: 17px;
+  padding: 10px;
+  border: 1px solid @color-white;
+  display: block;
+  opacity: 0.7;
+
+  @media screen and (max-width: 768px) {
+    float: left;
+  }
+}
+
+#photo-gallery .owl-carousel.owl-loaded {
+  background: transparent !important;
+  padding: 0 0 0 25px;
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    height: 560px;
+  }
+}
+
+#photo-gallery .target {
+  height: 70vh;
+  min-height: 550px;
+  display: none;
+}
+
+#photo-gallery .social-container {
+  margin: 65px 0 -10px 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+
+  @media screen and (max-width: 768px) {
+    left: 0px;
+    width: 100%;
+    margin: 30px 0 -10px 0;
+  }
+}
+
+#photo-gallery .social-container ul li {
+  height: 40px;
+  width: 42px;
+
+  @media screen and (max-width: 992px) {
+    display: block;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: inline-block;
+  }
+}
+
+#photo-gallery .social-container .facebook {
+  color: #bbb;
+  font-size: 17px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  transition: @transition-basic;
+
+  @media screen and (max-width: 768px) {
+    padding: 10px 10px 10px 10px;
+    margin-right: -3px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+#photo-gallery .social-container .twitter {
+  color: #bbb;
+  font-size: 19px;
+  padding: 10px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  transition: @transition-basic;
+
+  @media screen and (max-width: 992px) {
+    margin-top: -1px;
+  }
+
+  @media screen and (max-width: 768px) {
+    border-left: none;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 10px 10px 10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+#photo-gallery .owl-prev, #photo-gallery .owl-next {
+  font-size: 17px;
+  opacity: 0.4;
+  top: 28px;
+  trasition: @transition-basic;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 768px) {
+    top: 145px;
+  }
+}
+
+#photo-gallery .owl-next {
+  left: 29%;
+  width: 30px;
+
+  @media screen and (max-width: 768px) {
+    right: 25px;
+    width: auto;
+    left: auto;
+  }
+}
+
+#photo-gallery .chiller-close-weathered {
+  font-size: 15px;
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  color: @color-white;
+  opacity: 0.4;
+  transition: @transition-basic;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    right: 25px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+#photo-gallery .photo-count {
+  color: #888;
+  margin-bottom: 15px;
+  font-size: 12px;
+
+  @media screen and (min-width: 2100px) {
+    font-size: 14px;
+  }
+}
+
+#photo-gallery .photo-description {
+  margin-top: -100px;
+  margin-left: 70px;
+  width: 60%;
+
+  @media screen and (min-width: 2100px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0;
+    width: 100%
+  }
+}
+
+.photos__info__copy.grey {
+  padding: 0px 80px 25px 25px;
+  background: linear-gradient(to right, #0e0e0e, #0e0e0e 65%, rgba(0, 0, 0, 0) 100%);
+  transition: @transition-basic;
+
+  @media screen and (max-width: 768px) {
+    padding: 85px 80px 25px 25px;
+    top: -110px;
+    height: 400px;
+    background: linear-gradient(to top, #0e0e0e, #0e0e0e 75%, rgba(0, 0, 0, 0) 90%);
+  }
+}
+
+#photo-gallery .photos__info {
+    width: 100%;
+    height: 70vh;
+    min-height: 550px;
+
+  @media screen and (max-width: 768px) {
+    height: 580px;
+  }
+}
+
+#photo-gallery .owl-stage {
+
+  @media screen and (max-width: 480px) {
+    height: 550px;
+  }
+}

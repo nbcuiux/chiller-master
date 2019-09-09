@@ -1,0 +1,76 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+<script>
+  window.SITE_URL = "{{ site.url }}";
+</script>
+
+
+
+
+    <div class="header">
+      <img src="{{ site.theme.link }}/assets/img/chiller-white-logo.png" class="logo" />
+      <div class="page-title"><span>U</span>ser<span> A</span>cceptance <span>T</span>esting</div>
+    </div>
+
+    <div class="search">
+      <div class="search-input">
+        <i class="chiller-search-thin-weathered"></i>
+        <input type="text" id="search-input" placeholder="Type to search..."/>
+        <div class="search-loader">
+        {% include "includes/_loader.html" %}
+        </div>
+      </div>
+    </div>
+
+    <!-- General Section -->
+    {% for cat in categories %}
+      <div class="section">
+        <div class="section-title">{{ cat.title }}</div>
+        <div class="section-tile-wrapper">
+          {% for post in cat.get_posts %}
+            <div class="section-tile">
+              <a href="#" class="details-link" data-details-link="{{ post.slug }}">
+                <div class="tile-img">
+                  <div class="img-overlay">
+                    <div class="overlay-text"><i class="chiller-view-eye-2-weathered"></i> View</div>
+                  </div>
+                  <img src="{{ TimberImage(post.get_field('thumbnail')).src }}" />
+                </div>
+              </a>
+              <div class="tile-copy">
+                <div class="tile-title">{{post.title}}</div>
+                <div class="tile-description">{{post.short_description}}</div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+
+
+    <div class="sub-pages">
+      {% for post in posts %}
+        <div class="subpage" data-subpage-id="{{ post.slug }}">
+          <i class="close-subpage chiller-close-weathered" data-close-subpage></i>
+          {% include '_steps.html' %}
+        </div>
+      {% endfor %}
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+
+  <script>
+  /*
+      ReactDOM.render(
+        React.createElement(window.components.BlankComponent, null),
+        document.getElementById("blank-component")
+      );
+  */
+  </script>
+  <!--<script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>-->
+
+{% endblock %}

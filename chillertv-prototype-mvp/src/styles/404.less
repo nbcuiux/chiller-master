@@ -1,0 +1,91 @@
+@import "variables.less";
+@import "fonts.less";
+
+.error-content-container {
+  position: absolute;
+  bottom: 13%;
+  left: -3%;
+}
+
+.four-o-four h5 {
+  font-size: 6.5vw;
+  color: @color-red;
+  text-align: left;
+  font-weight: 600;
+  position: absolute;
+  left: 11%;
+  bottom: 111%;
+  width: 100%;
+  transition: @transition-basic;
+
+  @media screen and (max-width: 800px) {
+    font-size: 10vw;
+  }
+}
+
+.error-message {
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 0 0 10% !important;
+    text-align: left !important;
+    font-size: 4vw !important;
+  }
+}
+
+.error-message span {
+  font-size: 2vw;
+  color: @color-white;
+  text-align: left;
+  position: relative;
+  transition: @transition-basic;
+
+  @media screen and (max-width: 800px) {
+    font-size: 3vw;
+  }
+}
+
+.error-bg {
+  position: relative;
+  background-size: cover;
+  background-position: right center;
+  animation-name: bg-shiver;
+  animation-duration: 75ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 10;
+  animation-fill-mode: forwards;
+  height: 100vh;
+
+  @media screen and (max-width: 768px) {
+    background-position: 60% center;
+  }
+}
+
+.error-bg-blur {
+  animation-name: bg-blur;
+  animation-duration: .75s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bg-shiver {
+  0% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2deg);
+  }
+  100% {
+    transform: translateX(-2deg);
+  }
+}
+
+@keyframes bg-blur {
+  0% {
+    -webkit-filter: blur(5px);
+  }
+  100% {
+    -webkit-filter: blur(0px);
+  }
+}

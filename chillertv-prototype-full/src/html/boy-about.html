@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Boy | About - ChillerTV.com</title>
+    <link href="lib/bootstrap.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+    <link rel="shortcut icon" href="http://www.chillertv.com/sites/chiller/themes/zen_chiller/favicon.png" type="image/png" />
+  </head>
+  <body>
+
+//= template/movies-navigation-hero.html
+    <!--  Hero -->
+    <section style="margin-bottom: -40px;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="hero-header sub">
+              <div class="header-container">
+                <div class="header-content-container">
+                  <h1 class="header">The Boy: About</h1>
+                </div>
+              </div>
+            </div>
+            <div class="hero-container slasher-about the-boy-bg full">
+              <div class="tile-content-container">
+                <div class="tlt hidden-xs hidden-sm">
+                  <p>In the summer of 1989, the Mt. Vista motel has been slowly deteriorating on an isolated roadside, and its proprietor, John Henley, is not faring much better.  Since his wife left him and their nine year-old son, Ted, John has drifted into despondency, leaving Ted to fend for himself. With no parental or adult supervision to guide him, the young Ted’s darker impulses begin to emerge, leading him to explore a growing fascination with death. This fascination blossoms into a bizarre and dangerous method for roping in the occasional passing motorists for an unplanned overnight stop at the motel.  When a mysterious drifter is forced to take up residency at the Mt. Vista for several days, he and Ted forge a unique friendship that sends the boy down a dangerous path. The Boy comes from the SpectreVision producing team of Daniel Noah, Josh C. Waller and Elijah Wood. It was directed by Craig William MacNeill.</p>
+                </div>
+                <div class="hidden-md hidden-lg hidden-xl">
+                  <p class="center">In the summer of 1989, the Mt. Vista motel has been slowly deteriorating on an isolated roadside, and its proprietor, John Henley, is not faring much better.  Since his wife left him and their nine year-old son, Ted, John has drifted into despondency, leaving Ted to fend for himself. With no parental or adult supervision to guide him, the young Ted’s darker impulses begin to emerge, leading him to explore a growing fascination with death. This fascination blossoms into a bizarre and dangerous method for roping in the occasional passing motorists for an unplanned overnight stop at the motel.  When a mysterious drifter is forced to take up residency at the Mt. Vista for several days, he and Ted forge a unique friendship that sends the boy down a dangerous path. The Boy comes from the SpectreVision producing team of Daniel Noah, Josh C. Waller and Elijah Wood. It was directed by Craig William MacNeill.</p>
+                </div>
+                <div class="watch-trailer-button-container slideDown-trigger">
+                  <a href="slasher-episodes.html">
+                    <div class="button-container center watch-trailer-button">
+                      <div class="button1-left watch-trailer-button">
+                          <div class="button">Watch Trailer</div>
+                      </div>
+                      <div class="button1-right watch-trailer-button">
+                          <div class="button">Watch Trailer</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="hidden-xs">
+                <img src="img/the-boy-2.jpg" class="tilt-effect" alt="grid03"  data-tilt-options='{"transition": 0.4, "movement": { "perspective" : 1200, "translateX" : -15, "translateY" : -15, "translateZ" : 10, "rotateX" : 2, "rotateY" : 10 } }' />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 horizontal-ad">
+            <img src="img/horizontal-ad.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+//= template/footer.html
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/animations.js"></script>
+    <script src="js/side-navigation.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(window).on( 'resize', function () {
+            $('.hero-container , #canvas, .tilt').height( $(window).height() * 1.2);
+        }).resize();
+      });
+
+      $(function () {
+        $('.tlt').textillate();
+      })
+
+      if ( $(window).width() > 992) {
+        $(function () {
+            $('div.slideDown-trigger , p.slideDown-trigger , h4.slideDown-trigger , img.slideDown-trigger').addClass("hide-ani").viewportChecker({
+                classToAdd: 'visible slideDown', // Class to add to the elements when they are visible
+                offset: 75
+            });
+        });
+      }
+      else {
+
+      }
+    </script>
+  </body>
+</html>

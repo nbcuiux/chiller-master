@@ -1,0 +1,482 @@
+@import "variables.less";
+@import "fonts.less";
+
+.cast-large-tile-container {
+  width: 100%;
+  min-height: 400px;
+  cursor: pointer;
+  position: relative;
+  height: 30vw;
+
+  @media screen and (min-width: 2100px) {
+    height: 24vw;
+  }
+}
+.cast-tile-container {
+  width: 100%;
+  min-height: 340px;
+  cursor: pointer;
+  position: relative;
+  height: 27vw;
+
+  @media screen and (min-width: 2100px) {
+    height: 22vw;
+  }
+}
+.cast-tile-container .card-title,
+.card-left-subcard .card-title,
+.card-right-subcard .card-title,
+.cast-large-tile-container .card-title, {
+  position: relative;
+  z-index: 10;
+  font-size: 20px;
+  padding: 30px 30px 0px 30px;
+  color: #ffffff;
+  opacity: 0;
+
+  @media screen and (min-width: 1600px) {
+    font-size: 24px;
+  }
+}
+.cast-tile-container .card-info,
+.card-left-subcard .card-info,
+.card-right-subcard .card-info,
+.cast-large-tile-container .card-info, {
+  position: relative;
+  z-index: 10;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 0 30px 5px 30px;
+  color: #ffffff;
+  opacity: 0;
+
+  @media screen and (min-width: 1600px) {
+    font-size: 16px;
+  }
+}
+.cast-tile-container .card-link,
+.card-left-subcard .card-link,
+.card-right-subcard .card-link,
+.cast-large-tile-container .card-link, {
+  position: absolute;
+  width: auto;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  font-size: 14px;
+  padding: 30px;
+  color: #ffffff;
+  opacity: 0;
+
+  @media screen and (min-width: 1600px) {
+    font-size: 16px;
+  }
+}
+.cast-tile-container h4,
+.card-left-subcard h4,
+.card-right-subcard h4,
+.cast-large-tile-container h4 {
+  color: #fff;
+  /*font-size: 3.0vmin;*/
+  font-size: 24px;
+  position: absolute;
+  bottom: 40px;
+  z-index: 2;
+  text-align: center;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  text-shadow: 1px 1px 1px #000000;
+  transition: @transition-basic;
+}
+
+.cast-tile-container h5,
+.cast-large-tile-container h5 {
+  color: #fff;
+  /*font-size: 2.0vmin;*/
+  font-size: 16px;
+  position: absolute;
+  bottom: 16px;
+  z-index: 2;
+  text-align: center;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  text-shadow: 1px 1px 1px #000000;
+  transition: @transition-basic;
+}
+.cast-tile-container:hover h4, .cast-large-tile-container:hover h4, .cast-tile-container:hover h5, .cast-large-tile-container:hover h5 {
+  opacity: 1;
+}
+.cast-tile-container:hover h4,
+.cast-large-tile-container:hover h4,
+.cast-tile-container:hover h5,
+.cast-large-tile-container:hover h5 {
+  opacity: 0;
+  transition: @transition-basic;
+}
+.cast-tile-container:hover .card-title, .cast-large-tile-container:hover .card-title {
+  opacity: 1;
+  transition: 0.6s ease-out 0.5s;
+}
+.cast-tile-container:hover .card-info, .cast-large-tile-container:hover .card-info {
+  opacity: 0.8;
+  transition: 0.6s ease-out 0.6s;
+}
+.cast-tile-container:hover .card-link, .cast-large-tile-container:hover .card-link {
+  opacity: 0.8;
+  transition: 0.6s ease-out 0.7s;
+}
+.cast-tile-container .card-left-side-2, .cast-large-tile-container .card-left-side-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0% 0%, 86% 0%, 26% 100%, 0% 100%);
+  transition: 0.6s ease-out;
+}
+.cast-tile-container .card-left-side-2::after, .cast-large-tile-container .card-left-side-2::after  {
+  position: absolute;
+  background-color: #be0c36;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.6s ease-out;
+}
+.cast-tile-container .card-right-side-2, .cast-large-tile-container .card-right-side-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(84% 0%, 100% 0%, 100% 100%, 24% 100%);
+  transition: 0.6s ease-out 0.15s;
+}
+.cast-tile-container .card-right-side-2::after, .cast-large-tile-container .card-right-side-2::after {
+  position: absolute;
+  background-color: #be0c36;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.6s ease-out;
+}
+.cast-tile-container .card-img, .cast-large-tile-container .card-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 3s ease-out;
+}
+.cast-tile-container .card-img::after, .cast-large-tile-container .card-img::after {
+  content: '';
+  position: absolute;
+  background-color: #be0c36;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.6s ease-out;
+}
+.cast-tile-container:hover .card-left-side-2, .cast-large-tile-container:hover .card-left-side-2 {
+  transform: rotate3d(1, 0, 0, -0.5turn);
+}
+.cast-tile-container:hover .card-left-side-2::after, .cast-large-tile-container:hover .card-left-side-2::after  {
+  opacity: 1;
+}
+.cast-tile-container:hover .card-right-side-2, .cast-large-tile-container:hover .card-right-side-2 {
+  transform: rotate3d(1, 0, 0, -0.5turn);
+}
+.cast-tile-container:hover .card-right-side-2::after, .cast-large-tile-container:hover .card-right-side-2::after {
+  opacity: 1;
+}
+.cast-tile-container:hover .card-img::after, .cast-large-tile-container:hover .card-img::after {
+  opacity: 1;
+}
+.cast-tile-container .card-left-side, .cast-large-tile-container .card-left-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0% 0%, 86% 0%, 26% 100%, 0% 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.6s ease-out;
+}
+.cast-tile-container .card-right-side, .cast-large-tile-container .card-right-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(84% 0%, 100% 0%, 100% 100%, 24% 100%);
+  transition: 0.3s ease-out;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.cast-tile-container .card-left-subcard, .cast-large-tile-container .card-left-subcard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(farthest-corner at 0 0, #be0c36 0%, rgba(190, 12, 54, 0.7) 100%);
+  transform: translate(100%, 100%);
+  transition: transform 0.5s ease-out;
+}
+.cast-tile-container .card-right-subcard, .cast-large-tile-container .card-right-subcard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(farthest-corner at 0 0, #be0c36 0%, rgba(190, 12, 54, 0.7) 100%);
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+.cast-tile-container:hover .card-left-subcard, .cast-large-tile-container:hover .card-left-subcard {
+  transform: translate(0, 0);
+}
+.cast-tile-container:hover .card-right-subcard, .cast-large-tile-container:hover .card-right-subcard {
+  opacity: 1;
+  transition: 0.6s ease-out 0.2s;
+}
+.cast-tile-container:hover .card-left-subcard .card-title,
+.cast-tile-container:hover .card-right-subcard .card-title,
+.cast-large-tile-container:hover .card-left-subcard .card-title,
+.cast-large-tile-container:hover .card-right-subcard .card-title {
+  opacity: 1;
+  transition: 0.6s ease-out 0.7s;
+}
+.cast-tile-container:hover .card-left-subcard .card-subtitle,
+.cast-tile-container:hover .card-right-subcard .card-subtitle,
+.cast-large-tile-container:hover .card-left-subcard .card-subtitle,
+.cast-large-tile-container:hover .card-right-subcard .card-subtitle {
+  opacity: 1;
+  transition: 0.6s ease-out 0.8s;
+}
+.cast-tile-container:hover .card-left-subcard .card-info,
+.cast-tile-container:hover .card-right-subcard .card-info,
+.cast-large-tile-container:hover .card-left-subcard .card-info,
+.cast-large-tile-container:hover .card-right-subcard .card-info {
+  opacity: 1;
+  transition: 0.6s ease-out 0.9s;
+}
+.cast-tile-container:hover .card-left-subcard .card-link,
+.cast-tile-container:hover .card-right-subcard .card-link,
+.cast-large-tile-container:hover .card-left-subcard .card-link,
+.cast-large-tile-container:hover .card-right-subcard .card-link {
+  opacity: 1;
+  transition: 0.6s ease-out 1s;
+}
+.cast-tile-container .card-left-side-3, .cast-large-tile-container .card-left-side-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0% 0%, 40px 0%, 0% 40px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all 1.2s ease-out;
+}
+.cast-tile-container .card-right-side-3, .cast-large-tile-container .card-right-side-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(39px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 39px);
+  transition: 0.3s ease-out;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.cast-tile-container .card-right-side-3 .card-title, .cast-large-tile-container .card-right-side-3 .card-title {
+  position: relative;
+  z-index: 10;
+  font-size: 20px;
+  margin: 0px 0px 0px 10px;
+  color: #ffffff;
+  opacity: 0;
+
+  @media screen and (min-width: 1400px) {
+    font-size: 24px;
+  }
+}
+.cast-tile-container .card-right-side-3 .card-subtitle,
+.card-left-subcard .card-subtitle,
+.card-right-subcard .card-subtitle,
+.cast-large-tile-container .card-right-side-3 .card-subtitle, {
+  font-size: 12px;
+  margin: 0px 30px 20px 40px;
+  opacity: 0;
+  z-index: 10;
+  position: relative;
+
+  @media screen and (min-width: 1400px) {
+    font-size: 14px;
+  }
+}
+.card-right-subcard .card-subtitle,
+.card-left-subcard .card-subtitle {
+  margin: 0px 30px 20px 31px !important;
+}
+.cast-tile-container .card-right-side-3 .card-info,
+.cast-large-tile-container .card-right-side-3 .card-info {
+  position: relative;
+  z-index: 10;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0px 5px 10px;
+  color: #ffffff;
+  opacity: 0;
+}
+.cast-tile-container .card-right-side-3 .card-link,
+.cast-large-tile-container .card-right-side-3 .card-link {
+  position: absolute;
+  width: auto;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  font-size: 14px;
+  padding: 0 0 30px 40px;
+  color: #ffffff;
+  opacity: 0;
+
+  @media screen and (min-width: 1400px) {
+    font-size: 16px;
+  }
+}
+.cast-tile-container .card-right-side-3::after,
+.cast-large-tile-container .card-right-side-3::after {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  background: linear-gradient(to bottom right, #272727 0%, rgba(39, 39, 39, 0.7) 100%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 340px;
+  border-bottom-right-radius: 300px;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: left top;
+  transition: all 0.4s ease-in-out;
+}
+.cast-tile-container:hover .card-left-side-3,
+.cast-large-tile-container:hover .card-left-side-3 {
+  background: #be0c36;
+  transition: all 1.2s ease-out;
+}
+.cast-tile-container:hover .card-right-side-3,
+.cast-large-tile-container:hover .card-right-side-3 {
+  transform: translate(0px, 0px);
+}
+.cast-tile-container:hover .card-right-side-3 .card-title,
+.cast-tile-container:hover .card-right-side-3 .card-subtitle,
+.cast-large-tile-container:hover .card-right-side-3 .card-title,
+.cast-large-tile-container:hover .card-right-side-3 .card-subtitle {
+  opacity: 1 !important;
+  transition: 0.6s ease-out 0.4s;
+}
+.cast-tile-container:hover .card-right-side-3 .card-info,
+.cast-large-tile-container:hover .card-right-side-3 .card-info {
+  opacity: 0.8 !important;
+  transition: 0.6s ease-out 0.4s;
+}
+.cast-tile-container:hover .card-right-side-3 .card-link,
+.cast-large-tile-container:hover .card-right-side-3 .card-link {
+  opacity: 1 !important;
+  transition: 0.6s ease-out 0.6s;
+}
+.cast-tile-container:hover .card-right-side-3::after,
+.cast-large-tile-container:hover .card-right-side-3::after {
+  transform: scale(1);
+  opacity: 1;
+  border-bottom-right-radius: 0;
+  transition: opacity 0.4s ease-out, transform 0.3s ease-out, border-radius 0.3s ease-out 0.2s;
+}
+.cast-member .tilt {
+  height: 80vh !important;
+
+  @media screen and (max-width: 992px) {
+    height: 30vw;
+  }
+}
+
+.cast-member-info {
+  height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  @media screen and (max-width: 992px) {
+    height: auto;
+  }
+}
+
+.cast-member-info h4 {
+  color: #222;
+}
+
+.six-cast-1 {
+  background-image: url('img/666-park-cast-1.jpg');
+}
+.six-cast-2 {
+  background-image: url('img/666-park-cast-2.jpg');
+}
+.six-cast-3 {
+  background-image: url('img/666-park-cast-3.jpg');
+}
+.six-cast-4 {
+  background-image: url('img/666-park-cast-4.jpg');
+}
+.six-cast-5 {
+  background-image: url('img/666-park-cast-5.jpg');
+}
+.six-cast-6 {
+  background-image: url('img/666-park-cast-6.jpg');
+}
+.card-1 {
+  background-image: url('img/slasher-cast-cam-henry-6-v2.jpg');
+}
+.card-2 {
+  background-image: url('img/slasher-cast-rob-stewart-1-v2.jpg');
+}
+.card-3 {
+  background-image: url('img/slasher-cast-sarah-bennett-5.jpg');
+}
+.card-4 {
+  background-image: url('img/slasher-cast-iain-vaughn-3.jpg');
+}
+.card-5 {
+  background-image: url('img/slasher-cast-dylan-bennett-2-v2.jpg');
+}
+.card-6 {
+  background-image: url('img/slasher-cast-erin-karpluk-1-v2.jpg');
+}
+.card-7 {
+  background-image: url('img/slasher-cast-christopher-jacot-1-v2.jpg');
+}
+.card-8 {
+  background-image: url('img/slasher-cast-enuka-okuma-2.jpg');
+}

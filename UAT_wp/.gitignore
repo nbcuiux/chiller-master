@@ -1,0 +1,18 @@
+# Deepend Wordpress Starter gitignore
+
+node_modules
+.DS_Store
+.DS_store
+error.log
+.sass-cache
+npm-debug.log
+
+
+
+wordpress/wp-local-config.php
+wordpress/wp-content/uploads
+
+
+
+# Auto generated files
+src/styles/_icons.scss

@@ -1,0 +1,657 @@
+
+
+$nav-height: 110px;
+
+
+.details-wrapper {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100vh - #{$nav-height});
+
+  .step-img {
+    width: 60%;
+
+    @media screen and (max-width: $bp-medium) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (max-width: $mobile-bp) {
+    display: block;
+    height: auto;
+  }
+
+}
+
+.step-wrapper {
+  padding: 0;
+  flex-grow:1;
+  max-width: 600px;
+  max-height: calc(100vh - 110px);
+  height: calc(100vh - 110px);
+
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+    //background: blue;
+  }
+
+  &:before {
+    top: 0px;
+    @include background-image(linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%));
+  }
+
+  &:after {
+    bottom: 0px;
+    @include background-image(linear-gradient(top, rgba(0,0,0,0) 1%,rgba(0,0,0,1) 50%,rgba(0,0,0,1) 100%));
+  }
+
+  @media (max-width: 1200px) {
+     max-width: 50%;
+  }
+  @media (max-width: $mobile-bp) {
+    display: block;
+    max-height: none;
+    max-width: none;
+    height: auto;
+    width: auto;
+  }
+}
+
+.step-wrapper__inner {
+
+  padding: 120px 30px 120px 30px;
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow-y: scroll;
+  >div {
+    display: flex;
+    flex-direction: column;
+    align-items: strech;
+    justify-content: center;
+    min-height: 100%;
+  }
+}
+
+
+.step-copy {
+  margin-left: 60px;
+
+  strong {
+    font-weight: bold;
+    font-family: 'ApexNew_Medium', sans-serif;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: $chiller-red;
+    text-transform: uppercase;
+    line-height: 1.3;
+  }
+
+  ul, ol {
+    padding: 10px 0px 15px 50px;
+    margin: 0;
+  }
+
+  .description,
+  li,
+  p {
+    font-size: 14px;
+    font-family: 'ApexNew_Light';
+    line-height: 1.5;
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style-type: none;
+    position: relative;
+
+    &:before {
+      width: 5px;
+      height: 1px;
+      content: '';
+      background: #be0c36;
+      position: absolute;
+      left: -15px;
+      margin-top: 10px;
+    }
+  }
+
+  .description {
+    p {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+
+.step-description__wrapper {
+  overflow: hidden;
+  height: 0px;
+  @include transition(height 0.5s);
+}
+
+
+
+.step-img-list__wrapper {
+    max-width: calc(100% - 600px);
+    flex-grow: 1;
+    height: 100%;
+    position: relative;
+
+    @media screen and (max-width: $bp-medium) {
+      width: 100%;
+    }
+
+    @media (max-width: 1200px) {
+      max-width: 50%;
+    }
+
+    @media (max-width: $mobile-bp) {
+      display: block;
+      max-height: none;
+      max-width: none;
+      height: auto;
+      width: auto;
+      padding-top: 57%;
+    }
+
+}
+
+.step-img-list {
+  height: 100%;
+}
+
+.step-img-list {
+  top: 0px;
+  transition: left 0.5s;
+  display: flex;
+
+}
+
+.result-link-img {
+  display: none;
+}
+
+.step-img-result,
+.step-img-wrapper {
+  height: 100%;
+  min-width: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  //display: flex;
+  align-items: center;
+  position: absolute;
+  max-width: 100%;
+  left: -100%;
+  display: flex;
+  transition: 0.5s left;
+  &.step-img-current {
+    left: 0%;
+  }
+
+  @media (max-width: $mobile-bp) {
+    top: 0%;
+  }
+}
+
+.step-img-img {
+  display: block;
+  max-width: 100%;
+}
+
+.step-img-magnified {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  left: 105%;
+  top: 50%;
+  @include transform(translateY(-50%));
+  border: 2px solid #AAA;
+  border-radius: 2px;
+  z-index: 110;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  /*
+  .step-img-wrapper.step-img-current:hover & {
+    opacity: 1;
+    visibility: visible;
+  }
+  */
+
+  img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+.step-img-img:hover + .step-img-magnified {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.step-img-result {
+  z-index: 10;
+  background-color: #000;
+  .show-result-link & {
+    left: 0%;
+  }
+}
+
+.checkbox {
+  display: inline-block;
+  height: 40px;
+  margin: 0 20px 0 0;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+}
+
+
+.step-container {
+  margin-bottom: 30px;
+  opacity: 0.5;
+  transition: opacity .5s;
+  position: relative;
+  &.step--current {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  &.step--finished {
+    opacity: 1;
+  }
+
+  &:first-child {
+    opacity: 1;
+  }
+
+  &:last-child {
+    opacity: 1 !important;
+  }
+}
+
+.checkbox label {
+  display: block;
+  height: 40px;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  .step--current & {
+    cursor: pointer;
+  }
+}
+
+.checkbox label:after {
+  -moz-transform: scaleX(-1) rotate(180deg);
+  -ms-transform: scaleX(-1) rotate(180deg);
+  -webkit-transform: scaleX(-1) rotate(180deg);
+  transform: scaleX(-1) rotate(180deg);
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  border-right: 4px solid $white;
+  border-top: 4px solid $white;
+  content: '';
+  display: block;
+  height: 0px;
+  left: 11px;
+  position: absolute;
+  top: 18px;
+  width: 10px;
+  opacity: 0.4;
+}
+.checkbox input {
+  display: none;
+}
+
+.step--finished .checkbox label:after {
+  -webkit-animation: check 0.8s;
+  -moz-animation: check 0.8s;
+  -o-animation: check 0.8s;
+  animation: check 0.8s;
+  border-color: $chiller-green;
+  animation-fill-mode: forwards;
+  -moz-transform: scaleX(-1) rotate(135deg);
+  -ms-transform: scaleX(-1) rotate(135deg);
+  -webkit-transform: scaleX(-1) rotate(135deg);
+  transform: scaleX(-1) rotate(135deg);
+  height: 14px;
+  width: 6px;
+  opacity: 1;
+}
+
+
+.step-image {
+  display: none;
+}
+
+.filled-button.button-container {
+
+  width: 60px;
+  height: 32px;
+  position: relative;
+  cursor: not-allowed;
+  transition: 0.2s ease-in-out;
+  margin-right: 20px;
+  opacity: 0.6;
+
+  &.submit {
+    width: 72px;
+    cursor: pointer;
+
+    .button1-left, .button1-right {
+      width: 72px;
+    }
+  }
+
+  .step--current & {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  &:hover {
+    .button1-left {
+      background: $chiller-red;
+      border: 1px solid $chiller-red;
+      transition: 0.5s ease-in-out;
+      top: -1px;
+      left: -1px;
+    }
+    .button1-right {
+      transition: 0.5s ease-in-out;
+      border: 1px solid $chiller-red;
+      background: $chiller-red;
+      top: 1px;
+      left: 1px;
+    }
+  }
+
+    .button1-left {
+      -webkit-clip-path: polygon(0% 0%, 16px 0%, 0% 16px);
+      overflow: hidden;
+      position: absolute;
+      width: 60px;
+      height: 32px;
+      background: transparent;
+      border: 1px solid $white;
+      transition: 0.5s ease-in-out;
+      top: 0;
+      left: 0;
+
+    }
+
+    .button1-right {
+      -webkit-clip-path: polygon(15px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 15px);
+      overflow: hidden;
+      position: absolute;
+      width: 60px;
+      height: 32px;
+      background: transparent;
+      transition: 0.5s ease-in-out;
+      border: 1px solid $white;
+      top: 0;
+      left: 0;
+    }
+
+
+    .button1-left, .button1-right {
+      background: $chiller-red;
+      border: $chiller-red !important;
+      transition: all 0.6s ease-in-out;
+    }
+  }
+
+  .ghost-button.button-container {
+    width: 107px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    float: left;
+
+    &:hover {
+      .button1-left {
+        background: $chiller-red;
+        border: 1px solid $chiller-red;
+        transition: 0.5s ease-in-out;
+        top: -1px;
+        left: -1px;
+      }
+      .button1-right {
+        transition: 0.5s ease-in-out;
+        border: 1px solid $chiller-red;
+        background: $chiller-red;
+        top: 1px;
+        left: 1px;
+      }
+    }
+
+      .button1-left {
+        -webkit-clip-path: polygon(0% 0%, 16px 0%, 0% 16px);
+        overflow: hidden;
+        position: absolute;
+        width: 107px;
+        height: 30px;
+        background: transparent;
+        border: 1px solid $white;
+        transition: 0.5s ease-in-out;
+        top: 0;
+        left: 0;
+      }
+
+      .button1-right {
+        -webkit-clip-path: polygon(15px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 15px);
+        overflow: hidden;
+        position: absolute;
+        width: 107px;
+        height: 30px;
+        background: transparent;
+        transition: 0.5s ease-in-out;
+        border: 1px solid $white;
+        top: 0;
+        left: 0;
+      }
+
+      .button1-left, .button1-right {
+        background: transparent;
+        border: 1px solid $white;
+        transition: all 0.6s ease-in-out;
+      }
+    }
+
+.button {
+  padding: 7px 12px;
+  text-shadow: none;
+  background: transparent;
+  border-radius: 1px;
+  text-transform: uppercase;
+  font-size: 12px;
+  position: absolute;
+  font-weight: 500;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $white;
+  pointer-events: visible !important;
+}
+
+.result-link-container {
+  position: absolute;
+  cursor: pointer;
+  top: 130px;
+  right: 45px;
+  z-index: 101;
+  .result-link {
+    font-size: 14px;
+    color: $chiller-green;
+    transition: color 0.3s;
+
+    i {
+      position: relative;
+      top: 2px;
+      margin-right: 5px;
+    }
+
+    &:hover {
+      color: #c2ecdc;
+    }
+  }
+  .img {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    visibility: hidden;
+    transition: all .5s;
+    opacity: 0;
+
+    img {
+      height: 93vh;
+      width: auto;
+    }
+  }
+  &:hover {
+    .img {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.buttons-container {
+  margin: 20px 0 0 62px;
+  a, div {
+    display: inline-block;
+  }
+}
+
+@keyframes resultFade {
+  0% {
+    visibility: hidden;
+  }
+  5% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes check {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+
+  }
+  25% {
+    height: 0;
+    width: 6px;
+  }
+  50% {
+    height: 14px;
+    width: 6px;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+/**** Magnifying ****/
+
+
+html.magnifying > body {
+  overflow-x: hidden !important;
+}
+.magnify {
+  position: relative;
+  display: inline-block;
+}
+
+.magnify,
+[data-magnify-src] {
+  width: 100%;
+  height: 100%;
+}
+
+.magnify .magnify-lens {
+  /* Create the magnifying lens */
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  /* Multiple box shadows to achieve the glass lens effect */
+  -webkit-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85),
+    0 0 7px 7px rgba(0, 0, 0, 0.25),
+    inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85),
+    0 0 7px 7px rgba(0, 0, 0, 0.25),
+    inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+  /* Hide the mouse pointer */
+  cursor: none;
+  /* Hide the lens by default */
+  display: none;
+  /* Place the lens on top of other elements */
+  z-index: 100;
+}
+.magnify .magnify-lens.loading {
+  background: #333 !important;
+  opacity: 0.75;
+}
+.magnify .magnify-lens.loading:after {
+  /* Loading text */
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  content: 'Loading...';
+  font: italic normal 16px/1 Calibri, sans-serif;
+  text-align: center;
+  text-shadow: 0 0 2px rgba(51, 51, 51, 0.8);
+  text-transform: none;
+}
+
+
+
+
+

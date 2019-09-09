@@ -1,0 +1,294 @@
+* { margin: 0; font-family: 'ApexNew_Book', sans-serif; letter-spacing: 1px; }
+
+body {
+  background: radial-gradient(at 41% top, #202020, #000000);
+  overflow-x: hidden;
+  background-attachment: fixed;
+  color: $white;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: 0;
+}
+
+.header {
+  height: 80px;
+  padding: 20px 40px 10px;
+  width: calc(100% - 80px);
+  background: #222;
+  position: relative;
+  z-index: 50;
+  .logo {
+    width: auto;
+    height: 60px;
+    display: inline-block;
+  }
+
+  .page-title {
+    font-size: 22px;
+    color: $white;
+    display: inline-block;
+    position: absolute;
+    top: 36px;
+    font-family: 'ApexNew_Light';
+    line-height: 1.7;
+    letter-spacing: 1.6px;
+    right: 100px;
+
+    span {
+      font-family: 'ApexNew_Medium';
+    }
+  }
+}
+
+
+.section {
+  padding: 40px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-family: 'ApexNew_Book';
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding: 0 0 10px;
+}
+
+.section-tile-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.section-tile {
+  width: 24%;
+  padding-bottom: 20px;
+  transition: all 0.3s;
+  overflow: hidden;
+
+  @media screen and (max-width: $bp-large) {
+    width: 32%
+  }
+
+  @media screen and (max-width: $bp-medium) {
+    width: 48%
+  }
+
+  @media screen and (max-width: $bp-small) {
+    width: 100%
+  }
+
+  &--hidden {
+    width: 0px;
+    height: 0px;
+  }
+}
+
+.tile-img {
+  height: auto;
+  position: relative;
+  margin: 0 20px;
+  margin-top: 25px;
+
+
+  &:hover {
+    .img-overlay {
+      opacity: 1;
+    }
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0px;
+    left: 0px;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    border-color: $chiller-red transparent transparent;
+    z-index: 2;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.7s ease-out;
+    .details-link--read & {
+       opacity: 0;
+       transform: scale(3);
+    }
+  }
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  background-color: rgba(17, 17, 17, 0.95);
+  color: #fff;
+  opacity: 0;
+  padding: 20px;
+  transition: opacity .6s;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  .overlay-text {
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    font-size: 20px;
+  }
+
+  i {
+    font-size: 24px;
+    margin-top: 14px;
+    position: relative;
+    top: 3px;
+    margin-right: 3px;
+  }
+}
+
+
+
+// Subpages
+
+.subpage {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  z-index: 5;
+  background: #000;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s;
+
+  &--show-add {
+    display: block;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  &--show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &--remove {
+    display: block;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  @media (max-width: $mobile-bp) {
+    position: absolute;
+  }
+}
+
+
+.close-subpage {
+  color: #FFF;
+  position: absolute;
+  top: 42px;
+  right: 38px;
+  font-size: 25px;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: all 0.2s;
+  z-index: 20;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.tile-copy {
+  width: calc(100% - 60px);
+  margin: 0 30px;
+}
+
+.tile-title {
+  margin: 10px 0 5px;
+  line-height:1.2;
+}
+
+.tile-description {
+  font-size: 14px;
+  font-family: 'ApexNew_Light';
+  opacity: 0.7;
+  line-height:1.5;
+}
+
+
+
+
+/* Search */
+
+.search {
+  margin: 40px 40px 0px 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.search-input {
+  position: relative;
+  width: 400px;
+      opacity: 0.7;
+  i {
+    position: absolute;
+    left: -48px;
+    top: 7px;
+    font-size: 32px;
+    color: #AAA;
+  }
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 32px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: none;
+    transition: 0.2s ease-in-out;
+    color: #FFF;
+    outline: none;
+  }
+}
+.search-loader {
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    height: 30px;
+    display: none;
+    .search--searching & {
+      display: block;
+    }
+  }

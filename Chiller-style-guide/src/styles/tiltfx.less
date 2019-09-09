@@ -1,0 +1,31 @@
+.tilt {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+    min-height: 400px;
+	margin: 0 auto;
+}
+
+.tilt__back,
+.tilt__front {
+	width: 140%;
+	height: 140%;
+    position: relative;
+    margin: -20% 0 0 -20%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.tilt__back {
+	position: relative;
+}
+
+.tilt__front {
+	position: absolute;
+	top: 0;
+	left: 0;
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slasher | Specials - ChillerTV.com</title>
+    <link href="lib/bootstrap.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+    <link rel="shortcut icon" href="http://www.chillertv.com/sites/chiller/themes/zen_chiller/favicon.png" type="image/png" />
+  </head>
+<body>
+
+<div class="notification active">
+  <div class="notification-content-wrapper">
+    <div class="notification-icon notifications-flash-player"></div>
+    <div class="notification-content">
+      <div class="notification-title">Flash Player Required</div>
+      <div class="notification-description">To view this website in your current browser you must download the latest version of flash by clicking <a href="https://get.adobe.com/flashplayer/" target="_blank">here</a>.<br />Alternatively you may also download any of the browsers shown below.</div>
+      <div class="notification-browsers">
+        <a class="notification-browser-item" href="https://www.google.com/chrome/browser/desktop/" target="_blank">
+          <div class="notifications-chrome"></div>
+          <div class="notification-browser-title">Chrome</div>
+        </a>
+        <a class="notification-browser-item" href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">
+          <div class="notifications-firefox"></div>
+          <div class="notification-browser-title">Firefox</div>
+        </a>
+        <a class="notification-browser-item" href="https://support.apple.com/downloads/safari" target="_blank">
+          <div class="notifications-safari"></div>
+          <div class="notification-browser-title">Safari</div>
+        </a>
+        <a class="notification-browser-item" href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">
+          <div class="notifications-ie"></div>
+          <div class="notification-browser-title">IE</div>
+        </a>
+      </div>
+      <div class="button-container okay-button">
+        <div class="button1-left okay-button">
+            <div class="button">Okay</div>
+        </div>
+        <div class="button1-right okay-button">
+            <div class="button">okay</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notification-close-trigger notifications-close"></div>
+  <div class="notification-overlay"></div>
+</div>
+
+//= template/navigation.html
+    <!--  Hero -->
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <a href="dont-watch-alone.html">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 slideDown-trigger">
+              <div class="schedule-tile-container">
+                <div class="hero-header">
+                  <div class="header-container">
+                    <div class="header-content-container">
+                      <h1 class="header">Marathons &amp; Events</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="hero-container-60 latest-video full">
+                  <div class="hero-copy">
+                    <h3>Don't Watch Alone</h3>
+                    <h2>Half the fun of watching a horror movie is doing so with friends.</h2>
+                    <div class="button-container explore-now-button">
+                      <div class="button1-left explore-now-button">
+                          <div class="button">Explore now</div>
+                      </div>
+                      <div class="button1-right explore-now-button">
+                          <div class="button">Explore now</div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="img/dont-watch-alone.jpg" class="tilt-effect" alt="grid03"  data-tilt-options='{"transition": 0.4, "movement": { "perspective" : 700, "translateX" : -15, "translateY" : -15, "translateZ" : 10, "rotateX" : 2, "rotateY" : 10 } }' />
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="row">
+          <a href="throwback-thursday.html">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 slideDown-trigger">
+              <div class="schedule-tile-container">
+                <div class="hero-container-60 latest-video full">
+                  <div class="hero-copy">
+                    <h3>Throwback Thursday</h3>
+                    <h2>Half the fun of watching a horror movie is doing so with friends.</h2>
+                    <div class="button-container explore-now-button">
+                      <div class="button1-left explore-now-button">
+                          <div class="button">Explore now</div>
+                      </div>
+                      <div class="button1-right explore-now-button">
+                          <div class="button">Explore now</div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="img/throwback-thursday.jpg" class="tilt-effect" alt="grid03"  data-tilt-options='{"transition": 0.4, "movement": { "perspective" : 700, "translateX" : -15, "translateY" : -15, "translateZ" : 10, "rotateX" : 2, "rotateY" : 10 } }' />
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--  Body -->
+    <section>
+      <div class="row" style="margin-bottom: -20px;">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 horizontal-ad">
+          <img src="img/horizontal-ad.jpg" />
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+//= template/footer.html
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/animations.js"></script>
+    <script src="js/side-navigation.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+    if ( $(window).width() > 992) {
+        $(function () {
+            $('div.slideDown-trigger').addClass("hide-ani").viewportChecker({
+                classToAdd: 'visible slideDown', // Class to add to the elements when they are visible
+                offset: 75
+            });
+            $('div.slideUp-trigger').addClass("hide-ani").viewportChecker({
+                classToAdd: 'visible slideUp', // Class to add to the elements when they are visible
+                offset: 200
+            });
+        });
+      }
+      else {
+
+      }
+      $('.notification-close-trigger').click(function(e){
+          e.preventDefault();
+          $(this).parent().removeClass('active');
+          $('body').css({
+            position: 'static'
+          })
+        });
+
+      $('.button-container.okay-button').click(function(e){
+          e.preventDefault();
+          $(this).parent().parent().parent().removeClass('active');
+          $('body').css({
+            position: 'static'
+          })
+        });
+
+      if($('.notification.active')){
+        $('body').css({
+          position: 'fixed'
+        })
+      }
+
+      // $(window).load(function() {
+      //   function setHeight() {
+      //     windowHeight = $('.notification-content-wrapper').outerHeight(true);
+      //     $('.active').css('max-height', Math.round(windowHeight).toString() + "px");
+      //   };
+      //   setHeight();
+      //
+      //   $(window).resize(function() {
+      //     setHeight();
+      //   });
+      // });
+      //
+      // $(window).load(function() {
+      //   function setHeight() {
+      //     windowHeight = $('.notification-content-wrapper').outerHeight(true);
+      //     $('.notification-overlay, .notification.active .side-navigation-container .side-navigation').css('top', Math.round(windowHeight).toString() + "px");
+      //   };
+      //   setHeight();
+      //
+      //   $(window).resize(function() {
+      //     setHeight();
+      //   });
+      // });
+      //
+      // $(window).load(function() {
+      //   function setHeight() {
+      //     windowHeight = $('.notification-content-wrapper').outerHeight(true);
+      //     $('.notification.active ~ .side-navigation-container .side-navigation-trigger').css('top', Math.round(windowHeight + 120).toString() + "px");
+      //   };
+      //   setHeight();
+      //
+      //   $(window).resize(function() {
+      //     setHeight();
+      //   });
+      // });
+
+    </script>
+  </body>
+</html>

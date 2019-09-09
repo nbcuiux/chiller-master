@@ -1,0 +1,156 @@
+.loader {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  background: #ffffff;
+  background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #ffffff;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loader:after {
+  background: #000;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+$anim-speed: 750ms;
+$tricolor: #be0c36;
+$triw: 10px;
+$trih: $triw*.9;
+$bodycolor: #000;
+
+@include keyframes(pulse) {
+  0% {
+    opacity: 1;
+  }
+  16.666%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+$loader-color: green;
+
+.triangle-loader {
+  @include transform( translate(-50%, -50%) rotate(60deg) );
+  height: $trih * 3;
+  width: $triw * 3;
+  position: relative;
+  left: 50%;
+  top: 50%;
+}
+.tri {
+  position: absolute;
+  @include animation(pulse $anim-speed ease-in infinite);
+  border: {
+    top: $trih solid $tricolor;
+    left: $triw/2 solid transparent;
+    right: $triw/2 solid transparent;
+    bottom: 0px;
+  }
+  &.invert {
+    border: {
+      top: 0px;
+      bottom: $trih solid $tricolor;
+      left: $triw/2 solid transparent;
+      right: $triw/2 solid transparent;
+    }
+  }
+  &:nth-child(1) {
+    left: $triw;
+  }
+  &:nth-child(2) {
+    left: $triw/2;
+    top: $trih;
+    @include animation-delay($anim-speed/6*-1);
+  }
+  &:nth-child(3) {
+    left: $triw;
+    top: $trih;
+  }
+  &:nth-child(4) {
+    left: $triw*1.5;
+    top: $trih;
+    @include animation-delay($anim-speed/6*-5);
+  }
+  &:nth-child(5) {
+    top:$trih*2;
+    @include animation-delay($anim-speed/6*-2);
+  }
+  &:nth-child(6) {
+    top:$trih*2;
+    left: $triw/2;
+    @include animation-delay($anim-speed/6*-2);
+  }
+  &:nth-child(7) {
+    top:$trih*2;
+    left: $triw;
+    @include animation-delay($anim-speed/6*-3);
+  }
+  &:nth-child(8) {
+    top:$trih*2;
+    left: $triw*1.5;
+    @include animation-delay($anim-speed/6*-4);
+  }
+  &:nth-child(9) {
+    top:$trih*2;
+    left: $triw*2;
+    @include animation-delay($anim-speed/6*-4);
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Chiller - ChillerTV.com</title>
+    <link href="lib/bootstrap.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+    <link rel="shortcut icon" href="http://www.chillertv.com/sites/chiller/themes/zen_chiller/favicon.png" type="image/png" />
+  </head>
+  <body>
+
+//= template/navigation.html
+    <!--  Hero -->
+    <section style="margin-bottom: -40px;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="hero-header">
+              <div class="header-container">
+                <div class="header-content-container">
+                  <h1 class="header">About Chiller</h1>
+                </div>
+              </div>
+            </div>
+            <div class="hero-container slasher-about about-chiller-bg full">
+              <div class="tile-content-container">
+                <div class="tlt hidden-xs hidden-sm">
+                  <p>Chiller, currently available in over 40 million homes, is the only cable channel devoted to delivering viewers round-the-clock scares. Chiller's eclectic slate of adrenaline-fueled, soul-stirring entertainment includes a broad offering of films, including feature length premieres every Friday, international programming, documentary and reality shows (Fear Factor), anthology series (The Twilight Zone), specials (Can You Survive a Horror Movie? and the ongoing "Chiller 13" countdown specials), classic series (Tales From the Darkside, The Outer Limits) and some of the most thought-provoking, suspenseful contemporary series that have aired in recent years (Pushing Daisies, Dead Like Me). Chiller is the home to original productions from some of the most acclaimed and respected creators in the horror world. Original movies include Dead Souls, from the novel by Michael Laimo; Remains, from the critically lauded graphic novel by Steve Niles; the award-winning documentary The American Scream, from filmmaker Michael Stephenson (the man behind Best Worst Movie); Beneath from writer/director Larry Fessenden (coming in October 2013) and the adaptation of the W.W. Jacobs classic, The Monkey's Paw (coming January 2014). </p>
+                </div>
+                <div class="hidden-md hidden-lg hidden-xl">
+                  <p class="center">Chiller, currently available in over 40 million homes, is the only cable channel devoted to delivering viewers round-the-clock scares. Chiller's eclectic slate of adrenaline-fueled, soul-stirring entertainment includes a broad offering of films, including feature length premieres every Friday, international programming, documentary and reality shows (Fear Factor), anthology series (The Twilight Zone), specials (Can You Survive a Horror Movie? and the ongoing "Chiller 13" countdown specials), classic series (Tales From the Darkside, The Outer Limits) and some of the most thought-provoking, suspenseful contemporary series that have aired in recent years (Pushing Daisies, Dead Like Me). Chiller is the home to original productions from some of the most acclaimed and respected creators in the horror world. Original movies include Dead Souls, from the novel by Michael Laimo; Remains, from the critically lauded graphic novel by Steve Niles; the award-winning documentary The American Scream, from filmmaker Michael Stephenson (the man behind Best Worst Movie); Beneath from writer/director Larry Fessenden (coming in October 2013) and the adaptation of the W.W. Jacobs classic, The Monkey's Paw (coming January 2014). </p>
+                </div>
+              </div>
+              <div class="hidden-xs">
+                <img id="background" class="tilt-effect" alt="grid03"  data-tilt-options='{"transition": 0.4, "movement": { "perspective" : 1200, "translateX" : -15, "translateY" : -15, "translateZ" : 10, "rotateX" : 2, "rotateY" : 10 } }'/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 horizontal-ad">
+            <img src="img/horizontal-ad.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+//= template/footer.html
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/animations.js"></script>
+    <script src="js/side-navigation.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(window).on( 'resize', function () {
+            $('.hero-container , .tilt').height( $(window).height() * 1.2);
+        }).resize();
+      });
+
+      $(function () {
+        $('.tlt').textillate();
+      })
+
+      if ( $(window).width() > 992) {
+        $(function () {
+            $('div.slideDown-trigger, p.slideDown-trigger, h4.slideDown-trigger').addClass("hide-ani").viewportChecker({
+                classToAdd: 'visible slideDown', // Class to add to the elements when they are visible
+                offset: 75
+            });
+        });
+      }
+      else {
+
+      }
+    </script>
+    <script>
+      var images = ['generic-bg-18-net.jpg'];
+      $('.tilt__front , .tilt__back').css({'background-image': 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+    </script>
+  </body>
+</html>

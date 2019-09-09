@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+'Futurizr': {
+'hasTouch': 'touch'
+}
+}">
+<head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="lib/google.css" rel="stylesheet" />
+    <link href="app.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/img/favicon.png">
+
+    <title>Feedback Interaction - Animation - Chiller Design Guide | DPIM UX Team</title>
+
+</head>
+
+<body class="site-material_ext_publish section-animation first-chapter color-red qp-ui" data-qp-ui="{ 'Mask': {} }">
+  <header class="qp-ui" data-qp-ui="{
+  'Peekaboo': {
+  'mobile': 72,
+  'desktop-sm': 72,
+  'default': 192
+}
+}">
+<div class="header-wrapper qp-ui" data-qp-ui="{
+'Peekaboo': {
+'mobile': 28,
+'desktop-sm': 28,
+'default': 82
+}
+}">
+<div class="header-title">      <span class="section-title">Animation</span>
+  <span class="chapter-title"><span class="title-separator">- Feedback Interaction</span></span>
+</div>
+</div>
+
+</header>
+
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab"><i class="material-icons material-spec-icon" title="Show navigation">menu</i></button>
+</nav>
+
+//= template/menu.html
+
+<div id="grid-cont">
+    <section class="grid_outer chapter">
+        <h1 class="chapter-title">Feedback Interaction</h1>
+
+        <div class="chapter-content">
+
+            <div class="chapter-intro">
+                <p>Feedback interaction is an actions that reacts to a viewer's click or press to indicate that their click has been registered.</p>
+            </div>
+
+            <nav class="chapter-toc">
+                <h1>Contents</h1>
+                <ul>
+                    <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#feedback-tiles">Tiles</a></li>
+                    <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#feedback-buttons">Buttons</a></li>
+                    <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#feedback-text">Text Fields</a></li>
+                </ul>
+            </nav>
+
+            <div class="article-list">
+                <!-- Buttons & Tiles --> 
+                <div id="feedback-tiles" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                    <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">Tiles</h2>
+                    <div class="article-content">
+                        <div class="module-list">
+                            <div>
+                                <section class="moduleE1">
+                                    <div class="module-body">
+                                        <p>Tiles will be used as informational containers or in a similar fashion to buttons.  For the tiles that are clickable we will be associating a simple and subtle press effect that lets the user know their action has been registered with the system.</p>
+                                    </div>
+                                    <div class="figure-group">
+                                        <div class="figure-row">
+                                            <figure class="is-active">
+                                                <div class="media">
+                                                    <a class="feedback-press">
+                                                        <img src="img/components-tile.jpg" />
+                                                    </a>
+                                                </div>
+                                                <figcaption>
+                                                    <p>Tile Press With Drop Shadow</p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="moduleE1">
+                                    <div class="module-body">
+                                        <p></p>
+                                    </div>
+                                    <div class="figure-group">
+                                        <div class="figure-row">
+                                            <figure class="">
+                                                <div class="media">
+                                                    <div class="feedback-press2-container">
+                                                        <div class="feedback-press2">
+                                                            <img src="img/components-tile.jpg" style="visibility: hidden;" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <figcaption>
+                                                    <p>Tile Press With Drop Shadow and Inner Shadow</p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="feedback-buttons" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                    <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">Buttons</h2>
+                    <div class="article-content">
+                        <div class="module-list">
+                            <div>
+                                <section class="moduleD1">
+                                    <div class="module-body">
+                                        <p>Similarly to the tile press, the buttons will have the same press animation. </p>
+                                    </div>
+                                    <div class="figure-group">
+                                        <div class="figure-row">
+                                            <figure class="is-active" style="width: 260px">
+                                                <div class="media">
+                                                    <div class="feedback-press-button">
+                                                        <div class="feedback-press-button-left">
+                                                            <div class="button">View Show</div>
+                                                        </div>
+                                                        <div class="feedback-press-button-right">
+                                                            <div class="button">View Show</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <figcaption>
+                                                    <p>Ghost to Solid Corner Slice Button</p>
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="">
+                                                <div class="media">
+                                                    <div class="feedback-press-button">
+                                                        <div class="feedback-press-button-left">
+                                                            <div class="button">View Show</div>
+                                                        </div>
+                                                        <div class="feedback-press-button-right-v2">
+                                                            <div class="button">View Show</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <figcaption>
+                                                    <p>Red &amp; White Corner Slice Ghost Button Sample</p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="moduleD1">
+                                    <div class="module-body">
+                                        <p></p>
+                                    </div>
+                                    <div class="figure-group">
+                                        <div class="figure-row">
+                                            <figure class="">
+                                                <div class="media">
+                                                    <div class="feedback-press-button">
+                                                        <div class="feedback-press-button-left">
+                                                            <div class="button">View Show</div>
+                                                        </div>
+                                                        <div class="feedback-press-button-right-v3">
+                                                            <div class="button">View Show</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <figcaption>
+                                                    <p>All Red Corner Slice Ghost Button Sample</p>
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="">
+                                                <div class="media">
+                                                    <div class="feedback-press-button">
+                                                        <a class="feedback-press-button-v5">
+                                                            <div class="button">View Show</div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <figcaption>
+                                                    <p>Shiver Button Example</p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Buttons & Tiles End --> 
+                <!-- Input Fields Start --> 
+                <div id="feedback-text" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                    <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">Text Fields</h2>
+                    <div class="article-content">
+                        <div class="module-list">
+                            <div>
+                                <section class="moduleE1">
+                                    <div class="module-body">
+                                        <p>Text fields may be used at a later time for application forms, contest entry forms, or newsletter registrations.  Continuing with the theme of the slice effect, we have created a simple slice animation once the text field has been clicked.</p>
+                                    </div>
+                                    <div class="figure-group">
+                                        <div class="figure-row">
+                                            <figure class="is-active" style="width: 260px;">
+                                                <div class="media">
+                                                    <form class="input-1">
+                                                        <div id="input-left"></div>
+                                                        <input type="text" name="First Name" value="First Name" class="input-right">
+                                                    </form>
+                                                </div>
+                                                <figcaption>
+                                                    <p>Slice Input Field Example</p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Input Fields End --> 
+            </div>
+        </div>
+    </section>
+</div>
+
+
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-L section-what-is-material color-light-blue">&nbsp;</div>
+                <div class="footer-grid-L section-what-is-material color-light-blue">
+                    <a class="footer-text" href="animation-transitions.html">
+                        <i class="material-icons arrow-L">arrow_back</i>
+                        <span class="direction">Previous</span>
+                        <div>Transitions</div>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script src="lib/google.js"></script>
+        <script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+        <script src="js/animation-hover-state.js"></script>
+        <script src="js/focus.js"></script>
+        <script src="js/menu.js"></script>
+    </body>
+</html>

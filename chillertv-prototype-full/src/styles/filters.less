@@ -1,0 +1,725 @@
+@import "variables.less";
+@import "fonts.less";
+
+.stick .filter-bg {
+  @media screen and (max-width: 768px) {
+    margin-top: -9px;
+  }
+}
+
+.no-hero #season-header .header-container {
+  @media screen and (max-width: 768px) {
+    min-width: 200px;
+  }
+}
+.no-hero #season-header .filter-bg {
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+  }
+  @media screen and (max-width: 400px) {
+    width: 100%;
+  }
+}
+.no-hero #season-header .filter-container {
+  @media screen and (max-width: 480px) {
+    border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  @media screen and (max-width: 420px) {
+    border-right: none !important;
+    width: 100%;
+    max-width: 100%;
+    border-left: none !important;
+  }
+}
+.no-hero #season-header .filter-container .zone-list {
+  @media screen and (max-width: 768px) {
+    top: 175px !important;
+    right: auto !important;
+  }
+  @media screen and (max-width: 480px) {
+    top: 155px !important;
+  }
+  @media screen and (max-width: 400px) {
+    top: 189px !important;
+    max-width: 100%;
+  }
+}
+.no-hero #season-header #sticky-schedule.stick .filter-container .zone-list {
+  @media screen and (max-width: 768px) {
+    top: 140px !important;
+    right: auto !important;
+  }
+  @media screen and (max-width: 480px) {
+    top: 140px !important;
+  }
+  @media screen and (max-width: 400px) {
+    top: 175px !important;
+    max-width: 100%;
+  }
+}
+.no-hero #season-header .filter-container button {
+  height: 45px;
+}
+.no-hero #season-header #sticky-schedule.stick .filter-container button {
+  height: 36px;
+}
+.no-hero #season-header #sticky-schedule.stick {
+  top: 105px;
+}
+.no-hero #season-header #sticky-schedule.stick .filter-bg {
+  @media screen and (max-width: 400px) {
+    top: -9px;
+  }
+}
+.no-hero #season-header #sticky-schedule.stick .zone-list {
+  top: 140px;
+
+  @media screen and (max-width: 400px) {
+    top: 177px !important;
+  }
+}
+.no-hero #season-header .filter-season, .hero-header #season-header .filter-season {
+  width: 190px;
+}
+.no-hero #season-header .filter-season {
+  margin-right: 15px;
+
+  @media screen and (max-width: 768px) {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 425px) {
+    width: 160px !important;
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 100% !important;
+    min-width: 120px;
+  }
+
+}
+.no-hero #season-header #sticky-schedule .filter-season, .no-hero #season-header #sticky-schedule.stick .filter-season {
+  border-right: none !important;
+
+  @media screen and (max-width: 768px) {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  @media screen and (max-width: 480px) {
+    border-left: none !important;
+  }
+}
+.no-hero #season-header #sticky-schedule.stick .filter-season, .no-hero .stick .specific-movie .filter-zone {
+  @media screen and (max-width: 480px) {
+    height: 36px;
+    background: @color-red;
+    margin-top: -9px;
+  }
+}
+.no-hero #season-header .header-content-container {
+  width: auto;
+}
+.no-hero #season-header #sticky-schedule .filter-container::after {
+  top: -30px;
+}
+.no-hero #season-header #sticky-schedule.stick .filter-container::after {
+  top: -26px;
+}
+
+.hero-header .header-container {
+  float: left;
+}
+
+.hero-header .filter-season, .hero-header #season-header .filter-bg {
+    float: right !important;
+}
+.hero-header #season-header #sticky-schedule, .hero-header #season-header #sticky-schedule .filter-bg {
+  background: transparent;
+}
+.hero-header #season-header #sticky-schedule.stick {
+    top: 105px;
+    background: @color-red;
+}
+.filter-container {
+  transition: all 0.2s ease-in;
+  float: left;
+  height: 43px;
+}
+.hero-header #season-header .filter-season {
+  border-top: 1px solid rgba(255,255,255,0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.6);
+  border-right: 1px solid rgba(255,255,255,0.6) !important;
+  border-left: 1px solid rgba(255,255,255,0.6) !important;
+  border-radius: 2px;
+  height: 35px;
+  margin-top: 3px;
+  margin-right: 25px;
+  z-index: 10;
+  position: relative;
+
+  @media screen and (max-width: 435px) {
+    width: 160px !important;
+  }
+
+  @media screen and (max-width: 404px) {
+    width: 100% !important;
+    min-width: 120px;
+  }
+
+  @media screen and (max-width: 365px) {
+      border-left: none !important;
+      border-right: none !important;
+      margin-right: 0;
+  }
+}
+.hero-header #season-header .zone-list {
+  background: rgba(0,0,0, 0.3);
+  border-left: 1px solid rgba(255,255,255,0.6);
+  border-right: 1px solid rgba(255,255,255,0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.6);
+  margin-left: -1px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+
+  @media screen and (max-width: 768px) {
+    width: 190px;
+    top: 177px !important;
+  }
+
+  @media screen and (max-width: 480px) {
+    top: 147px !important;
+    right: 25px;
+  }
+
+  @media screen and (max-width: 435px) {
+    width: 160px;
+  }
+
+  @media screen and (max-width: 404px) {
+    width: 145px;
+  }
+
+  @media screen and (max-width: 365px) {
+    top: 192px !important;
+    width: 100%;
+    min-width: 100%;
+    border-left: none;
+    border-right: none;
+    background: rgba(0,0,0, 0.92);
+    right: 0;
+  }
+}
+.hero-header #season-header .filter-container button, .hero-header #season-header #sticky-schedule .filter-container::after {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+.hero-header #season-header #sticky-schedule .filter-container::after {
+  top: -25px;
+}
+.hero-header #season-header #sticky-schedule.stick .filter-season {
+  margin-top: 0;
+  border-top: none;
+  border-bottom: none;
+  border-right: none !important;
+  border-left: none !important;
+}
+.hero-header #season-header #sticky-schedule.stick .filter-container button, .hero-header #season-header #sticky-schedule.stick .filter-container::after {
+  text-shadow: none;
+}
+.hero-header #season-header #sticky-schedule.stick .zone-list {
+  background: rgba(0,0,0, 0.95);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  top: 140px;
+
+  @media screen and (max-width: 365px) {
+    top: 176px !important;
+  }
+}
+.hero-header #season-header #sticky-schedule.stick h1.header {
+  text-shadow: none;
+}
+.hero-header #season-header #sticky-schedule .filter-bg {
+  margin-top: 0;
+
+  @media screen and (max-width: 365px) {
+    width: 100%;
+    height: 36px;
+  }
+}
+.hero-header #season-header #sticky-schedule.stick .filter-bg {
+  @media screen and (max-width: 365px) {
+    margin: -10px 0 0 0;
+    background: @color-red;
+  }
+}
+.hero-header #season-header #sticky-schedule.stick .season-button {
+  margin-top: 2px;
+}
+.hero-header #season-header .filter-season {
+  @media screen and (max-width: 365px) {
+    min-width: 100%;
+    margin-right: 0;
+  }
+}
+.hero-header #season-header {
+  overflow: visible;
+}
+.hero-header.season {
+  @media screen and (max-width: 480px) {
+    top: 110px;
+  }
+}
+
+#sticky-schedule .filter-bg {
+  background: #0e0e0e;
+  transition: all 0.2s ease-in;
+}
+
+#sticky-schedule.stick .filter-bg {
+  background: @color-red;
+  transition: all 0.2s ease-in;
+}
+
+.filter-date {
+  max-width: 500px;
+  width: 260px;
+
+  @media screen and (max-width: 768px) {
+    width: 50%;
+  }
+}
+
+.filter-zone {
+  max-width: 200px;
+  width: 190px;
+
+  @media screen and (max-width: 768px) {
+    width: 50%;
+    max-width: 100%;
+  }
+}
+
+.filter-search {
+  max-width: 300px;
+  width: 30%;
+}
+
+.filter-search .chiller-search-thick-weathered {
+  float: left;
+  margin: 15px 10px 0px 20px;
+}
+
+.filter-search input[type=text] {
+  margin-top: 12px;
+  border: none;
+
+  @media screen and (max-width: 480px) {
+    margin-top: 12px;
+    border: none;
+    width: 65%;
+  }
+}
+
+  .filter-search input[type=text]:focus {
+    outline: none;
+  }
+  .filter-search input[type=text]:focus::-webkit-input-placeholder { color:transparent; }
+
+.filter-bg.specific-movie  {
+  float: left;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    float: none;
+  }
+}
+
+.specific-movie .filter-zone {
+  @media screen and (max-width: 768px) {
+    max-width: 200px;
+    width: 190px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    max-width: 100%;
+    border-left: none !important;
+  }
+}
+
+.specific-movie .zone-list {
+  @media screen and (max-width: 768px) {
+    max-width: 190px;
+    top: 153px;
+  }
+  @media screen and (max-width: 480px) {
+    max-width: 100%;
+    top: 148px !important;
+  }
+}
+
+#sticky-schedule .specific-movie .filter-container {
+  border-right: none !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#sticky-schedule.stick .specific-movie .filter-container {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#sticky-schedule.stick .specific-movie .zone-list{
+  top: 114px !important;
+
+  @media screen and (max-width: 480px) {
+    top: 150px !important;
+  }
+}
+
+#sticky-schedule.stick .filter-search input[type=text]::-webkit-input-placeholder {
+  color: @color-white;
+}
+
+#sticky-schedule {
+  text-align: left;
+  background: #0e0e0e;
+  transition: all .2s ease-in;
+  height: 45px;
+  position: relative;
+}
+
+#sticky-schedule-phantom {
+  text-align: center;
+  background: rgba(14,14,14,1);
+  transition: all .2s ease-in;
+  visibility: hidden;
+}
+
+#sticky-schedule.stick {
+  position:fixed;
+  background: @color-red;
+  top: 80px;
+  z-index: 999;
+  height: 36px;
+  transition: all .2s ease-in;
+  width: 100%;
+}
+
+#sticky-schedule .filter-container:first-child {
+  border-right: 1px solid rgba(255,255,255,0.1);
+  border-left: 1px solid rgba(255,255,255,0.1);
+
+  @media screen and (max-width: 768px) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: none;
+  }
+}
+
+#sticky-schedule .filter-container {
+  border-right: 1px solid rgba(255,255,255,0.1);
+
+  @media screen and (max-width: 768px) {
+    border-right: none;
+  }
+}
+
+.filter-container::after {
+  content: "\e913";
+  float: right;
+  transition: @transition-basic;
+  color: @color-red;
+  font-family: 'chiller';
+  position: relative;
+  top: -28px;
+  right: 18px;
+  font-weight: normal;
+  font-weight: 800;
+  pointer-events: none;
+}
+.filter-container.filter-search {
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    top: -33px;
+    right: 0;
+    width: 50%;
+    max-width: 100%;
+  }
+}
+.filter-container.filter-search::after {
+  display: none;
+}
+.filter-container button {
+  width: 100%;
+  text-align: left;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0px 0 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: @transition-basic;
+}
+
+.stick .filter-container button {
+  font-size: 14px;
+}
+
+#sticky-schedule.stick .filter-container::after {
+  content: "\e913";
+  float: right;
+  transition: @transition-basic;
+  color: @color-white;
+  font-family: 'chiller';
+  position: relative;
+  top: -24px;
+  right: 18px;
+}
+
+#sticky-schedule.stick .filter-container:first-child {
+  height: 34px;
+  border-right: 1px solid rgba(0,0,0,0.1);
+  border-left: 1px solid rgba(0,0,0,0.1);
+  transition: @transition-basic;
+}
+
+#sticky-schedule.stick .filter-container {
+  height: 34px;
+  border-right: 1px solid rgba(0,0,0,0.1);
+  transition: @transition-basic;
+}
+
+#sticky-schedule.stick .date-list {
+  top: 115px;
+  padding-bottom: 100px;
+
+  @media screen and (max-width: 768px) {
+    top: 150px
+  }
+
+  @media screen and (max-width: 480px) {
+    top: 151px !important;
+  }
+}
+
+#sticky-schedule.stick .zone-list {
+  @media screen and (max-width: 768px) {
+    top: 151px
+  }
+
+  @media screen and (max-width: 480px) {
+    top: 150px !important;
+  }
+}
+
+#sticky-schedule.stick .filter-container .chiller-search-thick-weathered {
+  margin: 10px 10px 0 20px;
+}
+
+#sticky-schedule.stick .filter-container.filter-search input[type=text] {
+  margin-top: 6px;
+}
+
+#sticky-schedule.stick h1.header {
+  /*font-size: 12px;*/
+  color: @color-white;
+  text-transform: uppercase;
+  padding: 0 0 0 10px;
+  margin-left: 25px;
+  margin-top: 5px;
+  transition: @transition-basic;
+}
+
+#sticky-schedule.stick h1.header::before {
+  background: #0e0e0e;
+  top: 3px;
+  transition: @transition-basic;
+}
+
+.zone-list {
+  max-width: 190px;
+}
+
+.zone-list, .season-list {
+  position: fixed;
+  width: 100%;
+  height: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 3;
+  padding-top: 10px;
+  border-top: 1px solid #be0c36;
+  transition: @transition-basic;
+  opacity: 0;
+  visibility: hidden;
+
+  @media screen and (max-width: 768px) {
+    top:198px;
+    max-width: 50%;
+  }
+
+  @media screen and (max-width: 480px) {
+    top: 149px !important;
+    right: 0;
+  }
+}
+
+  .zone-list ul li, .season-list ul li {
+    padding: 5px 20px;
+    overflow: hidden;
+  }
+
+  .zone-list ul li .zone {
+    float: left;
+  }
+
+  .zone-list ul li .time {
+    float: right;
+  }
+
+.date-list {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  left: 0;
+  height: 0%;
+  right: 0;
+  background: rgba(0,0,0,0.92);
+  top: 154px;
+  z-index: 5;
+  padding-top: 20px;
+  border-top: 1px solid @color-red;
+  transition: @transition-basic;
+  opacity: 0;
+  visibility: hidden;
+  padding-bottom: 160px;
+
+  @media screen and (max-width: 768px) {
+    top:198px;
+  }
+
+  @media screen and (max-width: 480px) {
+    top: 149px !important;
+    right: 0;
+  }
+}
+
+.scrolling {
+  overflow: auto;
+  max-height: 98%;
+}
+
+  .date-list ul, .zone-list ul, .season-list ul {
+    list-style-type: none;
+    line-height: 2;
+    padding: 0;
+    margin: 0;
+  }
+
+  .date-list ul a:first-child {
+    margin-top: 20px;
+  }
+
+  .date-list ul a li {
+    font-size: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: calc(16.66666667% + 1.2px);
+    transition: all 0.2s ease-out;
+  }
+
+  .date-list ul a li span, .date-list ul a li span sup {
+    color: #777;
+  }
+
+  .date-list ul a:hover li, .zone-list ul a:hover li, .season-list ul a:hover li {
+    background: rgba(255,255,255,0.1);
+    transition: all 0.1s ease-out;
+  }
+
+.date-show, .zone-show, .season-show {
+  opacity: 1 !important;
+  transition: @transition-basic;
+  visibility: visible !important;
+}
+
+.date-show {
+  height: 100%;
+}
+
+.zone-show, .season-show {
+  height: 173px;
+}
+
+.no-hero .filter-season, .no-hero #season-header .filter-bg {
+  float: left;
+  max-width: 250px;
+  width: 250px !important;
+
+  @media screen and (max-width: 480px) {
+    width: 100% !important;
+    max-width: 100%;
+  }
+}
+
+.no-hero .season-list {
+  @media screen and (max-width: 768px) {
+    top: 195px;
+  }
+
+  @media screen and (max-width: 480px) {
+    top: 197px !important;
+  }
+}
+
+.no-hero #season-trigger, .no-hero .season-list  {
+  width: 250px;
+  max-width: 250px;
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.no-hero .season-show {
+  height: 340px;
+}
+
+.no-hero #season-header .header-container {
+  float: left;
+  width: 100%;
+  max-width: 200px;
+}
+
+.no-hero .season-button.season-show, .date-button.date-show, .zone-button.zone-show {
+  background: rgba(255,255,255,0.1);
+}
+
+.stick .season-button.season-show, .stick .date-button.date-show, .stick .zone-button.zone-show {
+  background: rgba(0,0,0,0.1);
+}
+
+.no-hero .stick .season-list {
+  top: 140px;
+
+    @media screen and (max-width: 480px) {
+    top: 175px !important;
+  }
+}
+
+.no-hero .season-list ul li {
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+.no-hero .season-list div {
+  float: left;
+
+  img {
+    max-width: 100px;
+  }
+}
+
+.no-hero div.season {
+  float: right;
+  margin-top: 13px;
+}

@@ -1,0 +1,143 @@
+
+<div class="header">
+  <img src="{{ site.theme.link }}/assets/img/chiller-white-logo.png" class="logo" />
+  <div class="page-title">{{ post.title }}</div>
+</div>
+
+{% if post.resulting_image %}
+  <div class="result-link-container">
+    <div class="result-link"><i class="chiller-view-eye-2-weathered"></i><span>View Resulting Page</span></div>
+  </div>
+{% endif %}
+
+
+<div class="details-wrapper">
+  <div class="step-img-list__wrapper">
+    <div class='step-img-list'>
+      {% for step in post.get_field('steps') %}
+        <div class='step-img-wrapper'>
+          <img class='step-img-img' src='{{ TimberImage(step.image).src }}'/>
+          <div class='step-img-magnified'>
+            <img src='{{ TimberImage(step.image).src }}'/>
+          </div>
+        </div>
+      {% endfor %}
+      {% if post.resulting_image %}
+        <div class='step-img-wrapper'>
+          <img class='step-img-img' src='{{ TimberImage(post.resulting_image).src }}'/>
+          <div class='step-img-magnified'>
+            <img src='{{ TimberImage(post.resulting_image).src }}'/>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="step-wrapper">
+    <div class="step-wrapper__inner">
+      <div>
+        {% for step in post.get_field('steps') %}
+          <div class="step-container">
+            <div class="checkbox">
+              <input type="checkbox" />
+              <label for="cb"></label>
+            </div>
+            <div class="step-copy">
+              <div class="title">{{ loop.index }}. {{ step.step_title }}</div>
+              <div class="step-description__wrapper">
+                <div class="description">{{ step.step_content }}</div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        <div class="step-container step-container--not-step">
+          <div class="buttons-container">
+            <a href="" class="js-next-button">
+              <div class="filled-button button-container">
+                <div class="button1-left">
+                    <div class="button">Done!</div>
+                </div>
+                <div class="button1-right">
+                    <div class="button">Done!</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="comments-form">
+          <div class="form-title">Submit feedback</div>
+          <form data-feedback-form>
+            <div class="form-success">
+              Thank you for submitting your feedback! <a data-more-feedback href="#">Give more feedback.</a>
+            </div>
+            <div class="form-main">
+              <div class="form-field">
+                <input name="page" value="{{ post.slug }}" type="hidden" />
+              </div>
+              <div class="form-field">
+                <input placeholder="Your name" name="name" value="" type="text" />
+              </div>
+              <div class="form-field">
+                <textarea data-dynamic-height placeholder="Enter your comments/feedback" name="comments" value="" style="overflow:hidden"></textarea>
+              </div>
+              <div class="form-field">
+                <label>Browser</label>
+                <select name="browser">
+                  <option value="-1" selected disabled>Select browser...</option>
+                  <option value="Safari">Safari</option>
+                  <option value="Chrome">Chrome</option>
+                  <option value="Firefox">Firefox</option>
+                  <option value="Internet Explorer">Internet Explorer</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label>Platform</label>
+                <select name="platform">
+                  <option value="-1" selected disabled>Select platform...</option>
+                  <option value="Windows">Windows</option>
+                  <option value="Mac OS">Mac OS</option>
+                  <option value="iOS">iOS</option>
+                  <option value="Android">Android</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label>Issue type</label>
+                <select name="issue-type">
+                  <option value="-1" selected disabled>Select issue type...</option>
+                  <option value="Content">Content</option>
+                  <option value="Cosmetic">Cosmetic</option>
+                  <option value="Functional">Functional</option>
+               </select>
+             </div>
+
+              <div class="form-errors">
+                Sorry, we need you to complete every field to submit.
+              </div>
+              <div class="filled-button button-container submit" data-submit-comment-button>
+                <div class="button1-left">
+                    <div class="button">Submit</div>
+                </div>
+                <div class="button1-right">
+                    <div class="button">Submit</div>
+                </div>
+              </div>
+              <div class="form-loader">
+                {% include 'includes/_loader.html' %}
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+
+/*
+function textAreaAdjust(o) {
+    o.style.height = "0px";
+  o.style.height = (15+o.scrollHeight)+"px";
+}
+*/
+</script>

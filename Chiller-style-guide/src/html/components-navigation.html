@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="qp-ui" data-qp-ui="{
+'Futurizr': {
+'hasTouch': 'touch'
+}
+}">
+<head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="lib/google.css" rel="stylesheet" />
+    <link href="app.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/img/favicon.png">
+
+    <title>Navigation - Components - Chiller Design Guide | DPIM UX Team</title>
+
+</head>
+
+<body class="site-material_ext_publish section-animation first-chapter color-red qp-ui" data-qp-ui="{ 'Mask': {} }">
+  <header class="qp-ui" data-qp-ui="{
+  'Peekaboo': {
+  'mobile': 72,
+  'desktop-sm': 72,
+  'default': 192
+}
+}">
+<div class="header-wrapper qp-ui" data-qp-ui="{
+'Peekaboo': {
+'mobile': 28,
+'desktop-sm': 28,
+'default': 82
+}
+}">
+<div class="header-title">      <span class="section-title">Components</span>
+  <span class="chapter-title"><span class="title-separator">- Navigation</span></span>
+</div>
+</div>
+
+</header>
+
+<nav>
+  <button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab"><i class="material-icons material-spec-icon" title="Show navigation">menu</i></button>
+</nav>
+
+//= template/menu.html
+
+<div id="grid-cont">
+    <section class="grid_outer chapter">
+        <h1 class="chapter-title">Navigation</h1>
+
+        <div class="chapter-content">
+
+            <div class="chapter-intro">
+                <p>The navigations primary use is to help the viewer get to the page they would like on ChillerTV.com</p>
+            </div>
+
+            <nav class="chapter-toc">
+                <h1>Contents</h1>
+                <ul>
+                    <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#navigation-sitemap">Sitemap</a></li>
+                    <li><a class="gweb-smoothscroll-control qp-ui" data-qp-ui="{ 'SmoothScroll': {} }" href="#navigation-navigation">Navigation</a></li>
+                </ul>
+            </nav>
+
+            <div class="article-list">
+                <!-- Tiles Start --> 
+                <div id="navigation-sitemap" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                    <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">Sitemap</h2>
+                    <div class="article-content">
+                        <div class="module-list">
+                            <div>
+                                <section class="moduleE1">
+                                    <div class="module-body">
+                                        <p>AA new sitemap for ChillerTV.com will help the viewers navigate through the website.  By keeping the pages in a similar hierarchy they will have no problem enjoying all the features the website has to offer.  This will also make it easy to create additional content on any page of the website.</p>
+                                    </div>
+                                    <div class="figure-group">
+                                        <div class="figure-row">
+                                            <figure class="is-active">
+                                                <div class="media">
+                                                    <img src="img/chiller-sitemap.png" />
+                                                </div>
+                                                <figcaption>
+                                                    <p>Sitemap</p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tiles End --> 
+                <!-- Navigation Start --> 
+                <div id="navigation-navigation" class="article qp-ui" data-qp-ui="{ 'ScrollSpy': {} }">
+                    <h2 class="article-title qp-ui" data-qp-ui="{ 'ResponsiveZippy': {} }">Navigation</h2>
+                    <div class="article-content">
+                        <div class="module-list">
+                            <div>
+                                <section class="moduleE1">
+                                    <div class="module-body">
+                                        <p>In the initial view the navigation will be hidden with only a hamburger being shown.</p>
+                                    </div>
+                                    <div class="figure-group">
+                                        <div class="figure-row">
+                                            <figure class="is-active">
+                                                <div class="media">
+                                                    <img src="img/components-navigation.jpg" />
+                                                </div>
+                                                <figcaption>
+                                                    <p>Closed Navigation Example</p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="moduleE1">
+                                    <div class="module-body">
+                                        <p>In this version, once the hamburger is clicked it will trigger a top panel to slide down and push the page down.  This panel will contain 6-8 page links and a search option.  In addition the hamburger will animate into an "X" which will close the navigation upon click.  The navigation will also close if you click on the page anywhere out of the navigation area.  This design is ideal if you have a limited amount of page links.</p>
+                                    </div>
+                                    <div class="figure-group">
+                                        <div class="figure-row">
+                                            <figure class="">
+                                                <div class="media">
+                                                    <img src="img/components-navigation-1-open.jpg" />
+                                                </div>
+                                                <figcaption>
+                                                    <p>Top Navigation Example</p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="moduleE1">
+                                    <div class="module-body">
+                                        <p>In the second version, once the hamburger is clicked it will trigger a side panel to slide left over the page content.  This panel can contain an unlimited number of page links, a search option, and social media links.  In addition the hamburger will animate into an "X" which will close the navigation upon click.  The navigation will also close if you click on the page anywhere out of the navigation area.  Keeping with the Chiller brand we will also include a slice in the top left corner, which not only is aesthetically pleasing, but also makes the "X" more apparent to the user.</p>
+                                        <p>This version of the navigation will function similarly to<a href="http://www.syfy.com/" target="_blank"> Syfy.com</a></p>
+                                    </div>
+                                    <div class="figure-group">
+                                        <div class="figure-row">
+                                            <figure class="is-active">
+                                                <div class="media">
+                                                    <img src="img/components-navigation-2-open.jpg" />
+                                                </div>
+                                                <figcaption>
+                                                    <p>Side Navigation Example</p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation End --> 
+            </div>
+        </div>
+    </section>
+</div>
+
+
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-L section-what-is-material color-light-blue">&nbsp;</div>
+                <div class="footer-grid-L section-what-is-material color-light-blue">
+                    <a class="footer-text" href="components-buttons.html">
+                        <i class="material-icons arrow-L">arrow_back</i>
+                        <span class="direction">Previous</span>
+                        <div>Buttons</div>
+                    </a>
+                </div>
+
+                <div class="footer-R section-animation color-purple">&nbsp;</div>
+                <div class="footer-grid-R section-animation color-purple">
+                    <a class="footer-text" href="components-footer.html">
+                        <i class="material-icons arrow-R">arrow_forward</i>
+                        <span class="direction">Next</span>
+                        <div>Footer</div>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script src="lib/google.js"></script>
+        <script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+        <script src="js/menu.js"></script>
+    </body>
+</html>

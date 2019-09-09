@@ -1,0 +1,300 @@
+@import "variables.less";
+
+.tile-transitions .tile-container, .tile-transitions-out .tile-container {
+	width: 48%;
+	float: left;
+}
+
+	.tile-transitions .tile-container:first-child, .tile-transitions-out .tile-container:first-child, .tile-transitions .tile-container:nth-child(3) {
+		margin-right: 10px;
+	}
+
+	.tile-transitions .tile-container:first-child {
+		animation-delay: 0.5s;
+	}
+
+	.tile-transitions .tile-container:nth-child(2) {
+		animation-delay: 0.7s;
+	}
+
+	.tile-transitions .tile-container:nth-child(3) {
+		animation-delay: 0.8s;
+		margin-top: 10px;
+	}
+
+	.tile-transitions .tile-container:nth-child(4) {
+		animation-delay: 0.9s;
+		margin-top: 10px;
+	}
+
+.tile-fadeUp {
+	animation-name: tile-fadeUp;
+	animation-duration: 4s;	
+    animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;	
+	animation-interation-count: infinite;	
+    
+    opacity: 0;
+	visibility: visible !important;	
+}
+
+@keyframes tile-fadeUp {
+	0% {
+		transform: translateY(-10%);
+		opacity: 0;		
+	}
+	6% {
+		transform: translateY(0%);
+		opacity: 1;	
+	}	
+	100% {
+		transform: translateY(0%);
+		opacity: 1;	
+	}		
+}
+
+.tile-fadeOut {
+	animation-name: tile-fadeOut;
+	animation-duration: 2s;	
+    animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;	
+	animation-interation-count: infinite;	
+    
+    opacity: 0;
+	visibility: visible !important;	
+}
+
+@keyframes tile-fadeOut {
+	0% {
+		opacity: 1;		
+	}
+	75% {
+		opacity: 1;	
+	}	
+	100% {
+		opacity: 0;	
+	}		
+}
+
+.feedback-press, .feedback-press-button {
+	position: relative;
+	display: block;
+	top: 0px;
+	transition: .2s ease-in-out !important;
+	transform: translate(0px,0px);
+	width: 95%;
+	margin-left: 10px;
+}
+
+.feedback-press {
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.feedback-press:hover {
+	animation-name: none !important;
+}
+
+div.feedback-press-button {
+	width: 95px;
+	height: 50px;
+	position: relative;
+	cursor: pointer;
+	transition: .2s ease-in-out;
+}
+
+div.feedback-press-button .feedback-press-button-left {
+	-webkit-clip-path: polygon(0% 0%, 16px 0%, 0% 16px);
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	height: 32px;
+	background: transparent;
+	border: 1px solid @color-white;
+	transition: .5s ease-in-out;
+	top: 0;
+	left: 0;
+}
+
+div.feedback-press-button:hover .feedback-press-button-left {
+	background: @color-red;
+	border: 1px solid @color-red;
+	transition: 0.5s ease-in-out;
+	top: -1px;
+	left: -1px;
+}
+
+div.feedback-press-button .feedback-press-button-right { 
+	-webkit-clip-path: polygon(15px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 15px);
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	height: 32px;
+	background: transparent;
+	transition: .5s ease-in-out;
+	border: 1px solid @color-white;
+	top: 0;
+	left: 0;
+}
+
+div.feedback-press-button:hover .feedback-press-button-right {
+	transition: .5s ease-in-out;
+	border: 1px solid @color-red;
+	background: @color-red;
+	top: 1px;
+	left: 1px;
+}
+
+div.feedback-press-button .feedback-press-button-right-v2 {
+	-webkit-clip-path: polygon(15px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 15px);
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	height: 32px;
+	transition: .5s ease-in-out;
+	border: 1px solid @color-white;
+	transform: translate(0px,0px);
+}
+
+div.feedback-press-button:hover .feedback-press-button-right-v2 {
+	border: 1px solid @color-white;
+	transform: translate(1px,1px);
+	transition: 0.5s ease-in-out;
+}
+
+div.feedback-press-button .feedback-press-button-right-v3 {
+	-webkit-clip-path: polygon(15px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 15px);
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	height: 32px;
+	transition: .6s ease-in-out;
+	border: 1px solid @color-white;
+	transform: translate(0px,0px);
+}
+
+div.feedback-press-button:hover .feedback-press-button-right-v3 {
+	border: 1px solid @color-red;
+	transform: translate(1px,1px);
+	transition: 0.6s ease-in-out;
+	color: @color-white;
+}
+
+div.feedback-press-button .feedback-press-button-right-v4 {
+	-webkit-clip-path: polygon(15px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 15px);
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	height: 32px;
+	transition: .6s ease-in-out;
+	border: 1px solid @color-white;
+	transform: translate(0px,0px);
+}
+
+div.feedback-press-button:hover .feedback-press-button-right-v4 {
+	transform: translate(1px,1px);
+	transition: 0.6s ease-in-out;
+	color: @color-red;
+}
+
+div.feedback-press-button .feedback-press-button-v5 {
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	height: 32px;
+	transition: .6s ease-in-out;
+	border: 1px solid @color-white;
+	box-shadow: 0 0px 0px 0px @color-red inset;
+	color: @color-white !important;
+}
+
+div.feedback-press-button:hover .feedback-press-button-v5 {
+	transition: 0.6s ease-in-out;
+	background: @color-red;
+	border: 1px solid @color-red;
+	box-shadow: 0px 0px 10px @color-red, 0px 0px 50px @color-red inset;
+	color: @color-white !important;
+}
+
+.feedback-press:active, div.feedback-press-button:active, div.feedback-press-button-v2:active {
+	transition: .2s ease-in-out;
+	transform: translate(1px,2px);
+}
+
+div.feedback-press-button div.button {
+	padding: 7px 12px; 
+	text-shadow: none;
+	background: transparent; 
+	border-radius: 1px; 
+	text-transform: uppercase; 
+	font-size: 12px;
+	position: absolute;
+	font-weight: 500;
+}
+
+.feedback-press2-container {
+	position: relative;
+	display: block;
+	width: 95%;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.feedback-press2 {
+	background: url('img/components-tile.jpg'); 
+	width: 100%; 
+	height: auto; 
+	background-size: contain;
+	transition: .1s ease-in-out;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0) inset, 1px 1px 1px 0px rgba(255, 255, 255, 0);
+}
+
+.feedback-press2:active {
+	transition: .1s ease-in-out;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .3) inset, 1px 1px 1px 0px rgba(255, 255, 255, .1);
+	transform: translate(1px,1px);
+}
+
+.input-1 {
+	width: 200px;
+	height: 32px;
+	position: relative;
+}
+
+.show {
+	opacity: 1 !important;
+	transition: .6s ease-in-out;
+	background: @color-red !important;
+}
+
+#input-left {
+	-webkit-clip-path: polygon(0% 0%, 16px 0%, 0% 16px);
+	overflow: hidden;
+	position: absolute;
+	width: 200px;
+	height: 32px;
+	background: transparent;
+	transition: .6s ease-in-out;
+	opacity: 0;
+	z-index: 10;
+}
+
+.input-right {
+	overflow: hidden;
+	position: absolute;
+	transition: .6s ease-in-out !important;
+	top: 0;
+	left: 0;
+	border-radius: 1px !important;
+	border: none !important;
+	box-shadow: none !important;
+	color: #666;
+	transform: translate(0px,0px);
+
+}
+
+	.input-right:focus {
+		-webkit-clip-path: polygon(15px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 15px);
+		transition: .6s ease-in-out;
+		transform: translate(2px,2px);
+		padding: 6px 6px 6px 10px;
+	}
